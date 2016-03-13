@@ -56,8 +56,10 @@ public class Enemy : MonoBehaviour {
 			idle ();
 		} else if (!InAttackRange ())
 			chase ();
-		else
+		else if (PlayerHealth.Instance.Health > 0)
 			attack ();
+		else
+			idle ();
 
 
 

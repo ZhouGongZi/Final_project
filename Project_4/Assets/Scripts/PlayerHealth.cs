@@ -4,10 +4,12 @@ using System.Collections;
 public class PlayerHealth : MonoBehaviour {
 	public static PlayerHealth Instance;
 
-	int _health=100;
+
+
 	public AnimationClip death,getHit;
 	Animation Anim;
 
+	int _health=100;
 	public int Health {
 		get { return _health;}
 		set {_health = value;
