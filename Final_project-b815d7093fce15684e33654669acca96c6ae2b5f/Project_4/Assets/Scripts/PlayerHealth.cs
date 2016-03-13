@@ -34,4 +34,9 @@ public class PlayerHealth : MonoBehaviour {
 		Anim.Play(death.name);
 
 	}
+
+	void OnTriggerEnter (Collider col){
+		if (col.gameObject.tag == "Enemy")
+			Debug.Log ("hit enemy");
+	}
 }
