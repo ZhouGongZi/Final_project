@@ -6,6 +6,7 @@ public class Player_modern : MonoBehaviour {
 	private Animation				Anim;
 	public AnimationClip 			Melee_Clip;
 
+
 	//melee attack cool down
 	private float 					meleeRate = 0.3f;
 	private float 					nextMelee = 0.0f;

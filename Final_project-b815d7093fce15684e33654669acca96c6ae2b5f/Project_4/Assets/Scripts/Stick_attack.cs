@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Stick_attack : MonoBehaviour {
 
-	private float 				attack_value = 5f;
+	private float 	attack_value = 5f;
 	// Use this for initialization
 	void Start () {
 

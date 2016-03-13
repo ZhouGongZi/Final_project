@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour {
 	}
 	public enum enemyStatus
 	{
-		casual,fight
+		casual,fight,death
 	}
 	//enemy type
 	protected enemyType _enemyType;
@@ -36,8 +36,8 @@ public class Enemy : MonoBehaviour {
 		set { _health = value;
 			if (_health <= 0) {
 				_health = 0;
-				inform ();
 				die ();
+				inform ();
 			}
 		}
 	}
@@ -75,7 +75,7 @@ public class Enemy : MonoBehaviour {
 			idle ();
 		} else if (!InAttackRange ()) {
 			chase ();
-		} else if (PlayerHealth.Instance.Health > 0) {
+		} else if (PlayerHealth.Instance.Health > 0&&!Anim.IsPlaying(death.name)) {
 			attack ();
 			inform();
 		}
@@ -116,8 +116,7 @@ public class Enemy : MonoBehaviour {
 	}
 	public virtual void die(){
 		Anim.Play (death.name);
-		if (Anim [death.name].time > 0.95 * Anim [death.name].length)
-			Destroy (this.gameObject);
+		StartCoroutine (disappear ());
 	}
 	public virtual void dance(){
 		Anim.Play (dancing.name);
@@ -137,6 +136,14 @@ public class Enemy : MonoBehaviour {
 
 	}
 
-	// Use this for initialization
+	IEnumerator  disappear(){
+		Vector3 pos= transform.position;
+		while(pos.y>-0.2){
+			pos.y-=0.001f;
+			transform.position=pos;
+			yield return null;
+		}
+		Destroy(this.gameObject);
 
+	}
 }
