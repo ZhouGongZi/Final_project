@@ -17,6 +17,7 @@ public class Stick_attack : MonoBehaviour {
 	void onTriggerEnter(Collider other){
 		if (other.tag == "Enemy") {
 			other.GetComponent<Enemy>().GetHit(5);
+			//print ("hit the enemy");
 			//other.gameObject.onhit (attack_value);
 		}
 	}
