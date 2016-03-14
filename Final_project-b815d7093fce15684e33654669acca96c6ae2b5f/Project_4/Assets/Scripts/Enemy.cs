@@ -71,6 +71,8 @@ public class Enemy : MonoBehaviour {
 
 
 	public virtual void Update(){
+		if (Health <= 0)
+			return;
 		if (!Alert () && !InAttackRange ()) {
 			idle ();
 		} else if (!InAttackRange ()) {
