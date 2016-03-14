@@ -10,18 +10,22 @@ public class RangeAttack : MonoBehaviour {
 
 
 
+	GameObject shadow;
 	GameObject fireBall;
 	GameObject go;
 	Animation Anim;
+
 	float impactTime=0.65f;
 	float nextCast=0.0f;
 	float intervalCast = 2.01f;
 	bool casted=false;
 	bool speedset=false;
+
 	// Use this for initialization
 	void Awake () {
 		fireBall = Resources.Load ("fireBall") as GameObject;
 		Anim = this.GetComponent<Animation> ();
+		shadow = GameObject.FindGameObjectWithTag ("Shadow");
 
 	}
 	
@@ -52,9 +56,15 @@ public class RangeAttack : MonoBehaviour {
 	}
 	public void movement(){
 		go.GetComponent<Rigidbody> ().velocity = transform.forward * speed;
+
 	}
 	public void cancel(){
 		if (Anim.IsPlaying (cast.name))
 			Destroy (go);
+	}
+
+	void calfocus(){
+		Vector3 middle = (shadow.transform.position + this.transform.position) / 2;
+
 	}
 }
