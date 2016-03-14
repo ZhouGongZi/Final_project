@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour {
 
 
 	//enemy health 
-	protected int _health;
+	protected int			 _health;
 
 	public  int Health { 
 		get {return _health;}
@@ -72,7 +72,8 @@ public class Enemy : MonoBehaviour {
 
 
 	public virtual void Update(){
-		if (Health <= 0)
+		
+		if (Health <= 0 || Anim.IsPlaying(getHit.name))
 			return;
 		if (!Alert () && !InAttackRange ()) {
 			idle ();
@@ -118,6 +119,7 @@ public class Enemy : MonoBehaviour {
 		Anim.Play (attacking.name);
 	}
 	public virtual void die(){
+		Anim.Stop ();
 		Anim.Play (death.name);
 		StartCoroutine (disappear ());
 	}
@@ -125,9 +127,13 @@ public class Enemy : MonoBehaviour {
 		Anim.Play (dancing.name);
 	}
 	public virtual void GetHit(int damage){
+		
+		Health -= damage;
 		if (Health <= 0)
 			return;
-		Health -= damage;
+		
+		Anim [getHit.name].time = 0.15f;
+		Anim.Play (getHit.name);
 
 	}
 	//once it is in the chase/attack or die mode inform the enemies around it.
@@ -145,6 +151,7 @@ public class Enemy : MonoBehaviour {
 	}
 
 	IEnumerator  disappear(){
+		this.GetComponent<CharacterController> ().enabled = false;
 		Vector3 pos= transform.position;
 		while(pos.y>-0.2){
 			pos.y-=0.001f;
