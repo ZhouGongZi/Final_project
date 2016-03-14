@@ -45,6 +45,7 @@ public class Enemy : MonoBehaviour {
 	//alert range
 	public float alertRange;
 	public float maxalertRange;
+	public float informRange;
 	//attack range public attackRange;
 	public float attackRange;
 	public float speed;
@@ -124,6 +125,8 @@ public class Enemy : MonoBehaviour {
 		Anim.Play (dancing.name);
 	}
 	public virtual void GetHit(int damage){
+		if (Health <= 0)
+			return;
 		Health -= damage;
 
 	}
@@ -131,9 +134,12 @@ public class Enemy : MonoBehaviour {
 	public virtual void inform(){
 		GameObject[] enes = GameObject.FindGameObjectsWithTag ("Enemy");
 		foreach (GameObject en in enes) {
-			if (Vector3.Distance (en.transform.position, transform.position) < 20)
-				en.GetComponent<Enemy> ().alertRange =maxalertRange;
+			if (Vector3.Distance (en.transform.position, transform.position) < informRange) {
+				print ("informed");
 
+				en.GetComponent<Enemy> ().alertRange =en.GetComponent<Enemy>().maxalertRange;
+			}
+				
 		}
 
 	}
