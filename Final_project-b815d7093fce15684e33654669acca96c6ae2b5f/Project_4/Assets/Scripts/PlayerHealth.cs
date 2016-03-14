@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerHealth : MonoBehaviour {
 	public static PlayerHealth Instance;
 
-	int _health=100;
+	int _health=10000;
 	public AnimationClip death,getHit;
 	Animation Anim;
 
