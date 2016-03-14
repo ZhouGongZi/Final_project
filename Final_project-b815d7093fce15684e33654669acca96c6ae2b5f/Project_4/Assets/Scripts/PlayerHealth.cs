@@ -25,7 +25,7 @@ public class PlayerHealth : MonoBehaviour {
 	public void OnHit(int damage){
 		Health -= damage;
 
-		if(!Anim.IsPlaying(death.name))
+		if(!Anim.IsPlaying(death.name)&&!Anim.IsPlaying("attack 1"))
 			Anim.Play(getHit.name);
 		
 
