@@ -24,9 +24,6 @@ public class Player_modern : MonoBehaviour {
 			Melee_Attack();
 			nextMelee = Time.time + meleeRate;
 		}
-		if (Anim [Melee_Clip.name].time > Anim [Melee_Clip.name].length * 0.90)
-			isAttacking = false;
-
 	}
 	void Melee_Attack(){
 		Anim.Play (Melee_Clip.name);
