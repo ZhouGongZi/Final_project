@@ -11,7 +11,7 @@ public class Player_modern : MonoBehaviour {
 	private float 					meleeRate = 0.3f;
 	private float 					nextMelee = 0.0f;
 	private	bool 					isAttacking = false; 
-	private float 					impactTime=0.40f;
+	private float 					impactTime=0.45f;
 	// Use this for initialization
 	void Start () {
 		Anim = this.GetComponent<Animation> ();
@@ -26,6 +26,7 @@ public class Player_modern : MonoBehaviour {
 		}
 	}
 	void Melee_Attack(){
+		this.GetComponent<RangeAttack> ().cancel();
 		Anim.Play (Melee_Clip.name);
 		isAttacking = true;
 	}

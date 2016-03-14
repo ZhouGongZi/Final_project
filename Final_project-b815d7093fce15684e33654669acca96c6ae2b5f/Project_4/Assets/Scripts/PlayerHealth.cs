@@ -24,6 +24,7 @@ public class PlayerHealth : MonoBehaviour {
 	}
 	public void OnHit(int damage){
 		Health -= damage;
+		this.GetComponent<RangeAttack> ().cancel();
 
 		if(!Anim.IsPlaying(death.name)&&!Anim.IsPlaying("attack 1"))
 			Anim.Play(getHit.name);
@@ -35,8 +36,5 @@ public class PlayerHealth : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter (Collider col){
-		if (col.gameObject.tag == "Enemy")
-			Debug.Log ("hit enemy");
-	}
+
 }

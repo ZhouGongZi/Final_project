@@ -9,7 +9,7 @@ public class MeleeEnemy : Enemy {
 	// Use this for initialization
 	public override void Start () {
 		base.Start ();
-		this.Health = 20;
+		this.Health = 100;
 	}
 	
 	// Update is called once per frame
