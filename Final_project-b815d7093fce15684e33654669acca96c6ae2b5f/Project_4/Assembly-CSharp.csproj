@@ -185,13 +185,11 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\MeleeEnemy.cs" />
+     <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\Player_modern.cs" />
-<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Player_shadow.cs" />
-=======
      <Compile Include="Assets\Scripts\RangeAttack.cs" />
->>>>>>> bc9de8ed4c83b76c5cd4cd26fdf5c02338ef6299
      <Compile Include="Assets\Scripts\Stick_attack.cs" />
      <Compile Include="Assets\Scripts\fireBall.cs" />
      <Compile Include="Assets\Scripts\stealthAttack.cs" />

@@ -35,7 +35,7 @@ public class Player_shadow : MonoBehaviour {
 		if (isShadowFree) {
 			
 		} else {
-			if (Input.GetKeyDown (KeyCode.A) && Time.time > nextMelee && !Anim.IsPlaying("death")) {
+			if (Input.GetKeyDown (KeyCode.K) && Time.time > nextMelee && !Anim.IsPlaying("death")) {
 				Melee_Attack();
 				nextMelee = Time.time + meleeRate;
 			}
