@@ -7,7 +7,7 @@ public class RangeAttack : MonoBehaviour {
 	public AnimationClip	 cast;
 	public float 			speed;
 	public Vector3 			offset1,offset2,offset3;
-
+    public GameObject spawnPoint;
 
 
 	GameObject shadow;
@@ -45,13 +45,14 @@ public class RangeAttack : MonoBehaviour {
 		if (Anim [cast.name].time >0.1f && casted ==false) {
 			go = Instantiate (fireBall) as GameObject;
 
-			go.GetComponent<TweenPosition> ().from = this.transform.position+offset1;
-			go.GetComponent<TweenPosition> ().to = this.transform.position + offset2;
+            go.GetComponent<TweenPosition>().from = this.transform.position+offset1;
+            go.GetComponent<TweenPosition>().to = this.transform.position + offset2;
 			casted = true;
 		}
 		if (Anim [cast.name].time > Anim [cast.name].length * impactTime && !speedset) {
 
 			if (this.gameObject.tag == "Shadow") {
+<<<<<<< HEAD
 				Vector3 direction= calfocus ();
 				if (direction == Vector3.zero) {
 					go.GetComponent<Rigidbody> ().velocity = this.transform.forward*speed;
@@ -61,10 +62,19 @@ public class RangeAttack : MonoBehaviour {
 					go.GetComponent<Rigidbody> ().velocity = vel;
 					go.transform.LookAt (direction);
 				}
+=======
+				Vector3 direction= calfocus ();	
+				Vector3 vel =Vector3.Normalize(direction-(spawnPoint.transform.position+offset2)) * speed;
+				vel.y = 0f;
+				go.GetComponent<Rigidbody> ().velocity = vel;
+				go.transform.LookAt (direction);
+>>>>>>> 06d7562a6b09c04c03dd0c7f3cfd799467102180
 
 			} else if (this.gameObject.tag == "Player") {
 				go.GetComponent<Rigidbody> ().velocity = transform.forward * speed;
-			}
+                Vector3 direction = calfocus();
+                go.transform.LookAt(direction);
+            }
 				
 
 			speedset = true;
@@ -84,7 +94,7 @@ public class RangeAttack : MonoBehaviour {
 	Vector3 calfocus(){
 		RaycastHit hit;
 		GameObject player = GameObject.FindGameObjectWithTag ("Player");
-
+        //Debug.DrawRay(player.transform.position + offset3, player.transform.forward, Color.blue);
 		if (Physics.Raycast (player.transform.position+offset3, player.transform.forward, out hit, 1000f)) {
 			//this.transform.LookAt (hit.transform.position);
 			Debug.DrawRay (player.transform.localPosition + offset3, player.transform.forward,Color.blue);
