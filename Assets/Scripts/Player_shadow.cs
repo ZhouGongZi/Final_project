@@ -79,7 +79,7 @@ public class Player_shadow : MonoBehaviour {
 					transform.LookAt (other.transform);
 					viewLocked = true;
 					if (Anim [Melee_Clip.name].time > Anim [Melee_Clip.name].length * impact_time) {
-						other.GetComponent<Enemy> ().GetHit (10);
+						other.GetComponent<Enemy> ().GetHit (8);
 						isAttacking = false;
 					}
 

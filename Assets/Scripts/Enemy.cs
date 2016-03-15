@@ -59,7 +59,8 @@ public class Enemy : MonoBehaviour {
 		set;
 	}
 	[SerializeField]
-	GameObject player;
+	protected GameObject player;
+	protected GameObject shadow;
 	CharacterController controller;
 	protected Animation Anim;
 
@@ -72,14 +73,19 @@ public class Enemy : MonoBehaviour {
 
 
 	public virtual void Update(){
-		
+		if(shadow==null)
+		shadow = GameObject.FindGameObjectWithTag ("Shadow");
 		if (Health <= 0 || Anim.IsPlaying(getHit.name))
 			return;
 		if (!Alert () && !InAttackRange ()) {
 			idle ();
 		} else if (!InAttackRange ()) {
 			chase ();
+<<<<<<< HEAD
 		} else if (PlayerStatus.Instance.Health > 0&&!Anim.IsPlaying(death.name)) {
+=======
+		} else if ((PlayerHealth.Instance.Health>0 || ShadowHealth.Instance.Health > 0)&&!Anim.IsPlaying(death.name)) {
+>>>>>>> 3f2ab99d6f0c0ebf886dc4efea4e2de85acddeec
 			attack ();
 			inform();
 		}
@@ -92,30 +98,43 @@ public class Enemy : MonoBehaviour {
 
 	//check if it should run to the player
 	bool Alert(){
-		return  (Vector3.Distance(this.transform.position,player.transform.position)<alertRange);
-
+		if(shadow==null ||ShadowHealth.Instance.stealth==true||Vector3.Distance(this.transform.position,player.transform.position)<Vector3.Distance(this.transform.position,shadow.transform.position))
+			return  (Vector3.Distance(this.transform.position,player.transform.position)<alertRange && Vector3.Dot(player.transform.position-this.transform.position,this.transform.forward)>-0.3);
+		else 
+			return  (Vector3.Distance(this.transform.position,shadow.transform.position)<alertRange && Vector3.Dot(shadow.transform.position-this.transform.position,this.transform.forward)>-0.3);
 	}
 
 	//check if it is able to attack
 	bool InAttackRange(){
+		if(shadow==null ||ShadowHealth.Instance.stealth==true||Vector3.Distance(this.transform.position,player.transform.position)<Vector3.Distance(this.transform.position,shadow.transform.position))
 		return (Vector3.Distance(this.transform.position,player.transform.position)<attackRange);
+		else return (Vector3.Distance(this.transform.position,shadow.transform.position)<attackRange);
 
 	}
 
 	//idle
 	public virtual void idle(){
-
+		
 		Anim.Play (idling.name);
 	}
 	//chase the player
 	public virtual void chase(){
-		this.transform.LookAt (player.transform.position);
-		controller.SimpleMove (this.transform.forward*speed);
-		Anim.Play (running.name);
+		if (shadow == null || ShadowHealth.Instance.stealth == true || Vector3.Distance (this.transform.position, player.transform.position) < Vector3.Distance (this.transform.position, shadow.transform.position)) {
+			this.transform.LookAt (player.transform.position);
+			controller.SimpleMove (this.transform.forward * speed);
+			Anim.Play (running.name);
+		} else {
+			this.transform.LookAt (shadow.transform.position);
+			controller.SimpleMove (this.transform.forward * speed);
+			Anim.Play (running.name);
+		}
 	}
 
 	public virtual void attack (){
-		this.transform.LookAt (player.transform);
+		if (shadow == null || ShadowHealth.Instance.stealth == true || Vector3.Distance (this.transform.position, player.transform.position) < Vector3.Distance (this.transform.position, shadow.transform.position))
+			this.transform.LookAt (player.transform);
+		else
+			this.transform.LookAt (shadow.transform);
 		Anim.Play (attacking.name);
 	}
 	public virtual void die(){
@@ -141,7 +160,7 @@ public class Enemy : MonoBehaviour {
 		GameObject[] enes = GameObject.FindGameObjectsWithTag ("Enemy");
 		foreach (GameObject en in enes) {
 			if (Vector3.Distance (en.transform.position, transform.position) < informRange) {
-				print ("informed");
+				
 
 				en.GetComponent<Enemy> ().alertRange =en.GetComponent<Enemy>().maxalertRange;
 			}
