@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
 
     private bool isAttacking;
     private float nextMelee = 0.0f;
-    private float impactTime;
+    private float impactTime = 0.8f;
 
     bool jump;
 
