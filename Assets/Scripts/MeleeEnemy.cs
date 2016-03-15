@@ -33,7 +33,6 @@ public class MeleeEnemy : Enemy {
 	{	base.attack ();
 		if( !attacked && Anim[attacking.name].time>this.GetComponent<Animation>()[attacking.name].length*impactTime&&Anim[attacking.name].time<Anim[attacking.name].length*0.9){
 			//do something attack
-
 			if (shadow == null || ShadowHealth.Instance.stealth == true || Vector3.Distance (this.transform.position, player.transform.position) < Vector3.Distance (this.transform.position, shadow.transform.position))
                 PlayerStatus.Instance.OnHit (attackDamage);
 			else
