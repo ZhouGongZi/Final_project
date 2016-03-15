@@ -81,11 +81,8 @@ public class Enemy : MonoBehaviour {
 			idle ();
 		} else if (!InAttackRange ()) {
 			chase ();
-<<<<<<< HEAD
-		} else if (PlayerStatus.Instance.Health > 0&&!Anim.IsPlaying(death.name)) {
-=======
-		} else if ((PlayerHealth.Instance.Health>0 || ShadowHealth.Instance.Health > 0)&&!Anim.IsPlaying(death.name)) {
->>>>>>> 3f2ab99d6f0c0ebf886dc4efea4e2de85acddeec
+
+		} else if ((PlayerStatus.Instance.Health>0 || ShadowHealth.Instance.Health > 0)&&!Anim.IsPlaying(death.name)) {
 			attack ();
 			inform();
 		}
