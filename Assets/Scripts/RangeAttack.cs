@@ -6,7 +6,7 @@ public class RangeAttack : MonoBehaviour {
 
 	public AnimationClip	 cast;
 	public float 			speed;
-	public Vector3 			offset1,offset2;
+	public Vector3 			offset1,offset2,offset3;
 
 
 
@@ -28,7 +28,7 @@ public class RangeAttack : MonoBehaviour {
 		shadow = GameObject.FindGameObjectWithTag ("Shadow");
 
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Q)&&Time.time>nextCast) {
@@ -49,10 +49,23 @@ public class RangeAttack : MonoBehaviour {
 			casted = true;
 		}
 		if (Anim [cast.name].time > Anim [cast.name].length * impactTime && !speedset) {
-			go.GetComponent<Rigidbody> ().velocity = transform.forward * speed;
+
+			if (this.gameObject.tag == "Shadow") {
+				Vector3 direction= calfocus ();	
+				Vector3 vel =Vector3.Normalize(direction-(this.transform.position+offset2)) * speed;
+				vel.y = 0f;
+				go.GetComponent<Rigidbody> ().velocity = vel;
+				go.transform.LookAt (direction);
+
+			} else if (this.gameObject.tag == "Player") {
+				go.GetComponent<Rigidbody> ().velocity = transform.forward * speed;
+			}
+				
+
 			speedset = true;
 
 		}
+
 	}
 	public void movement(){
 		go.GetComponent<Rigidbody> ().velocity = transform.forward * speed;
@@ -63,8 +76,21 @@ public class RangeAttack : MonoBehaviour {
 			Destroy (go);
 	}
 
-	void calfocus(){
-		Vector3 middle = (shadow.transform.position + this.transform.position) / 2;
+	Vector3 calfocus(){
+		RaycastHit hit;
+		GameObject player = GameObject.FindGameObjectWithTag ("Player");
+
+		if (Physics.Raycast (player.transform.position+offset3, player.transform.forward, out hit, 1000f)) {
+			this.transform.LookAt (hit.transform.position);
+			Debug.DrawRay (player.transform.localPosition + offset3, player.transform.forward,Color.blue);
+			Debug.Log (player.transform.forward);
+			Debug.Log (hit.transform.position);
+			return hit.transform.position;
+
+
+		} else
+			return this.transform.forward;
+	
 
 	}
 }
