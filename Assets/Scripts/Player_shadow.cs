@@ -16,7 +16,8 @@ public class Player_shadow : MonoBehaviour {
 	private float 					meleeRate;
 
 	private bool 					isAttacking = false;
-
+    public bool                     hasEnemyInRange = false;
+    private bool                    isWell = false;
 	// Use this for initialization
 	void Start () {
 		Anim = GetComponent<Animation> ();
@@ -25,13 +26,18 @@ public class Player_shadow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		/*if (Anim [Melee_Clip.name].time > Anim [Melee_Clip.name].length * setRotateTime) {
+        /*if (Anim [Melee_Clip.name].time > Anim [Melee_Clip.name].length * setRotateTime) {
 			this.transform.localEulerAngles = new Vector3 (0, 180, 0);
 		}*/
-		Vector3 temp = this.transform.localEulerAngles;
-		temp.x = 0;
-		temp.z = 0;
-		this.transform.localEulerAngles = temp;
+        if (Anim[Melee_Clip.name].time > Anim[Melee_Clip.name].length * 0.8f && !isWell)
+        {
+            Vector3 temp = this.transform.localEulerAngles;
+            temp.x = 0;
+            temp.z = 0;
+            this.transform.localEulerAngles = temp;
+            isWell = true;
+        }
+		
 		if (isShadowFree) {
 			
 		} else {
@@ -50,7 +56,7 @@ public class Player_shadow : MonoBehaviour {
 	}
 
 
-	void onChangeShadowFollow(){
+	public void onChangeShadowFollow(){
 		//when change the state of follow, reset these variable
 		isShadowFree = false; 
 		hasAttacked = false;
@@ -60,6 +66,8 @@ public class Player_shadow : MonoBehaviour {
 
 	void OnTriggerStay(Collider other){
 		if (other.tag == "Enemy" && other.GetComponent<Enemy>().Health > 0) {
+            hasEnemyInRange = true;
+            isWell = false;
 			if (isShadowFree) {
 				if (Anim [Melee_Clip.name].time > Anim [Melee_Clip.name].length * impact_time && !hasAttacked) {
 					other.GetComponent<Enemy> ().GetHit (8);
@@ -87,5 +95,14 @@ public class Player_shadow : MonoBehaviour {
 			}
 		}
 	}
+
+    void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Enemy")
+        {
+            hasEnemyInRange = false;
+            GetComponent<Transform>().rotation = Player.instance.GetComponent<Transform>().rotation;
+        }
+    }
 
 }
