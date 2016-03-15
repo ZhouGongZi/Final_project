@@ -1,5 +1,7 @@
 Base path: D:/study/unity/Editor/Data
 Cmd: getPlatforms
+<<<<<<< HEAD
+=======
 Cmd: preprocess
   insize=238 outsize=238 ok=1
 Cmd: preprocess
@@ -312,3 +314,4 @@ Cmd: compileSnippet
 Cmd: compileSnippet
   api=4 type=1 insize=3695 outsize=1197 kw=SPOT pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_TEXTURE_ALPHASPLIT_ALLOWED ok=1
 >>>>>>> c2a3288b741b82c1777456376f9bf66c4948834d
+>>>>>>> 3f2ab99d6f0c0ebf886dc4efea4e2de85acddeec

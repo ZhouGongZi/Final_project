@@ -73,7 +73,6 @@
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\Spin.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\SpinWithMouse.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\Tutorial5.cs" />
-     <Compile Include="Assets\NGUI\Examples\Scripts\Other\UISliderColors.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\WindowAutoYaw.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\WindowDragTilt.cs" />
      <Compile Include="Assets\NGUI\Scripts\Interaction\EnvelopContent.cs" />
