@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
 
     private bool isAttacking;
     private float nextMelee = 0.0f;
-    private float impactTime;
+    private float impactTime = 0.8f;
 
     bool jump;
 
@@ -190,10 +190,10 @@ public class Player : MonoBehaviour
             }
 
 
-            if (GetComponent<CharacterController>().isGrounded)
+            /*if (GetComponent<CharacterController>().isGrounded)
             {
                 moveDirection.y = 0;
-            }
+            }*/
 
             controller.Move(moveDirection * Time.deltaTime * 1);
             if (shadow_on)

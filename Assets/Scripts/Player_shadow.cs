@@ -94,6 +94,10 @@ public class Player_shadow : MonoBehaviour {
 				}
 			}
 		}
+		if (other == null) {
+			hasEnemyInRange = false;
+			GetComponent<Transform> ().rotation = Player.instance.GetComponent<Transform> ().rotation;
+		}
 	}
 
     void OnTriggerExit(Collider other)

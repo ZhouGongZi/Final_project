@@ -31,7 +31,7 @@ public class ShadowHealth : MonoBehaviour {
 
 	void Update(){
 		if (Anim [death.name].time > Anim [death.name].length * 0.95)
-			Destroy (this.gameObject);
+			this.gameObject.SetActive (false);
 
 	}
 	public void OnHit(int damage){
