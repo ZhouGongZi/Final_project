@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerHealth : MonoBehaviour {
-	public static PlayerHealth Instance;
+public class PlayerStatus : MonoBehaviour {
+	public static PlayerStatus Instance;
 
 	int _health=10000;
 	public AnimationClip death,getHit;

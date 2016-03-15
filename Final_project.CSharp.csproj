@@ -212,7 +212,7 @@
     <Compile Include="Assets\Scripts\MeleeEnemy.cs" />
     <Compile Include="Assets\Scripts\Multi_trigger.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\PlayerStatus.cs" />
     <Compile Include="Assets\Scripts\Player_modern.cs" />
     <Compile Include="Assets\Scripts\Player_shadow.cs" />
     <Compile Include="Assets\Scripts\RangeAttack.cs" />

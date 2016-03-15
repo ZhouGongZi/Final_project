@@ -33,7 +33,7 @@ public class MeleeEnemy : Enemy {
 	{	base.attack ();
 		if( !attacked && Anim[attacking.name].time>this.GetComponent<Animation>()[attacking.name].length*impactTime&&Anim[attacking.name].time<Anim[attacking.name].length*0.9){
 			//do something attack
-			PlayerHealth.Instance.OnHit(attackDamage);
+			PlayerStatus.Instance.OnHit(attackDamage);
 
 			Debug.Log("attack");
 			attacked=true;

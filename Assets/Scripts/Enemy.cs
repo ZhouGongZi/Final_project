@@ -79,7 +79,7 @@ public class Enemy : MonoBehaviour {
 			idle ();
 		} else if (!InAttackRange ()) {
 			chase ();
-		} else if (PlayerHealth.Instance.Health > 0&&!Anim.IsPlaying(death.name)) {
+		} else if (PlayerStatus.Instance.Health > 0&&!Anim.IsPlaying(death.name)) {
 			attack ();
 			inform();
 		}
