@@ -191,11 +191,11 @@
      <Compile Include="Assets\Scripts\Player_modern.cs" />
      <Compile Include="Assets\Scripts\Player_shadow.cs" />
      <Compile Include="Assets\Scripts\RangeAttack.cs" />
+     <Compile Include="Assets\Scripts\ShadowHealth.cs" />
      <Compile Include="Assets\Scripts\Stick_attack.cs" />
      <Compile Include="Assets\Scripts\fireBall.cs" />
      <Compile Include="Assets\Scripts\scene_trigger.cs" />
      <Compile Include="Assets\Scripts\stealthAttack.cs" />
-     <Compile Include="Assets\ShadowHealth.cs" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\ReadMe - 3.9.7.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Masked 1.shader" />

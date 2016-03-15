@@ -52,11 +52,15 @@ public class RangeAttack : MonoBehaviour {
 		if (Anim [cast.name].time > Anim [cast.name].length * impactTime && !speedset) {
 
 			if (this.gameObject.tag == "Shadow") {
-				Vector3 direction= calfocus ();	
-				Vector3 vel =Vector3.Normalize(direction-(this.transform.position+offset2)) * speed;
-				vel.y = 0f;
-				go.GetComponent<Rigidbody> ().velocity = vel;
-				go.transform.LookAt (direction);
+				Vector3 direction= calfocus ();
+				if (direction == Vector3.zero) {
+					go.GetComponent<Rigidbody> ().velocity = this.transform.forward*speed;
+				} else {
+					Vector3 vel = Vector3.Normalize (direction - (this.transform.position + offset2)) * speed;
+					vel.y = 0f;
+					go.GetComponent<Rigidbody> ().velocity = vel;
+					go.transform.LookAt (direction);
+				}
 
 			} else if (this.gameObject.tag == "Player") {
 				go.GetComponent<Rigidbody> ().velocity = transform.forward * speed;
@@ -82,7 +86,7 @@ public class RangeAttack : MonoBehaviour {
 		GameObject player = GameObject.FindGameObjectWithTag ("Player");
 
 		if (Physics.Raycast (player.transform.position+offset3, player.transform.forward, out hit, 1000f)) {
-			this.transform.LookAt (hit.transform.position);
+			//this.transform.LookAt (hit.transform.position);
 			Debug.DrawRay (player.transform.localPosition + offset3, player.transform.forward,Color.blue);
 			Debug.Log (player.transform.forward);
 			Debug.Log (hit.transform.position);
@@ -90,7 +94,7 @@ public class RangeAttack : MonoBehaviour {
 
 
 		} else
-			return this.transform.forward;
+			return Vector3.zero;
 	
 
 	}

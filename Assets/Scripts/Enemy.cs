@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour {
 			if (_health <= 0) {
 				_health = 0;
 				die ();
-				inform ();
+				//inform ();
 			}
 		}
 	}
@@ -136,7 +136,7 @@ public class Enemy : MonoBehaviour {
 		Anim.Play (attacking.name);
 	}
 	public virtual void die(){
-		Anim.Stop ();
+		//Anim.Stop ();
 		Anim.Play (death.name);
 		StartCoroutine (disappear ());
 	}
@@ -144,7 +144,7 @@ public class Enemy : MonoBehaviour {
 		Anim.Play (dancing.name);
 	}
 	public virtual void GetHit(int damage){
-		
+		alertRange = maxalertRange;
 		Health -= damage;
 		if (Health <= 0)
 			return;
