@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Final_project.CSharp.Plugins", "Final_project.CSharp.Plugins.csproj", "{74397E62-18BB-9DCD-3835-CB811C0E2C2D}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Final_project.CSharp", "Final_project.CSharp.csproj", "{171ADDBA-61D1-5BDE-2792-8E386124938A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Final_project.CSharp.Editor", "Final_project.CSharp.Editor.csproj", "{963F428A-D5B7-7FC7-A364-484DD174EDCE}"
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74397E62-18BB-9DCD-3835-CB811C0E2C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74397E62-18BB-9DCD-3835-CB811C0E2C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74397E62-18BB-9DCD-3835-CB811C0E2C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74397E62-18BB-9DCD-3835-CB811C0E2C2D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{171ADDBA-61D1-5BDE-2792-8E386124938A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{171ADDBA-61D1-5BDE-2792-8E386124938A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{171ADDBA-61D1-5BDE-2792-8E386124938A}.Release|Any CPU.ActiveCfg = Release|Any CPU
