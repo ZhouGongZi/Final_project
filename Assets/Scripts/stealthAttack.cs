@@ -21,8 +21,11 @@ public class stealthAttack : MonoBehaviour {
 		if (checkAttack ()) {
 			if (Input.GetKeyDown (KeyCode.E))
 				attack ();
-			if(this.GetComponent<Animation>()[BackStab.name].time>=this.GetComponent<Animation>()[BackStab.name].length*impactTime)
+			if (this.GetComponent<Animation> () [BackStab.name].time >= this.GetComponent<Animation> () [BackStab.name].length * impactTime) {
 				opponent.GetComponent<Enemy> ().GetHit (100);
+				ShadowHealth.Instance.stealth = false;	
+			}
+			
 		}
 
 
