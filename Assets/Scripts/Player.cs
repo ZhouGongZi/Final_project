@@ -4,6 +4,7 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance;
 
     public float forwardMovementSpeed = 90.0f;
     public float backwardMovementSpeed = 90.0f;
@@ -20,7 +21,7 @@ public class Player : MonoBehaviour
     public bool shadow_on = false;
     public List<GameObject> player_shadow_list;
     public GameObject shadow_indicator;
-    public GameObject acient;
+    public GameObject ancient;
 
     private Vector3 moveDirection = Vector3.zero;
 
@@ -40,7 +41,9 @@ public class Player : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        instance = this;
         game_started = true;
+
     }
 
     // Update is called once per frame
@@ -48,18 +51,18 @@ public class Player : MonoBehaviour
     {
 
         CharacterController controller = GetComponent<CharacterController>();
-        CharacterController acient_controller = acient.GetComponent<CharacterController>();
+        CharacterController ancient_controller = ancient.GetComponent<CharacterController>();
 
         if (game_started)
         {
             //horizontal_input = Input.GetAxis("LeftJoystickX_P" + joystickString);
-            //vertical_input = Input.GetAxis("LeftJoystickY_P" + joystickString);
+            //vertical_input = Input.GetAxis("LeftJoystickY_P" + joystickString); 
             float horizontal_input = Input.GetAxis("Horizontal");
             float vertical_input = Input.GetAxis("Vertical");
 
             moveDirection = horizontal_input * transform.right + vertical_input * transform.forward;
 
-
+            #region press X
             if (Input.GetKey(KeyCode.X))
             {
                 if (shadow_initial_cd < shadow_initial_cd_max / 2.0f)
@@ -83,7 +86,9 @@ public class Player : MonoBehaviour
                     }
                 }
             }
+            #endregion
 
+            #region press Z
             else if (Input.GetKeyDown(KeyCode.Z))
             {
                 if (!shadow_indicator.activeInHierarchy)
@@ -93,28 +98,49 @@ public class Player : MonoBehaviour
                 else
                 {
                     shadow_on = true;
-                    acient.SetActive(true);
+                    ancient.SetActive(true);
                     GetComponent<Animation>().Play("attack 3");
                     Vector3 thePosition = shadow_indicator.transform.TransformPoint(Vector3.forward * 0.6f);
-                    acient.transform.position = thePosition;
+                    ancient.transform.position = thePosition;
                     Quaternion rot = new Quaternion();
                     rot.SetLookRotation(transform.forward);
-                    acient.transform.rotation = rot;
+                    ancient.transform.rotation = rot;
                     shadow_indicator.SetActive(false);
                 }
             }
+            #endregion
 
-
+            #region press space
             else if (Input.GetKeyDown(KeyCode.Space))
             {
                 GetComponent<Animation>().Play("jump");
+                ancient.GetComponent<Animation>().Play("jump");
             }
+            #endregion
 
+            #region press K
             else if (Input.GetKeyDown(KeyCode.K))
             {
                 Melee_Attack();
                 //nextMelee = Time.time + meleeRate;
             }
+            #endregion
+
+            #region press L
+            else if (Input.GetKeyDown(KeyCode.L))
+            {
+                if (shadow_on)
+                {
+                    Vector3 temp_vec = Vector3.zero;
+                    temp_vec = GetComponent<Transform>().position;
+                    GetComponent<Transform>().position = ancient.GetComponent<Transform>().position;
+                    ancient.GetComponent<Transform>().position = temp_vec;
+                    ancient.GetComponent<Player_shadow>().onChangeShadowFollow();
+                }
+                
+                //nextMelee = Time.time + meleeRate;
+            }
+            #endregion
 
 
 
@@ -133,19 +159,20 @@ public class Player : MonoBehaviour
                 transform.Rotate(0, horizontal_input * 150 * Time.deltaTime, 0);
 
 
-                if (GetComponent<Animation>().IsPlaying("ready"))
+                if (GetComponent<Animation>().IsPlaying("ready 2"))
                 {
                     GetComponent<Animation>().Stop();
                 }
                 GetComponent<Animation>().PlayQueued("walk");
                 if (shadow_on)
-                    if (acient.GetComponent<Animation>().IsPlaying("ready"))
+                    if (ancient.GetComponent<Animation>().IsPlaying("ready 2"))
                     {
-                        acient.GetComponent<Animation>().Stop();
+                        ancient.GetComponent<Animation>().Stop();
                     }
-                acient.GetComponent<Animation>().PlayQueued("walk");
-                acient.transform.Rotate(0, horizontal_input * 150 * Time.deltaTime, 0);
-                //acient.transform.rotation = rot;
+                ancient.GetComponent<Animation>().PlayQueued("walk");
+                if(!ancient.GetComponent<Player_shadow>().hasEnemyInRange)
+                    ancient.transform.Rotate(0, horizontal_input * 150 * Time.deltaTime, 0);
+                //ancient.transform.rotation = rot;
             }
             else
             {
@@ -153,23 +180,27 @@ public class Player : MonoBehaviour
                 {
                     GetComponent<Animation>().Stop();
                 }
-                GetComponent<Animation>().PlayQueued("ready");
+                GetComponent<Animation>().PlayQueued("ready 2");
                 if (shadow_on)
-                    if (acient.GetComponent<Animation>().IsPlaying("walk"))
+                    if (ancient.GetComponent<Animation>().IsPlaying("walk"))
                     {
-                        acient.GetComponent<Animation>().Stop();
+                        ancient.GetComponent<Animation>().Stop();
                     }
-                acient.GetComponent<Animation>().PlayQueued("ready");
+                ancient.GetComponent<Animation>().PlayQueued("ready 2");
             }
 
 
-
+            /*if (GetComponent<CharacterController>().isGrounded)
+            {
+                moveDirection.y = 0;
+            }*/
 
             controller.Move(moveDirection * Time.deltaTime * 1);
             if (shadow_on)
-                acient_controller.Move(moveDirection * Time.deltaTime * 1);
+                ancient_controller.Move(moveDirection * Time.deltaTime * 1);
             if (GetComponent<Animation>()["attack 5"].time > GetComponent<Animation>()["attack 5"].length * 0.90)
                 isAttacking = false;
+            
         }
     }
     void Melee_Attack()
