@@ -24,7 +24,9 @@ public class Player : MonoBehaviour
 
     private Vector3 moveDirection = Vector3.zero;
 
+    private bool isAttacking;
     private float nextMelee = 0.0f;
+    private float impactTime;
 
     bool jump;
 
@@ -39,8 +41,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         game_started = true;
-
-
     }
 
     // Update is called once per frame
@@ -57,32 +57,7 @@ public class Player : MonoBehaviour
             float horizontal_input = Input.GetAxis("Horizontal");
             float vertical_input = Input.GetAxis("Vertical");
 
-            //if (vertical_input > 0)
-            //{
-            //    moveDirection.z = vertical_input;
-            //    //print(moveDirection.ToString());
-            //}
-            //else
-            //{
-            //    moveDirection.z = vertical_input;
-            //    //print(moveDirection.ToString());
-            //}
-
-            //if (horizontal_input > 0)
-            //{
-            //    moveDirection.x = horizontal_input;
-            //    //print(moveDirection.ToString());
-            //}
-            //else
-            //{
-            //    moveDirection.x = horizontal_input;
-            //    //print(moveDirection.ToString());
-            //}
-
             moveDirection = horizontal_input * transform.right + vertical_input * transform.forward;
-
-
-
 
 
             if (Input.GetKey(KeyCode.X))
@@ -98,8 +73,6 @@ public class Player : MonoBehaviour
                 else
                 {
                     float z_scale = longest_shadow_distance - ((2.0f * shadow_initial_cd - shadow_initial_cd_max) / shadow_initial_cd_max) * (longest_shadow_distance - shortest_shadow_distance);
-                    print(shadow_initial_cd);
-                    print(z_scale);
                     float z_pos = z_scale / 2.0f;
                     shadow_indicator.GetComponent<Transform>().localScale = new Vector3(0.1f, 0.1f, z_scale);
                     shadow_indicator.GetComponent<Transform>().localPosition = new Vector3(0f, 0f, z_pos);
@@ -171,6 +144,7 @@ public class Player : MonoBehaviour
                         acient.GetComponent<Animation>().Stop();
                     }
                 acient.GetComponent<Animation>().PlayQueued("walk");
+                acient.transform.Rotate(0, horizontal_input * 150 * Time.deltaTime, 0);
                 //acient.transform.rotation = rot;
             }
             else
@@ -191,14 +165,37 @@ public class Player : MonoBehaviour
 
 
 
-            controller.Move(moveDirection * Time.deltaTime * 10);
+            controller.Move(moveDirection * Time.deltaTime * 1);
             if (shadow_on)
-                acient_controller.Move(moveDirection * Time.deltaTime * 10);
+                acient_controller.Move(moveDirection * Time.deltaTime * 1);
+            if (GetComponent<Animation>()["attack 5"].time > GetComponent<Animation>()["attack 5"].length * 0.90)
+                isAttacking = false;
         }
     }
     void Melee_Attack()
     {
         GetComponent<Animation>().Play("attack 5");
+        isAttacking = true;
         
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        print("enterrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
+        if (other.tag == "Enemy")
+        {
+            if (isAttacking == true)
+            {
+                print("success!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                if (GetComponent<Animation>()["attack 5"].time > GetComponent<Animation>()["attack 5"].length * impactTime)
+                {
+                    other.GetComponent<Enemy>().GetHit(100);
+                    isAttacking = false;
+                    Debug.Log(other.GetComponent<Enemy>().Health);
+                    
+                }
+
+            }
+        }
     }
 }
