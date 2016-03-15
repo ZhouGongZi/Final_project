@@ -25,9 +25,10 @@ public class RangeAttack : MonoBehaviour {
 	void Awake () {
 		fireBall = Resources.Load ("fireBall") as GameObject;
 		Anim = this.GetComponent<Animation> ();
-		shadow = GameObject.FindGameObjectWithTag ("Shadow");
+		//shadow = GameObject.FindGameObjectWithTag ("Shadow");
 
 	}
+   
 
 	// Update is called once per frame
 	void Update () {
