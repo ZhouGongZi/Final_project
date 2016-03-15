@@ -8,6 +8,8 @@ public class PlayerHealth : MonoBehaviour {
 	public AnimationClip death,getHit;
 	Animation Anim;
 
+
+
 	public int Health {
 		get { return _health;}
 		set {_health = value;
@@ -17,6 +19,7 @@ public class PlayerHealth : MonoBehaviour {
 			}
 		}
 	}
+
 	// Use this for initialization
 	void Awake(){
 		Instance = this;
