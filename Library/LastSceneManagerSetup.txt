@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scenes/_Scene_Yizhou.unity
+=======
+- path: Assets/_Scenes/Test.unity
+>>>>>>> b748cb8669c1795df0d0da3f975b9dff92c531c8
   isLoaded: 1
   isActive: 1

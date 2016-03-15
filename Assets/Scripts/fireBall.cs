@@ -15,7 +15,7 @@ public class fireBall : MonoBehaviour {
 		
 	void OnTriggerEnter(Collider col){
 		if (col.gameObject.tag == "Enemy"&&!damaged) {
-			col.gameObject.GetComponent<Enemy> ().GetHit (50);
+			col.gameObject.GetComponent<Enemy> ().GetHit (10);
 			damaged = true;
 			Destroy (this.gameObject);
 		}

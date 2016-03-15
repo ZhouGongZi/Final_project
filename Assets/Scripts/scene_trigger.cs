@@ -14,7 +14,7 @@ public class scene_trigger : MonoBehaviour {
 	}
     void OnCollisionEnter (Collision coll)
     {
-        if (coll.transform.tag == "Player")
+        if (coll.transform.tag == "Player" || coll.transform.tag =="Shadow")
         {
             triggered = true;
         }

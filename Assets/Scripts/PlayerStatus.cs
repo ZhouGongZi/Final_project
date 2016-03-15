@@ -29,7 +29,7 @@ public class PlayerStatus : MonoBehaviour {
 		Health -= damage;
 		this.GetComponent<RangeAttack> ().cancel();
 
-		if(!Anim.IsPlaying(death.name)&&!Anim.IsPlaying("attack 1"))
+		if(!Anim.IsPlaying(death.name)&&!Anim.IsPlaying("attack 5"))
 			Anim.Play(getHit.name);
 		
 

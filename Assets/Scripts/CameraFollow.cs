@@ -5,7 +5,7 @@ public class CameraFollow : MonoBehaviour {
 
     // Use this for initialization
     public GameObject player_pos;
-    private float cam_speed = 0.5f;
+    private float cam_speed = 1f;
 
 	void Start () {
 	

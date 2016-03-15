@@ -68,3 +68,5 @@
 /Users/minttear/Documents/Final_project/Temp/bin/Debug/UnityEditor.iOS.Extensions.Common.dll.mdb
 /Users/minttear/Documents/Final_project/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.dll
 /Users/minttear/Documents/Final_project/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.dll.mdb
+/Users/minttear/Documents/Final_project/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/minttear/Documents/Final_project/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb

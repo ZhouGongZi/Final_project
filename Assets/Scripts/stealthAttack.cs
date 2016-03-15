@@ -4,7 +4,7 @@ using System.Collections;
 public class stealthAttack : MonoBehaviour {
 	public AnimationClip BackStab;
 
-	float impactTime=0.33f;
+	float impactTime=0.40f;
 	Vector3 startPosition;
 	GameObject opponent;
 
