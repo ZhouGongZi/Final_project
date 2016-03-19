@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Plain_attack : Skill {
 	
-	public AnimationClip 		MeleeClip;
+	public AnimationClip 		Melee_Clip;
 
 	float 						fireRate = 0.3f;
 	float 						nextfire = 0.0f;
@@ -17,7 +17,8 @@ public class Plain_attack : Skill {
 	}
 	// Update is called once per frame
 	public override void Update () {
-		
+		if (Anim [Melee_Clip.name].time > Anim [Melee_Clip.name].length * 0.90)
+			isAttacking = false;
 	}
 
 	public override void useSkill(){
@@ -28,7 +29,23 @@ public class Plain_attack : Skill {
 	}
 
 	public void attack(){
-		
+		Anim.Play (Melee_Clip.name);
+		isAttacking = true;
+	}
+
+
+	void OnTriggerStay(Collider other){
+
+		if (other.tag == "Enemy") {
+			if (isAttacking == true) {
+				print("success!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+				if (Anim [Melee_Clip.name].time > Anim [Melee_Clip.name].length * impactTime) {
+					other.GetComponent<Enemy> ().GetHit (100);
+					isAttacking = false;
+				}
+
+			}
+		}
 	}
 
 }
