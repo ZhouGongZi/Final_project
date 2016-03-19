@@ -73,13 +73,24 @@ public class RangeAttack : Skill {
 				go.GetComponent<fireBall> ().Movement = true;
 				speedset = true;
 				casted = true;
+<<<<<<< HEAD
+
+			} 
+
+	
+=======
 
 			}  
 
+>>>>>>> bcab8262b8ce5445300287878a5e713f306d9d1d
 
 
+<<<<<<< HEAD
+
+=======
 		}
 	}
+>>>>>>> bcab8262b8ce5445300287878a5e713f306d9d1d
 
 
 

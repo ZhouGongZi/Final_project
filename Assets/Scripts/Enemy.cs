@@ -152,6 +152,7 @@ public class Enemy : MonoBehaviour {
 	public virtual void die(){
 		//Anim.Stop ();
 		Anim.Play (death.name);
+		ChooseEnemy.Instance.enemy.Remove (this.gameObject);
 		StartCoroutine (disappear ());
 	}
 	public virtual void dance(){
