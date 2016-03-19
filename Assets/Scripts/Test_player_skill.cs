@@ -7,6 +7,7 @@ public class Test_player_skill : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		test = GetComponent<Plain_attack> ();
 	}
 	
 	// Update is called once per frame
