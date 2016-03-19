@@ -1,23 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RangeAttack : MonoBehaviour {
+public class RangeAttack : Skill {
 
 
 	public AnimationClip	 cast;
 	public float 			speed;
-	public Vector3 			offset1,offset2,offset3;
-    public GameObject spawnPoint;
+
+	Vector3 			offset1=new Vector3 (0.2f,0.9f,0.4f);
+	Vector3 			offset2=new Vector3 (0.2f,1.2f,0.4f);
 
 
 	GameObject shadow;
 	GameObject fireBall;
 	GameObject go;
-	Animation Anim;
+	GameObject tar=null;
+
 
 	float impactTime=0.65f;
 	float nextCast=0.0f;
 	float intervalCast = 2.01f;
+	bool launch;
 	bool casted=false;
 	bool speedset=false;
 
@@ -28,72 +31,79 @@ public class RangeAttack : MonoBehaviour {
 		//shadow = GameObject.FindGameObjectWithTag ("Shadow");
 
 	}
-   
+
+
+	public override void useSkill ()
+	{
+		launch = true;
+	}
+
+
 
 	// Update is called once per frame
-	void Update () {
-		if (Input.GetKeyDown (KeyCode.Q)&&Time.time>nextCast) {
+	public override void Update () {
+		if(ChooseEnemy.Instance.target!=null)
+			tar = ChooseEnemy.Instance.target.Value;
+		if (launch&&Time.time>nextCast&&(tar!=null)) {
 			Anim.Play (cast.name);
 			casted = false;
-			speedset = false;
 			nextCast = Time.time + intervalCast;
+			launch = false;
+			speedset = false;
 		}
 		castFire ();
 	}
 
 	void castFire(){
-		if (Anim [cast.name].time >0.1f && casted ==false) {
-			go = Instantiate (fireBall) as GameObject;
 
-            go.GetComponent<TweenPosition>().from = this.transform.position+offset1;
-            go.GetComponent<TweenPosition>().to = this.transform.position + offset2;
-			casted = true;
+		if (tar == null) {
+			Debug.Log ("no target availbale");
+			return;
+		}  else {
+
+			if (Anim [cast.name].time > 0.1f && casted == false) {
+				go = Instantiate (fireBall) as GameObject;
+
+				go.GetComponent<TweenPosition> ().from = this.transform.position + offset1;
+				go.GetComponent<TweenPosition> ().to = this.transform.position + offset2;
+				casted = true;
+			}
+			if (Anim [cast.name].time > Anim [cast.name].length * impactTime && !speedset) {
+				go.GetComponent<fireBall> ().SetTarget (tar);
+				go.GetComponent<fireBall> ().Movement = true;
+				speedset = true;
+				casted = true;
+
+			} 
+
+
+
+			}  
+
+
 		}
-		if (Anim [cast.name].time > Anim [cast.name].length * impactTime && !speedset) {
 
-			if (this.gameObject.tag == "Shadow") {
-				Vector3 direction= calfocus ();	
-				Vector3 vel =Vector3.Normalize(direction-(spawnPoint.transform.position+offset2)) * speed;
-				vel.y = 0f;
-				go.GetComponent<Rigidbody> ().velocity = vel;
-				go.transform.LookAt (direction);
 
-			} else if (this.gameObject.tag == "Player") {
-				go.GetComponent<Rigidbody> ().velocity = transform.forward * speed;
-                Vector3 direction = calfocus();
-                go.transform.LookAt(direction);
-            }
-				
-
-			speedset = true;
-
-		}
-
-	}
-	public void movement(){
-		go.GetComponent<Rigidbody> ().velocity = transform.forward * speed;
-
-	}
 	public void cancel(){
 		if (Anim.IsPlaying (cast.name))
 			Destroy (go);
 	}
 
-	Vector3 calfocus(){
-		RaycastHit hit;
-		GameObject player = GameObject.FindGameObjectWithTag ("Player");
-        //Debug.DrawRay(player.transform.position + offset3, player.transform.forward, Color.blue);
-		if (Physics.Raycast (player.transform.position+offset3, player.transform.forward, out hit, 1000f)) {
-			//this.transform.LookAt (hit.transform.position);
-			Debug.DrawRay (player.transform.localPosition + offset3, player.transform.forward,Color.blue);
-			Debug.Log (player.transform.forward);
-			Debug.Log (hit.transform.position);
-			return hit.transform.position;
-
-
-		} else
-			return this.transform.forward;
-	
-
-	}
+	//	Vector3 calfocus(){
+	//		RaycastHit hit;
+	//		GameObject player = GameObject.FindGameObjectWithTag ("Player");
+	//        //Debug.DrawRay(player.transform.position + offset3, player.transform.forward, Color.blue);
+	//		if (Physics.Raycast (player.transform.position+offset3, player.transform.forward, out hit, 1000f)) {
+	//			//this.transform.LookAt (hit.transform.position);
+	//			Debug.DrawRay (player.transform.localPosition + offset3, player.transform.forward,Color.blue);
+	//			Debug.Log (player.transform.forward);
+	//			Debug.Log (hit.transform.position);
+	//			return hit.transform.position;
+	//
+	//
+	//		}  else
+	//			return Vector3.zero;
+	//	
+	//
+	//	}
 }

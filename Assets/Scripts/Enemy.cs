@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 public class Enemy : MonoBehaviour {
 	//properties
+
+	public bool isStop = false; // used for time stop !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 	public enum enemyType{
 		meleeEne,
 		rangeEne
@@ -37,7 +40,7 @@ public class Enemy : MonoBehaviour {
 			if (_health <= 0) {
 				_health = 0;
 				die ();
-				inform ();
+				//inform ();
 			}
 		}
 	}
@@ -60,7 +63,7 @@ public class Enemy : MonoBehaviour {
 	}
 	[SerializeField]
 	protected GameObject player;
-	 public  GameObject shadow;
+	 //public  GameObject shadow;
 	CharacterController controller;
 	protected Animation Anim;
 
@@ -83,7 +86,7 @@ public class Enemy : MonoBehaviour {
 		} else if (!InAttackRange ()) {
 			chase ();
 
-		} else if ((PlayerStatus.Instance.Health>0 || ShadowHealth.Instance.Health > 0)&&!Anim.IsPlaying(death.name)) {
+		} else if ((PlayerStatus.Instance.Health>0 )&&!Anim.IsPlaying(death.name)) {
 			attack ();
 			inform();
 		}
@@ -96,17 +99,28 @@ public class Enemy : MonoBehaviour {
 
 	//check if it should run to the player
 	bool Alert(){
-		if(!shadow.activeInHierarchy ||ShadowHealth.Instance.stealth==true||Vector3.Distance(this.transform.position,player.transform.position)<Vector3.Distance(this.transform.position,shadow.transform.position))
-			return  (Vector3.Distance(this.transform.position,player.transform.position)<alertRange && Vector3.Dot(player.transform.position-this.transform.position,this.transform.forward)>-0.3);
-		else 
-			return  (Vector3.Distance(this.transform.position,shadow.transform.position)<alertRange && Vector3.Dot(shadow.transform.position-this.transform.position,this.transform.forward)>-0.3);
+		if (!PlayerStatus.Instance.stealth)
+			return Vector3.Distance (this.transform.position, player.transform.position) < alertRange;
+		else
+			return false;
+
+			//if( ShadowHealth.Instance.stealth==true||Vector3.Distance(this.transform.position,player.transform.position)<Vector3.Distance(this.transform.position,shadow.transform.position))
+		//return  (Vector3.Distance(this.transform.position,player.transform.position)<alertRange && Vector3.Dot(player.transform.position-this.transform.position,this.transform.forward)>-0.3&&!PlayerStatus.Instance.stealth);
+		//else 
+		//	return  (Vector3.Distance(this.transform.position,shadow.transform.position)<alertRange && Vector3.Dot(shadow.transform.position-this.transform.position,this.transform.forward)>-0.3);
 	}
 
 	//check if it is able to attack
 	bool InAttackRange(){
-		if(!shadow.activeInHierarchy ||ShadowHealth.Instance.stealth==true||Vector3.Distance(this.transform.position,player.transform.position)<Vector3.Distance(this.transform.position,shadow.transform.position))
-		return (Vector3.Distance(this.transform.position,player.transform.position)<attackRange);
-		else return (Vector3.Distance(this.transform.position,shadow.transform.position)<attackRange);
+
+		if (!PlayerStatus.Instance.stealth)
+			return (Vector3.Distance (this.transform.position, player.transform.position) < attackRange);
+		else
+			return (Vector3.Distance (this.transform.position, player.transform.position) < attackRange && Vector3.Dot (player.transform.position - this.transform.position, this.transform.forward) > -0.3);
+
+		//if( ShadowHealth.Instance.stealth==true||Vector3.Distance(this.transform.position,player.transform.position)<Vector3.Distance(this.transform.position,shadow.transform.position))
+		//return (Vector3.Distance(this.transform.position,player.transform.position)<attackRange);
+		//else return (Vector3.Distance(this.transform.position,shadow.transform.position)<attackRange);
 
 	}
 
@@ -117,35 +131,37 @@ public class Enemy : MonoBehaviour {
 	}
 	//chase the player
 	public virtual void chase(){
-		if (!shadow.activeInHierarchy || ShadowHealth.Instance.stealth == true || Vector3.Distance (this.transform.position, player.transform.position) < Vector3.Distance (this.transform.position, shadow.transform.position)) {
+		//if (  ShadowHealth.Instance.stealth == true || Vector3.Distance (this.transform.position, player.transform.position) < Vector3.Distance (this.transform.position, shadow.transform.position)) {
 			this.transform.LookAt (player.transform.position);
 			controller.SimpleMove (this.transform.forward * speed);
 			Anim.Play (running.name);
-		} else {
-			this.transform.LookAt (shadow.transform.position);
-			controller.SimpleMove (this.transform.forward * speed);
-			Anim.Play (running.name);
-		}
+//		} else {
+//			this.transform.LookAt (shadow.transform.position);
+//			controller.SimpleMove (this.transform.forward * speed);
+//			Anim.Play (running.name);
+//		}
 	}
 
 	public virtual void attack (){
-		if (!shadow.activeInHierarchy || ShadowHealth.Instance.stealth == true || Vector3.Distance (this.transform.position, player.transform.position) < Vector3.Distance (this.transform.position, shadow.transform.position))
+		//if (  ShadowHealth.Instance.stealth == true || Vector3.Distance (this.transform.position, player.transform.position) < Vector3.Distance (this.transform.position, shadow.transform.position))
 			this.transform.LookAt (player.transform);
-		else
-			this.transform.LookAt (shadow.transform);
+//		else
+//			this.transform.LookAt (shadow.transform);
 		Anim.Play (attacking.name);
 	}
 	public virtual void die(){
-		Anim.Stop ();
+		//Anim.Stop ();
 		Anim.Play (death.name);
+		ChooseEnemy.Instance.enemy.Remove (this.gameObject);
 		StartCoroutine (disappear ());
 	}
 	public virtual void dance(){
 		Anim.Play (dancing.name);
 	}
 	public virtual void GetHit(int damage){
-		
+		alertRange = maxalertRange;
 		Health -= damage;
+		PlayerStatus.Instance.AddFury(damage);
 		if (Health <= 0)
 			return;
 		
@@ -165,6 +181,12 @@ public class Enemy : MonoBehaviour {
 				
 		}
 
+	}
+	public void chosed(){
+		this.transform.localScale = new Vector3 (1.5f, 1.5f, 1.5f);
+	}
+	public void unchosed(){
+		this.transform.localScale = new Vector3 (1f, 1f, 1f);
 	}
 
 	IEnumerator  disappear(){
