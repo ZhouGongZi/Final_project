@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 public class Enemy : MonoBehaviour {
 	//properties
+
+	public bool isStop = false; // used for time stop !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 	public enum enemyType{
 		meleeEne,
 		rangeEne

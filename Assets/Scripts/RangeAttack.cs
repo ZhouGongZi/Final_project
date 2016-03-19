@@ -52,7 +52,7 @@ public class RangeAttack : MonoBehaviour {
 		if (Anim [cast.name].time > Anim [cast.name].length * impactTime && !speedset) {
 
 			if (this.gameObject.tag == "Shadow") {
-<<<<<<< HEAD
+
 				Vector3 direction= calfocus ();
 				if (direction == Vector3.zero) {
 					go.GetComponent<Rigidbody> ().velocity = this.transform.forward*speed;
@@ -62,13 +62,7 @@ public class RangeAttack : MonoBehaviour {
 					go.GetComponent<Rigidbody> ().velocity = vel;
 					go.transform.LookAt (direction);
 				}
-=======
-				Vector3 direction= calfocus ();	
-				Vector3 vel =Vector3.Normalize(direction-(spawnPoint.transform.position+offset2)) * speed;
-				vel.y = 0f;
-				go.GetComponent<Rigidbody> ().velocity = vel;
-				go.transform.LookAt (direction);
->>>>>>> 06d7562a6b09c04c03dd0c7f3cfd799467102180
+
 
 			} else if (this.gameObject.tag == "Player") {
 				go.GetComponent<Rigidbody> ().velocity = transform.forward * speed;
