@@ -63,11 +63,6 @@ public class RangeAttack : MonoBehaviour {
 					go.transform.LookAt (direction);
 				}
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 25b96bd339fbcb6cfc754854585baa9971207de1
-
 			} else if (this.gameObject.tag == "Player") {
 				go.GetComponent<Rigidbody> ().velocity = transform.forward * speed;
                 Vector3 direction = calfocus();
