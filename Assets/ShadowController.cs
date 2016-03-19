@@ -28,8 +28,15 @@ public class ShadowController : MonoBehaviour {
 			RangeAttack range = sha.GetComponent<RangeAttack> ();
 			range.useSkill ();
 		}
-
-
+	}
+	public void charge(){
+		foreach (GameObject sha in shadows) {
+			sha.transform.LookAt (tar.transform);
+			ChargeAttack charge = sha.GetComponent<ChargeAttack> ();
+			charge.setTarget (tar);
+			charge.charge = true;
+			charge.attacked = false;
+		}
 
 	}
 

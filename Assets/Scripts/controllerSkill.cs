@@ -18,5 +18,8 @@ public class controllerSkill : MonoBehaviour {
 			rangeattack.useSkill ();
 			ShadowController.Instance.fireball ();
 		}
+		if (Input.GetKeyDown (KeyCode.R)) {
+			ShadowController.Instance.charge ();
+		}
 	}
 }
