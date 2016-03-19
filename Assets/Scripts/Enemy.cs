@@ -181,6 +181,12 @@ public class Enemy : MonoBehaviour {
 		}
 
 	}
+	public void chosed(){
+		this.transform.localScale = new Vector3 (1.5f, 1.5f, 1.5f);
+	}
+	public void unchosed(){
+		this.transform.localScale = new Vector3 (1f, 1f, 1f);
+	}
 
 	IEnumerator  disappear(){
 		this.GetComponent<CharacterController> ().enabled = false;

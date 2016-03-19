@@ -5,7 +5,7 @@ public class PlayerStatus : MonoBehaviour {
 	public static PlayerStatus Instance;
 	[SerializeField]
 	int _health=10000;
-	int _fury =100;
+	int _fury =0;
 	public AnimationClip death,getHit;
 	Animation Anim;
 	[SerializeField]

@@ -6,7 +6,8 @@ public class Skill : MonoBehaviour {
 	public enum skillType{
 		AOE,
 		timeStop,
-		backStash
+		backStash,
+		shadowBackAttack
 	}
 	//enemy type
 	protected skillType _skillType;
