@@ -123,6 +123,7 @@ public class Player : MonoBehaviour
             {
                 Melee_Attack();
                 //nextMelee = Time.time + meleeRate;
+
             }
             #endregion
 
