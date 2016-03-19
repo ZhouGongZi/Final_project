@@ -12,6 +12,8 @@ public class ShadowBackStab : Skill {
 
 		} else {
 			GameObject go = Instantiate (shadow) as GameObject;
+			ShadowController.Instance.shadows.Add (go);
+
 			go.transform.position = tar.transform.position + tar.transform.forward * (-1.5f);
 			go.transform.LookAt (tar.gameObject.transform);	
 			go.GetComponent<stealthAttack> ().Opponent = tar;

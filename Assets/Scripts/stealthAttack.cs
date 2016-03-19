@@ -3,7 +3,7 @@ using System.Collections;
 
 public class stealthAttack : MonoBehaviour {
 	public AnimationClip BackStab;
-	public bool launchattack;
+	public bool launchattack=false;
 
 	float impactTime=0.40f;
 	Vector3 startPosition;

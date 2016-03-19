@@ -4,16 +4,17 @@ using System.Collections.Generic;
 
 public class ChooseEnemy :MonoBehaviour{
 	public static ChooseEnemy Instance;
-	 LinkedList<GameObject> enemy=new LinkedList<GameObject>();
+	public LinkedList<GameObject> enemy=new LinkedList<GameObject>();
 	public LinkedListNode<GameObject> target=null;
 
 	void Awake(){
 		Instance = this;
+		GetEnemies ();
 	}
 	// Use this for initialization
 	void Update()
 	{
-		GetEnemies ();
+
 		if (Input.GetKeyDown (KeyCode.Tab))
 			chooseEnemy();
 		
