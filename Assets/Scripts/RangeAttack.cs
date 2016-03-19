@@ -7,9 +7,9 @@ public class RangeAttack : Skill {
 	public AnimationClip	 cast;
 	public float 			speed;
 
-	 Vector3 			offset1=new Vector3 (0.2f,0.9f,0.4f);
-	 Vector3 			offset2=new Vector3 (0.2f,1.2f,0.4f);
- 
+	Vector3 			offset1=new Vector3 (0.2f,0.9f,0.4f);
+	Vector3 			offset2=new Vector3 (0.2f,1.2f,0.4f);
+
 
 	GameObject shadow;
 	GameObject fireBall;
@@ -31,7 +31,7 @@ public class RangeAttack : Skill {
 		//shadow = GameObject.FindGameObjectWithTag ("Shadow");
 
 	}
-   
+
 
 	public override void useSkill ()
 	{
@@ -43,7 +43,7 @@ public class RangeAttack : Skill {
 	// Update is called once per frame
 	public override void Update () {
 		if(ChooseEnemy.Instance.target!=null)
-		tar = ChooseEnemy.Instance.target.Value;
+			tar = ChooseEnemy.Instance.target.Value;
 		if (launch&&Time.time>nextCast&&(tar!=null)) {
 			Anim.Play (cast.name);
 			casted = false;
@@ -59,8 +59,8 @@ public class RangeAttack : Skill {
 		if (tar == null) {
 			Debug.Log ("no target availbale");
 			return;
-		} else {
-			
+		}  else {
+
 			if (Anim [cast.name].time > 0.1f && casted == false) {
 				go = Instantiate (fireBall) as GameObject;
 
@@ -73,13 +73,24 @@ public class RangeAttack : Skill {
 				go.GetComponent<fireBall> ().Movement = true;
 				speedset = true;
 				casted = true;
+<<<<<<< HEAD
 
 			} 
 
 	
+=======
 
-			}
+			}  
+
+>>>>>>> bcab8262b8ce5445300287878a5e713f306d9d1d
+
+
+<<<<<<< HEAD
+
+=======
 		}
+	}
+>>>>>>> bcab8262b8ce5445300287878a5e713f306d9d1d
 
 
 
@@ -88,21 +99,21 @@ public class RangeAttack : Skill {
 			Destroy (go);
 	}
 
-//	Vector3 calfocus(){
-//		RaycastHit hit;
-//		GameObject player = GameObject.FindGameObjectWithTag ("Player");
-//        //Debug.DrawRay(player.transform.position + offset3, player.transform.forward, Color.blue);
-//		if (Physics.Raycast (player.transform.position+offset3, player.transform.forward, out hit, 1000f)) {
-//			//this.transform.LookAt (hit.transform.position);
-//			Debug.DrawRay (player.transform.localPosition + offset3, player.transform.forward,Color.blue);
-//			Debug.Log (player.transform.forward);
-//			Debug.Log (hit.transform.position);
-//			return hit.transform.position;
-//
-//
-//		} else
-//			return Vector3.zero;
-//	
-//
-//	}
+	//	Vector3 calfocus(){
+	//		RaycastHit hit;
+	//		GameObject player = GameObject.FindGameObjectWithTag ("Player");
+	//        //Debug.DrawRay(player.transform.position + offset3, player.transform.forward, Color.blue);
+	//		if (Physics.Raycast (player.transform.position+offset3, player.transform.forward, out hit, 1000f)) {
+	//			//this.transform.LookAt (hit.transform.position);
+	//			Debug.DrawRay (player.transform.localPosition + offset3, player.transform.forward,Color.blue);
+	//			Debug.Log (player.transform.forward);
+	//			Debug.Log (hit.transform.position);
+	//			return hit.transform.position;
+	//
+	//
+	//		}  else
+	//			return Vector3.zero;
+	//	
+	//
+	//	}
 }
