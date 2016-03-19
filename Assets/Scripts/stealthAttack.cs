@@ -3,30 +3,27 @@ using System.Collections;
 
 public class stealthAttack : MonoBehaviour {
 	public AnimationClip BackStab;
+	public bool launchattack;
 
 	float impactTime=0.40f;
 	Vector3 startPosition;
-	GameObject opponent;
-
-
-
-	// Use this for initialization
-	void Start () {
-		
+	GameObject _opponent;
+	public GameObject Opponent{
+		set { _opponent = value;}
+		get { return _opponent;}
 	}
-	
+
+
 	// Update is called once per frame
 	void Update () {
 		setStart ();
-		if (checkAttack ()) {
-			if (Input.GetKeyDown (KeyCode.E))
-				attack ();
-			if (this.GetComponent<Animation> () [BackStab.name].time >= this.GetComponent<Animation> () [BackStab.name].length * impactTime) {
-				opponent.GetComponent<Enemy> ().GetHit (100);
-				ShadowHealth.Instance.stealth = false;	
-			}
-			
+		if (launchattack)
+			attack ();
+		if (this.GetComponent<Animation> () [BackStab.name].time >= this.GetComponent<Animation> () [BackStab.name].length * impactTime) {
+				Opponent.GetComponent<Enemy> ().GetHit (100);
+				launchattack = false;
 		}
+
 
 
 	}
@@ -36,8 +33,8 @@ public class stealthAttack : MonoBehaviour {
 		Debug.DrawRay(startPosition, transform.forward, Color.green);
 		if (Physics.Raycast (startPosition, transform.forward, out hit, 1.0f)) {
 			if (hit.collider.gameObject.tag == "Enemy") {
-				opponent = hit.collider.gameObject;
-				if (Vector3.Dot (this.transform.forward, opponent.transform.forward) > 0)
+				_opponent = hit.collider.gameObject;
+				if (Vector3.Dot (this.transform.forward, _opponent.transform.forward) > 0)
 					//do something to show that you can bakcstab
 					return true;
 				else
