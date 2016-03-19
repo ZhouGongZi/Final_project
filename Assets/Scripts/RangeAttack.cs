@@ -57,6 +57,7 @@ public class RangeAttack : Skill {
 	void castFire(){
 
 
+<<<<<<< HEAD
 
 		if (tar == null) {
 			Debug.Log ("no target availbale");
@@ -74,6 +75,16 @@ public class RangeAttack : Skill {
 				go.GetComponent<fireBall> ().SetTarget (tar);
 				go.GetComponent<fireBall> ().Movement = true;
 				speedset = true;
+=======
+			} else if (this.gameObject.tag == "Player") {
+				go.GetComponent<Rigidbody> ().velocity = transform.forward * speed;
+                Vector3 direction = calfocus();
+                go.transform.LookAt(direction);
+            }
+				
+
+			speedset = true;
+>>>>>>> bee176cc39346adc92768e45a545120ae6425f97
 
 			}
 		}

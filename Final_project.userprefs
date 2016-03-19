@@ -1,5 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/RangeAttack.cs">
     <Files>
       <File FileName="Assets/Scripts/RangeAttack.cs" Line="66" Column="1" />
@@ -14,6 +15,15 @@
       <File FileName="Assets/Scripts/scene_trigger.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Stick_attack.cs" Line="6" Column="33" />
       <File FileName="Assets/showFury.cs" Line="17" Column="1" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MeleeEnemy.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Enemy.cs" Line="16" Column="21" />
+      <File FileName="Assets/Scripts/MeleeEnemy.cs" Line="18" Column="11" />
+      <File FileName="Assets/Scripts/Skill.cs" Line="11" Column="14" />
+      <File FileName="Assets/Scripts/timeStop.cs" Line="22" Column="8" />
+      <File FileName="Assets/Scripts/Player_modern.cs" Line="54" Column="26" />
+>>>>>>> bee176cc39346adc92768e45a545120ae6425f97
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

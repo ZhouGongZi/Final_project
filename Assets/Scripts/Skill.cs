@@ -10,6 +10,7 @@ public class Skill : MonoBehaviour {
 		shadowBackAttack
 	}
 	//enemy type
+
 	protected skillType _skillType;
 
 	public skillType SkillType{
@@ -30,6 +31,7 @@ public class Skill : MonoBehaviour {
 		
 
 	public virtual void useSkill(){
+		
 	}
 	//chase the player
 
