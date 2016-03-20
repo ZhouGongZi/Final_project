@@ -9,6 +9,9 @@ public class ChooseEnemy :MonoBehaviour{
 
 	void Awake(){
 		Instance = this;
+
+	}
+	void Start(){
 		GetEnemies ();
 	}
 	// Use this for initialization
@@ -33,14 +36,22 @@ public class ChooseEnemy :MonoBehaviour{
 		}
 	}
 	void chooseEnemy(){
-		if(target!=null)
-		target.Value.GetComponent<Enemy> ().unchosed();
-		if (target == null || target.Next == null)
+		if (enemy.First == null)
+			GetEnemies ();
+		
+		if (target != null)
+			target.Value.GetComponent<Enemy> ().unchosed ();
+		else
+			GetEnemies ();
+	
+		
+		if (target==null|| target.Next == null)
 			target = enemy.First;
 		else
 			target = target.Next;
 		target.Value.GetComponent<Enemy> ().chosed();
 		Debug.Log (target.Value.name);
+
 	}
 
 

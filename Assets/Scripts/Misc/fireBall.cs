@@ -22,11 +22,14 @@ public class fireBall : MonoBehaviour {
 	void Update () {
 		if (Movement)
 			move ();
+		if (_target == null)
+			Destroy (this.gameObject);
+		
 	}
 		
 	void OnTriggerEnter(Collider col){
 		if (col.gameObject.tag == "Enemy"&&!damaged) {
-			col.gameObject.GetComponent<Enemy> ().GetHit (10);
+			col.gameObject.GetComponent<Enemy> ().GetHit (50);
 			damaged = true;
 			Destroy (this.gameObject);
 		}
@@ -38,5 +41,6 @@ public class fireBall : MonoBehaviour {
 	}
 	void move(){
 		rig.velocity=Vector3.Normalize(_target.transform.position+offset-this.transform.position)*speed;
+
 	}
 }

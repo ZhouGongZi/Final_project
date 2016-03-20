@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ChargeAttack : MonoBehaviour {
+public class ChargeAttack : Skill {
 	GameObject tar;
 	CharacterController cc;
 	public bool charge=false;
 	public float speed=10f;
-	public AnimationClip running;
-	Animation Anim;
+	public AnimationClip running,idling;
 	public bool attacked=false;
 
 
@@ -18,20 +17,28 @@ public class ChargeAttack : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		Debug.Log (Vector3.Distance (this.transform.position, tar.transform.position));
+	public override void Update () {
+		base.Update ();
 		if (tar == null)
+			//Anim.Play (idling.name);
 			return;
-		if (charge == true && Vector3.Distance (this.transform.position, tar.transform.position) > 1.5f)
-			chase ();
-		else if(Vector3.Distance (this.transform.position, tar.transform.position) < 1.5f&&!attacked){
+		if (Vector3.Distance (this.transform.position, tar.transform.position) < 1 && !attacked) {
+			this.transform.LookAt (tar.transform);
 			this.GetComponent<stealthAttack> ().Opponent = tar;
 			this.GetComponent<stealthAttack> ().launchattack = true;
 			attacked = true;
-		}
+		} else if (!attacked&&charge == true && Vector3.Distance (this.transform.position, tar.transform.position) >1f)
+			chase ();
+	
 			
 		
 
+	}
+
+	public override void useSkill ()
+	{
+		base.useSkill ();
+		charge = true;
 	}
 	public void setTarget(GameObject target){
 		tar = target;

@@ -31,11 +31,15 @@ public class ShadowController : MonoBehaviour {
 	}
 	public void charge(){
 		foreach (GameObject sha in shadows) {
-			sha.transform.LookAt (tar.transform);
 			ChargeAttack charge = sha.GetComponent<ChargeAttack> ();
-			charge.setTarget (tar);
-			charge.charge = true;
-			charge.attacked = false;
+
+
+			if (charge.Cooldown == 0) {
+				sha.transform.LookAt (tar.transform);
+				charge.setTarget (tar);
+				charge.useSkill ();
+				charge.attacked = false;
+			}
 		}
 
 	}

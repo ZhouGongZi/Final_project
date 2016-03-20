@@ -6,6 +6,7 @@ public class ShadowBackStab : Skill {
 	public GameObject shadow;
 	// Use this for initialization
 	public override void useSkill(){
+		base.useSkill ();
 		tar = ChooseEnemy.Instance.target.Value;
 		if (tar == null) {
 			Debug.Log ("no shadow available");

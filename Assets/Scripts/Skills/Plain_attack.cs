@@ -5,9 +5,6 @@ public class Plain_attack : Skill {
 	
 	public AnimationClip 		Melee_Clip;
 
-	float 						fireRate = 0.3f;
-	float 						nextfire = 0.0f;
-
 	bool 						isAttacking = false; 
 	float 						impactTime=0.40f;
 
@@ -17,15 +14,14 @@ public class Plain_attack : Skill {
 	}
 	// Update is called once per frame
 	public override void Update () {
+		base.Update ();
 		if (Anim [Melee_Clip.name].time > Anim [Melee_Clip.name].length * 0.90)
 			isAttacking = false;
 	}
 
 	public override void useSkill(){
-		if (Time.time > nextfire) {
-			attack ();
-			nextfire = Time.time + fireRate;
-		}
+		base.useSkill ();
+		attack ();
 	}
 
 	public void attack(){
