@@ -7,8 +7,12 @@ public class controllerSkill : MonoBehaviour {
 	public Skill PlayerCharge;
 	public Skill PlainAttack;
 	public Skill TimeStop;
+<<<<<<< HEAD
 	public Skill backstab;
 	public Skill switchPlayer;
+=======
+	public Skill AOE;
+>>>>>>> 42f29b47fb3a2de9ba9d067687f9a72adbdc7532
 	// Use this for initialization
 	void Start () {
 	
@@ -38,6 +42,7 @@ public class controllerSkill : MonoBehaviour {
 			this.GetComponent<RangeAttack> ().cancel();
 			PlayerStatus.Instance.AddFury (50);
 		}
+<<<<<<< HEAD
 		if (Input.GetKeyDown (KeyCode.V) && backstab.Cooldown == 0) {
 			this.GetComponent<RangeAttack> ().cancel();
 			backstab.useSkill ();
@@ -47,5 +52,10 @@ public class controllerSkill : MonoBehaviour {
 			this.GetComponent<RangeAttack> ().cancel();
 		}
 
+=======
+		if (Input.GetKeyDown (KeyCode.O) && AOE.Cooldown == 0) {
+			AOE.useSkill ();
+		}
+>>>>>>> 42f29b47fb3a2de9ba9d067687f9a72adbdc7532
 	}
 }

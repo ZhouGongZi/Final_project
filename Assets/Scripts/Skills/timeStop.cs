@@ -41,7 +41,6 @@ public class timeStop : Skill {
 			col [i].GetComponent<Enemy> ().isStop = true;
 			i++;
 		}
-
 	}
 
 	void makeFree(){
