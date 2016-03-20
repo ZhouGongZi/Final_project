@@ -69,7 +69,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ChargeAttack.cs" />
     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipItems.cs" />
     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipRandomItem.cs" />
     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UICursor.cs" />
@@ -208,28 +207,34 @@
     <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
     <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\ChooseEnemy.cs" />
-    <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\MeleeEnemy.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemy\MeleeEnemy.cs" />
+    <Compile Include="Assets\Scripts\Misc\fireBall.cs" />
     <Compile Include="Assets\Scripts\Multi_trigger.cs" />
-    <Compile Include="Assets\Scripts\Plain_attack.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\PlayerStatus.cs" />
-    <Compile Include="Assets\Scripts\Player_modern.cs" />
-    <Compile Include="Assets\Scripts\Player_shadow.cs" />
-    <Compile Include="Assets\Scripts\RangeAttack.cs" />
-    <Compile Include="Assets\Scripts\ShadowBackStab.cs" />
-    <Compile Include="Assets\Scripts\ShadowHealth.cs" />
-    <Compile Include="Assets\Scripts\Skill.cs" />
-    <Compile Include="Assets\Scripts\Stick_attack.cs" />
-    <Compile Include="Assets\Scripts\Test_player_skill.cs" />
-    <Compile Include="Assets\Scripts\controllerSkill.cs" />
-    <Compile Include="Assets\Scripts\fireBall.cs" />
+    <Compile Include="Assets\Scripts\Player\ChooseEnemy.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerCharge.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerStatus.cs" />
+    <Compile Include="Assets\Scripts\Player\Player_modern.cs" />
+    <Compile Include="Assets\Scripts\Player\Test_player_skill.cs" />
+    <Compile Include="Assets\Scripts\Player\controllerSkill.cs" />
+    <Compile Include="Assets\Scripts\PlayerAnimationControl.cs" />
+    <Compile Include="Assets\Scripts\Shadow\Player_shadow.cs" />
+    <Compile Include="Assets\Scripts\Shadow\ShadowController.cs" />
+    <Compile Include="Assets\Scripts\Shadow\ShadowHealth.cs" />
+    <Compile Include="Assets\Scripts\Skills\ChargeAttack.cs" />
+    <Compile Include="Assets\Scripts\Skills\Create_shadow.cs" />
+    <Compile Include="Assets\Scripts\Skills\Plain_attack.cs" />
+    <Compile Include="Assets\Scripts\Skills\PlayerCharge.cs" />
+    <Compile Include="Assets\Scripts\Skills\RangeAttack.cs" />
+    <Compile Include="Assets\Scripts\Skills\ShadowBackStab.cs" />
+    <Compile Include="Assets\Scripts\Skills\Skill.cs" />
+    <Compile Include="Assets\Scripts\Skills\Stick_attack.cs" />
+    <Compile Include="Assets\Scripts\Skills\stealthAttack.cs" />
+    <Compile Include="Assets\Scripts\Skills\timeStop.cs" />
+    <Compile Include="Assets\Scripts\UI\showFury.cs" />
     <Compile Include="Assets\Scripts\scene_trigger.cs" />
-    <Compile Include="Assets\Scripts\showFury.cs" />
-    <Compile Include="Assets\Scripts\stealthAttack.cs" />
-    <Compile Include="Assets\Scripts\timeStop.cs" />
-    <Compile Include="Assets\ShadowController.cs" />
+    <Compile Include="Assets\stealthEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\NGUI\Examples\Atlases\Fantasy\Fantasy Font - Normal.txt" />
