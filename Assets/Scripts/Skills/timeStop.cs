@@ -15,12 +15,14 @@ public class timeStop : Skill {
 	}
 	// Update is called once per frame
 	public override void Update () {
+		base.Update ();
 		if (Time.time > nextfire) {
 			makeFree ();
 		}
 	}
 
 	public override void useSkill(){
+		base.useSkill ();
 		if (Time.time > nextfire) {
 			makeStop ();
 			nextfire = Time.time + fireRate;

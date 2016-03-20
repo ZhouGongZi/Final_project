@@ -35,6 +35,7 @@ public class RangeAttack : Skill {
 
 	public override void useSkill ()
 	{
+		base.useSkill ();
 		launch = true;
 	}
 
@@ -42,6 +43,7 @@ public class RangeAttack : Skill {
 
 	// Update is called once per frame
 	public override void Update () {
+		base.Update ();
 		if(ChooseEnemy.Instance.target!=null)
 			tar = ChooseEnemy.Instance.target.Value;
 		if (launch&&Time.time>nextCast&&(tar!=null)) {
@@ -63,16 +65,17 @@ public class RangeAttack : Skill {
 
 			if (Anim [cast.name].time > 0.1f && casted == false) {
 				go = Instantiate (fireBall) as GameObject;
-
+				go.GetComponent<fireBall> ().SetTarget (tar);
 				go.GetComponent<TweenPosition> ().from = this.transform.position + offset1;
 				go.GetComponent<TweenPosition> ().to = this.transform.position + offset2;
 				casted = true;
 			}
 			if (Anim [cast.name].time > Anim [cast.name].length * impactTime && !speedset) {
-				go.GetComponent<fireBall> ().SetTarget (tar);
-				go.GetComponent<fireBall> ().Movement = true;
-				speedset = true;
-				casted = true;
+				if (go != null) {
+					go.GetComponent<fireBall> ().Movement = true;
+					speedset = true;
+					casted = true;
+				}
 
 			} 
 

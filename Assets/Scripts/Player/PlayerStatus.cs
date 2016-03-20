@@ -5,7 +5,7 @@ public class PlayerStatus : MonoBehaviour {
 	public static PlayerStatus Instance;
 	[SerializeField]
 	int _health=10000;
-	int _fury =0;
+	int _fury =10;
 	public AnimationClip death,getHit;
 	Animation Anim;
 	[SerializeField]
@@ -40,6 +40,8 @@ public class PlayerStatus : MonoBehaviour {
 			Debug.Log (Fury);
 			if (_fury == 0)
 				stealth = true;
+			else
+				stealth = false;
 		}
 
 	}
