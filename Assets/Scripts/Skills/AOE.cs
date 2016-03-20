@@ -3,14 +3,10 @@ using System.Collections;
 
 public class AOE : Skill {
 	
-	int radius = 500;
+	float radius = 500;
 	// Use this for initialization
-	float fireRate = 10f;
-	float nextfire = 0.0f;
 
-	void Start () {
-		
-	}
+
 
 	public override void Update () {
 		base.Update ();
@@ -18,10 +14,8 @@ public class AOE : Skill {
 
 	public override void useSkill(){
 		base.useSkill ();
-		if (Time.time > nextfire) {
-			explodeAOE ();
-			nextfire = Time.time + fireRate;
-		}
+	 	explodeAOE ();
+			
 	}
 
 	public void explodeAOE(){
@@ -33,7 +27,7 @@ public class AOE : Skill {
 		print ("in the explosion!!!!!!!!!!");
 
 		while (i < col.Length) {
-			col [i].GetComponent<Enemy> ().Health = 0;
+			col[i].GetComponent<Enemy> ().Health = 0;
 			i++;
 		}
 	}
