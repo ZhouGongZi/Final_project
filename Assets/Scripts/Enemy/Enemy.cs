@@ -78,7 +78,11 @@ public class Enemy : MonoBehaviour {
 	public virtual void Update(){
 		
 		//shadow = GameObject.FindGameObjectWithTag ("Shadow");
-		
+		if (ChooseEnemy.Instance.target!= null) {
+			if (this.gameObject != ChooseEnemy.Instance.target.Value)
+				unchosed ();
+		}
+
 		if (Health <= 0 || Anim.IsPlaying(getHit.name))
 			return;
 		if (!Alert () && !InAttackRange ()) {
@@ -156,6 +160,7 @@ public class Enemy : MonoBehaviour {
 		ChooseEnemy.Instance.enemy.Remove (this.gameObject);
 		StartCoroutine (disappear ());
 
+
 	}
 	public virtual void dance(){
 		Anim.Play (dancing.name);
@@ -175,6 +180,8 @@ public class Enemy : MonoBehaviour {
 	public virtual void inform(){
 		GameObject[] enes = GameObject.FindGameObjectsWithTag ("Enemy");
 		foreach (GameObject en in enes) {
+			if (en == null)
+				continue;
 			if (Vector3.Distance (en.transform.position, transform.position) < informRange) {
 				
 

@@ -39,12 +39,6 @@ public class ChooseEnemy :MonoBehaviour{
 		if (enemy.First == null)
 			GetEnemies ();
 		
-		if (target != null)
-			target.Value.GetComponent<Enemy> ().unchosed ();
-		else
-			GetEnemies ();
-	
-		
 		if (target==null|| target.Next == null)
 			target = enemy.First;
 		else

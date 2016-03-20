@@ -20,7 +20,7 @@ public class ShadowController : MonoBehaviour {
 //
 //	void GetShadows(){
 //		GameObject[] shadows = GameObject.FindGameObjectsWithTag ("Shadow");
-//
+// 
 //	}
 	public void fireball(){
 		foreach (GameObject sha in shadows) {
@@ -42,6 +42,13 @@ public class ShadowController : MonoBehaviour {
 			}
 		}
 
+	}
+	public void backstab(){
+		foreach (GameObject sha in shadows) {
+			if(sha.GetComponent<stealthAttack>().Opponent!=null&& Vector3.Distance(sha.transform.position,sha.GetComponent<stealthAttack>().Opponent.transform.position)<2f)
+			sha.GetComponent<stealthAttack> ().launchattack = true;
+			sha.GetComponent<shadowStatus> ().bonusTime ();
+		}
 	}
 
 

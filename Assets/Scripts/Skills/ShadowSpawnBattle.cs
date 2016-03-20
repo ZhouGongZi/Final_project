@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ShadowBackStab : Skill {
+public class ShadowSpawnBattle: Skill {
 	GameObject tar;
 	public GameObject shadow;
 	// Use this for initialization
@@ -18,7 +18,7 @@ public class ShadowBackStab : Skill {
 			go.transform.position = tar.transform.position + tar.transform.forward * (-1.5f);
 			go.transform.LookAt (tar.gameObject.transform);	
 			go.GetComponent<stealthAttack> ().Opponent = tar;
-			go.GetComponent<stealthAttack> ().launchattack = true;
+//			go.GetComponent<stealthAttack> ().launchattack = true;
 
 
 		}

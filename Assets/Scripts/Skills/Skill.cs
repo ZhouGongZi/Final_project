@@ -34,6 +34,7 @@ public class Skill : MonoBehaviour {
 
 
 	public virtual void Start(){
+		startTime = Time.time - 5f;
 	}
 
 

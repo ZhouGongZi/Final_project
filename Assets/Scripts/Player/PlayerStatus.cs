@@ -66,7 +66,7 @@ public class PlayerStatus : MonoBehaviour {
 	public void OnHit(int damage){
 		Health -= damage;
 		this.GetComponent<RangeAttack> ().cancel();
-
+		AddFury (damage);
 		if(!Anim.IsPlaying(death.name)&&!Anim.IsPlaying("attack 5"))
 			Anim.Play(getHit.name);
 		
