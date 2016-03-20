@@ -187,6 +187,7 @@
      <Compile Include="Assets\Scripts\Enemy\MeleeEnemy.cs" />
      <Compile Include="Assets\Scripts\Misc\fireBall.cs" />
      <Compile Include="Assets\Scripts\Multi_trigger.cs" />
+     <Compile Include="Assets\Scripts\Player\AOEPlayer.cs" />
      <Compile Include="Assets\Scripts\Player\ChooseEnemy.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerCharge.cs" />
