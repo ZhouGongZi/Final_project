@@ -10,6 +10,7 @@ public class controllerSkill : MonoBehaviour {
 	public Skill backstab;
 	public Skill switchPlayer;
 	public Skill AOE;
+	public Skill shadowFight;
 
 	public bool isStop = false;
 	Skill cast;
@@ -80,6 +81,10 @@ public class controllerSkill : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.O) && AOE.Cooldown == 0&&PlayerStatus.Instance.Fury==100) {
 			AOE.useSkill ();
+		}
+
+		if (Input.GetKeyDown (KeyCode.C) && shadowFight.Cooldown == 0) {
+			shadowFight.useSkill ();
 		}
 
 	}
