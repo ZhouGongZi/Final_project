@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AOE : Skill {
 	
-	float radius = 500;
+	float radius = 5;
 	// Use this for initialization
 
 
@@ -27,6 +27,7 @@ public class AOE : Skill {
 		print ("in the explosion!!!!!!!!!!");
 
 		while (i < col.Length) {
+			if(col[i].tag=="Enemy")
 			col[i].GetComponent<Enemy> ().Health = 0;
 			i++;
 		}

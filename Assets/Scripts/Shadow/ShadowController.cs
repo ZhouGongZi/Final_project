@@ -50,6 +50,11 @@ public class ShadowController : MonoBehaviour {
 			sha.GetComponent<shadowStatus> ().bonusTime ();
 		}
 	}
+	public void aoe(){
+		foreach (GameObject sha in shadows) {
+			sha.GetComponent<AOE> ().useSkill ();
+		}
+	}
 
 
 }

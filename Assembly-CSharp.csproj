@@ -187,6 +187,7 @@
      <Compile Include="Assets\Scripts\Enemy\MeleeEnemy.cs" />
      <Compile Include="Assets\Scripts\Misc\fireBall.cs" />
      <Compile Include="Assets\Scripts\Multi_trigger.cs" />
+     <Compile Include="Assets\Scripts\Player\AOEPlayer.cs" />
      <Compile Include="Assets\Scripts\Player\ChooseEnemy.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerCharge.cs" />
@@ -208,12 +209,12 @@
      <Compile Include="Assets\Scripts\Skills\Stick_attack.cs" />
      <Compile Include="Assets\Scripts\Skills\backStabPlayer.cs" />
      <Compile Include="Assets\Scripts\Skills\stealthAttack.cs" />
+     <Compile Include="Assets\Scripts\Skills\switchposition.cs" />
      <Compile Include="Assets\Scripts\Skills\timeStop.cs" />
      <Compile Include="Assets\Scripts\UI\showFury.cs" />
      <Compile Include="Assets\Scripts\scene_trigger.cs" />
      <Compile Include="Assets\Scripts\shadowStatus.cs" />
      <Compile Include="Assets\Scripts\stealthEffect.cs" />
-     <Compile Include="Assets\switchposition.cs" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\ReadMe - 3.9.7.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Masked 1.shader" />
