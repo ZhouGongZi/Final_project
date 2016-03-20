@@ -6,7 +6,7 @@ public class ChargeAttack : Skill {
 	CharacterController cc;
 	public bool charge=false;
 	public float speed=10f;
-	public AnimationClip running;
+	public AnimationClip running,idling;
 	public bool attacked=false;
 
 
@@ -20,6 +20,7 @@ public class ChargeAttack : Skill {
 	public override void Update () {
 		base.Update ();
 		if (tar == null)
+			//Anim.Play (idling.name);
 			return;
 		if (Vector3.Distance (this.transform.position, tar.transform.position) < 1 && !attacked) {
 			this.transform.LookAt (tar.transform);

@@ -16,6 +16,8 @@ public class stealthAttack : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if(Opponent!=null)
+		this.transform.LookAt (Opponent.transform);
 		setStart ();
 		if (launchattack)
 			attack ();
