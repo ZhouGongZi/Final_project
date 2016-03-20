@@ -11,7 +11,6 @@ public class shadowFight : Skill {
 	private float 				impact_time = 0.4f;
 
 
-
 	public override void Start () {
 		base.Anim = this.GetComponent<Animation> ();
 	}
