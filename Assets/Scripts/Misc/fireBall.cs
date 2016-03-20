@@ -20,10 +20,11 @@ public class fireBall : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (_target.tag != "Enemy")
+			Destroy (this.gameObject);
 		if (Movement)
 			move ();
-		if (_target == null)
-			Destroy (this.gameObject);
+		
 		
 	}
 		

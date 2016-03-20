@@ -60,6 +60,7 @@ public class Create_shadow : MonoBehaviour {
 
 				//instantiate a new shadow
 				GameObject go = Instantiate (ancient) as GameObject;
+				ShadowController.Instance.shadows.Add (go);
 				GetComponent<Animation>().Play("attack 3");
 
 				//position of the new shadow
