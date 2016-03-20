@@ -16,7 +16,6 @@ ExportedObj/
 *.userprefs
 *.pidb
 *.booproj
-*.svd
 *.app
 
 # Unity3D generated meta files
