@@ -16,7 +16,6 @@ public class Player_shadow : MonoBehaviour {
 	private float 					meleeRate;
 
 	private bool 					isAttacking = false;
-    public bool                     hasEnemyInRange = false;
     private bool                    isWell = false;
 	// Use this for initialization
 	void Start () {
