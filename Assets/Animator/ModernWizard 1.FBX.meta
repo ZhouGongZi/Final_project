@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: f82d41382a98f594ab98b685da731c26
-timeCreated: 1458442990
+guid: 59b10e8f0e24b1d4d80dff0f7b1d65b2
+timeCreated: 1458508979
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -752,13 +752,16 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleRotations: 1
-    optimizeGameObjects: 1
+    optimizeGameObjects: 0
     motionNodeName: 
-    animationImportErrors: 
-    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
-      might lower retargeting quality:\n\t'Bip01 Spine2' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\t'Bip01 R Clavicle' has
-      translation animation that will be discarded.\n"
+    animationImportErrors: '
+
+      Imported file ''ModernWizard 1'' conversion failed: Transform ''EthanHips''
+      for human bone ''Hips'' not found
+
+
+'
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 3
@@ -24369,16 +24372,6 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: dau_lo
-      position: {x: 0, y: 1.0881307, z: -0.02919422}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: wand_lo
-      position: {x: 0, y: 1.0769131, z: 0.020848874}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: Bip01
       position: {x: 0, y: 0.73824257, z: 9.187785e-10}
       rotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
@@ -24394,6 +24387,46 @@ ModelImporter:
       rotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
       scale: {x: 1.0000001, y: 1, z: 1}
       transformModified: 1
+    - name: Point06
+      position: {x: 0.047446974, y: -0.258236, z: 0.08113071}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000002}
+      transformModified: 1
+    - name: Point08
+      position: {x: 0.10212692, y: -0.2319229, z: -0.08112948}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000002}
+      transformModified: 1
+    - name: Point09
+      position: {x: 0.29887375, y: -0.023364812, z: 0.10302984}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000002}
+      transformModified: 1
+    - name: Point10
+      position: {x: 0.2715724, y: 0.045390643, z: -0.08627286}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000002}
+      transformModified: 1
+    - name: Point131
+      position: {x: -0.09845093, y: 0.0014153314, z: -0.049525194}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000007, y: 1.0000004, z: 1.0000006}
+      transformModified: 1
+    - name: Point132
+      position: {x: -0.0984507, y: 0.001415472, z: 0.0495255}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000004}
+      transformModified: 1
+    - name: Point136
+      position: {x: -0.0984507, y: 0.001415472, z: 0.0495255}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000007, y: 1.0000006, z: 0.9999999}
+      transformModified: 1
+    - name: Point138
+      position: {x: -0.09845108, y: 0.0014153337, z: -0.0495252}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1}
+      transformModified: 1
     - name: Bip01 Spine
       position: {x: -0.06939361, y: 0.011507044, z: -0.00907887}
       rotation: {x: 0, y: 0, z: 0, w: 1}
@@ -24403,6 +24436,26 @@ ModelImporter:
       position: {x: -0.0932447, y: -0.00008127689, z: 0.0000005865097}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1.0000001, y: 1.0000002, z: 1.0000004}
+      transformModified: 1
+    - name: Point27
+      position: {x: -0, y: 0.0000004887581, z: -0.14373754}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 0.9999999}
+      transformModified: 1
+    - name: Point171
+      position: {x: -0.032650758, y: -0.057634734, z: -0.05404205}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1.0000001, y: -1, z: -0.9999999}
+      transformModified: 1
+    - name: Point189
+      position: {x: -0.000000076293944, y: 0.0000004982948, z: 0.14373772}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: Point207
+      position: {x: -0.032651212, y: -0.057634704, z: 0.054042205}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
       transformModified: 1
     - name: Bip01 Spine2
       position: {x: -0.10207649, y: -0.00012773037, z: 0.0000018453597}
@@ -24424,6 +24477,11 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
+    - name: ExposeTransform12
+      position: {x: -0.011081237, y: 0.07507315, z: 0.017834472}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000007, y: 1.0000007, z: 1.0000002}
+      transformModified: 1
     - name: Point11
       position: {x: 0.0011699676, y: -0.025567101, z: -0.00000007152557}
       rotation: {x: 0, y: 0, z: 0, w: 1}
@@ -24443,6 +24501,11 @@ ModelImporter:
       position: {x: -0.014241714, y: 0.07836523, z: -0.016959807}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 0.9999995, y: 1.0000006, z: 1.0000002}
+      transformModified: 1
+    - name: ExposeTransform13
+      position: {x: 0.0036854648, y: -0.0008808899, z: -0.0000009155273}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000007, y: 1.0000006, z: 1.0000005}
       transformModified: 1
     - name: Point19
       position: {x: -0.0000000333786, y: 0, z: -0.00000015258789}
@@ -24464,11 +24527,6 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1.0000002, y: 1.0000011, z: 1.0000008}
       transformModified: 1
-    - name: ExposeTransform13
-      position: {x: 0.0036854648, y: -0.0008808899, z: -0.0000009155273}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000007, y: 1.0000006, z: 1.0000005}
-      transformModified: 1
     - name: Point20
       position: {x: -0.014487533, y: 0.057500977, z: -0.032434307}
       rotation: {x: 0, y: 0, z: 0, w: 1}
@@ -24489,110 +24547,15 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1.0000002, y: 1, z: 1.0000001}
       transformModified: 1
-    - name: Point141
-      position: {x: -0.013572006, y: 0.08566192, z: 0.0000001502037}
+    - name: Point22
+      position: {x: -0.0071430206, y: 0.07387781, z: -0.016959798}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1.0000004}
-      transformModified: 1
-    - name: Point112
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 0.9999997, z: 0.9999997}
-      transformModified: 1
-    - name: Point106
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 0.9999998, z: 0.9999997}
-      transformModified: 1
-    - name: Point107
-      position: {x: -0, y: 0, z: 0.000000009536743}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 0.9999997, z: 0.99999946}
-      transformModified: 1
-    - name: Point143
-      position: {x: -0.014241561, y: 0.078365095, z: 0.01696019}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999998, y: 1.0000006, z: 0.99999976}
-      transformModified: 1
-    - name: Point137
-      position: {x: -0.00000042438506, y: 0, z: -0.00000036239624}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 0.99999976, z: 1.0000001}
-      transformModified: 1
-    - name: Point101
-      position: {x: 0.000000042915342, y: -0.00000015258789, z: 0.000000076293944}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999976, y: 0.9999998, z: 0.9999997}
-      transformModified: 1
-    - name: Point94
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1, z: 1.0000001}
-      transformModified: 1
-    - name: ExposeTransform14
-      position: {x: 0.0029113388, y: -0.0009604645, z: 0.000000076293944}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000006, y: 1.0000004, z: 1.0000002}
-      transformModified: 1
-    - name: Point144
-      position: {x: -0.014487381, y: 0.0575009, z: 0.032434385}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999998, y: 0.99999976, z: 0.9999998}
-      transformModified: 1
-    - name: Point140
-      position: {x: 0.0012847328, y: 0.0030210875, z: 0.0007122421}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1.0000004, z: 1}
-      transformModified: 1
-    - name: Point109
-      position: {x: -0, y: -0.000000076293944, z: 0.000000038146972}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.000001, y: 0.99999917, z: 0.99999934}
-      transformModified: 1
-    - name: Point99
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1.0000002}
-      transformModified: 1
-    - name: Point118
-      position: {x: -0.03334175, y: 0.04230362, z: -0.044218443}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999976, y: 0.99999994, z: 1.0000002}
-      transformModified: 1
-    - name: Point117
-      position: {x: -0.034964524, y: 0.066983216, z: -0.031206284}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999999, y: 0.9999998, z: 0.9999995}
-      transformModified: 1
-    - name: Point116
-      position: {x: -0.024819259, y: 0.079787, z: -0.01172409}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999998, y: 0.9999999, z: 0.9999993}
-      transformModified: 1
-    - name: Point115
-      position: {x: -0.02160469, y: 0.08538711, z: 0.00000015258789}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 0.9999999, z: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 0.99999976}
       transformModified: 1
     - name: Point26
       position: {x: -0.01424179, y: 0.07836516, z: -0.016959686}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1.0000008, y: 1.0000012, z: 0.99999964}
-      transformModified: 1
-    - name: Point73
-      position: {x: -0.000000076293944, y: 0.00094301935, z: 0.0026103973}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999998, y: 0.9999997, z: 1.0000004}
-      transformModified: 1
-    - name: Point74
-      position: {x: -0.00083274837, y: -0.007426977, z: 0.001729412}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 0.9999998, z: 1.0000002}
-      transformModified: 1
-    - name: Point25
-      position: {x: -0.00000022888183, y: 0.0018884372, z: -0.00016210556}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 1.0000005, z: 0.99999994}
       transformModified: 1
     - name: Point21
       position: {x: 0.00000045776366, y: 0.0056477496, z: 0.002704544}
@@ -24619,25 +24582,25 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
       transformModified: 1
+    - name: Point73
+      position: {x: -0.000000076293944, y: 0.00094301935, z: 0.0026103973}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.9999997, z: 1.0000004}
+      transformModified: 1
+    - name: Point74
+      position: {x: -0.00083274837, y: -0.007426977, z: 0.001729412}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 1.0000002}
+      transformModified: 1
+    - name: Point25
+      position: {x: -0.00000022888183, y: 0.0018884372, z: -0.00016210556}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000005, z: 0.99999994}
+      transformModified: 1
     - name: Point28
       position: {x: -0.014241638, y: 0.07836519, z: 0.016959747}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1.0000004, y: 1.0000005, z: 1.0000004}
-      transformModified: 1
-    - name: Point72
-      position: {x: 0.000000076293944, y: 0.00094315526, z: 0.0026102257}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 0.9999997, z: 0.9999998}
-      transformModified: 1
-    - name: Point75
-      position: {x: 0.00083213806, y: -0.0074269483, z: 0.0017291831}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999999, y: 0.99999994, z: 1.0000002}
-      transformModified: 1
-    - name: Point30
-      position: {x: 0.000004653931, y: 0.0018886017, z: -0.00016139983}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 0.9999999, z: 0.99999946}
       transformModified: 1
     - name: Point40
       position: {x: -0.000002746582, y: 0.005647917, z: 0.0027038383}
@@ -24664,75 +24627,20 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 0.99999994, y: 1, z: 1.0000001}
       transformModified: 1
-    - name: Bip01 Ponytail1
-      position: {x: -0.01938675, y: 0.020134896, z: 0.0000004506111}
+    - name: Point72
+      position: {x: 0.000000076293944, y: 0.00094315526, z: 0.0026102257}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 0.9999999, z: 1.0000001}
+      scale: {x: 1.0000001, y: 0.9999997, z: 0.9999998}
       transformModified: 1
-    - name: Bip01 Ponytail1Nub
-      position: {x: -0.06814987, y: 0, z: 0}
+    - name: Point75
+      position: {x: 0.00083213806, y: -0.0074269483, z: 0.0017291831}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999998, y: 0.99999994, z: 0.99999994}
+      scale: {x: 0.9999999, y: 0.99999994, z: 1.0000002}
       transformModified: 1
-    - name: Point142
-      position: {x: -0.069399945, y: -0.020356674, z: -0.00000030755996}
+    - name: Point30
+      position: {x: 0.000004653931, y: 0.0018886017, z: -0.00016139983}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999999, y: 1.0000002, z: 1.0000006}
-      transformModified: 1
-    - name: Point113
-      position: {x: -0, y: 0, z: 0.000000095367426}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 1.0000001, z: 0.9999998}
-      transformModified: 1
-    - name: Point105
-      position: {x: 0.000000009536743, y: 0.00000015258789, z: -0.000000019073486}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999999, y: 0.9999994, z: 0.999999}
-      transformModified: 1
-    - name: Point95
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
-      transformModified: 1
-    - name: Point31
-      position: {x: -0.059105795, y: -0.021067198, z: -0.016960502}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 0.9999992, z: 0.9999993}
-      transformModified: 1
-    - name: Point33
-      position: {x: -0.059105832, y: -0.021067047, z: 0.016959496}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999997, y: 0.99999964, z: 0.99999994}
-      transformModified: 1
-    - name: Point114
-      position: {x: -0.07295307, y: -0.0075794216, z: -0.00000046014785}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000002}
-      transformModified: 1
-    - name: Point145
-      position: {x: -0.05262699, y: -0.0009777832, z: 0.023268128}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 0.9999999, z: 0.9999994}
-      transformModified: 1
-    - name: Point150
-      position: {x: -0.020852737, y: -0.005960388, z: 0.041883543}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 0.99999964, z: 0.9999997}
-      transformModified: 1
-    - name: Point120
-      position: {x: -0.052626763, y: -0.0009777069, z: -0.023269042}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 1, z: 1.0000004}
-      transformModified: 1
-    - name: Point119
-      position: {x: -0.020852547, y: -0.0059603117, z: -0.041884385}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1.0000004, z: 1}
-      transformModified: 1
-    - name: Point22
-      position: {x: -0.0071430206, y: 0.07387781, z: -0.016959798}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000004, y: 1.0000004, z: 0.99999976}
+      scale: {x: 1.0000001, y: 0.9999999, z: 0.99999946}
       transformModified: 1
     - name: Point32
       position: {x: -0.0071429443, y: 0.07387771, z: 0.016960202}
@@ -24748,6 +24656,96 @@ ModelImporter:
       position: {x: -0.012594376, y: 0.08263151, z: 0.00993927}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1.0000001, y: 1.0000004, z: 0.9999993}
+      transformModified: 1
+    - name: Point43
+      position: {x: -0.05374504, y: 0.06709209, z: -0.0234976}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000005}
+      transformModified: 1
+    - name: Point115
+      position: {x: -0.02160469, y: 0.08538711, z: 0.00000015258789}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1}
+      transformModified: 1
+    - name: Point116
+      position: {x: -0.024819259, y: 0.079787, z: -0.01172409}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.9999993}
+      transformModified: 1
+    - name: Point117
+      position: {x: -0.034964524, y: 0.066983216, z: -0.031206284}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.9999995}
+      transformModified: 1
+    - name: Point118
+      position: {x: -0.03334175, y: 0.04230362, z: -0.044218443}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 0.99999994, z: 1.0000002}
+      transformModified: 1
+    - name: Point141
+      position: {x: -0.013572006, y: 0.08566192, z: 0.0000001502037}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000004}
+      transformModified: 1
+    - name: Point112
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999997, z: 0.9999997}
+      transformModified: 1
+    - name: Point106
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.9999997}
+      transformModified: 1
+    - name: Point107
+      position: {x: -0, y: 0, z: 0.000000009536743}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999997, z: 0.99999946}
+      transformModified: 1
+    - name: Point143
+      position: {x: -0.014241561, y: 0.078365095, z: 0.01696019}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1.0000006, z: 0.99999976}
+      transformModified: 1
+    - name: ExposeTransform14
+      position: {x: 0.0029113388, y: -0.0009604645, z: 0.000000076293944}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000006, y: 1.0000004, z: 1.0000002}
+      transformModified: 1
+    - name: Point137
+      position: {x: -0.00000042438506, y: 0, z: -0.00000036239624}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999976, z: 1.0000001}
+      transformModified: 1
+    - name: Point101
+      position: {x: 0.000000042915342, y: -0.00000015258789, z: 0.000000076293944}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 0.9999998, z: 0.9999997}
+      transformModified: 1
+    - name: Point94
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+      transformModified: 1
+    - name: Point144
+      position: {x: -0.014487381, y: 0.0575009, z: 0.032434385}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.99999976, z: 0.9999998}
+      transformModified: 1
+    - name: Point140
+      position: {x: 0.0012847328, y: 0.0030210875, z: 0.0007122421}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000004, z: 1}
+      transformModified: 1
+    - name: Point109
+      position: {x: -0, y: -0.000000076293944, z: 0.000000038146972}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.000001, y: 0.99999917, z: 0.99999934}
+      transformModified: 1
+    - name: Point99
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000002}
       transformModified: 1
     - name: Point146
       position: {x: -0.024818877, y: 0.07978707, z: 0.011724014}
@@ -24783,11 +24781,6 @@ ModelImporter:
       position: {x: -0.053745117, y: 0.06709202, z: -0.023497619}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 0.9999998, y: 0.9999999, z: 1.0000002}
-      transformModified: 1
-    - name: Point43
-      position: {x: -0.05374504, y: 0.06709209, z: -0.0234976}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000005}
       transformModified: 1
     - name: Point163
       position: {x: -0.06399193, y: 0.078697205, z: 0.014413199}
@@ -24849,6 +24842,151 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
+    - name: Bip01 Ponytail1
+      position: {x: -0.01938675, y: 0.020134896, z: 0.0000004506111}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 0.9999999, z: 1.0000001}
+      transformModified: 1
+    - name: Bip01 Ponytail1Nub
+      position: {x: -0.06814987, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.99999994, z: 0.99999994}
+      transformModified: 1
+    - name: Point31
+      position: {x: -0.059105795, y: -0.021067198, z: -0.016960502}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 0.9999992, z: 0.9999993}
+      transformModified: 1
+    - name: Point33
+      position: {x: -0.059105832, y: -0.021067047, z: 0.016959496}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999997, y: 0.99999964, z: 0.99999994}
+      transformModified: 1
+    - name: Point114
+      position: {x: -0.07295307, y: -0.0075794216, z: -0.00000046014785}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000002}
+      transformModified: 1
+    - name: Point119
+      position: {x: -0.020852547, y: -0.0059603117, z: -0.041884385}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000004, z: 1}
+      transformModified: 1
+    - name: Point120
+      position: {x: -0.052626763, y: -0.0009777069, z: -0.023269042}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1.0000004}
+      transformModified: 1
+    - name: Point142
+      position: {x: -0.069399945, y: -0.020356674, z: -0.00000030755996}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1.0000002, z: 1.0000006}
+      transformModified: 1
+    - name: Point113
+      position: {x: -0, y: 0, z: 0.000000095367426}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 0.9999998}
+      transformModified: 1
+    - name: Point105
+      position: {x: 0.000000009536743, y: 0.00000015258789, z: -0.000000019073486}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999994, z: 0.999999}
+      transformModified: 1
+    - name: Point95
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+      transformModified: 1
+    - name: Point145
+      position: {x: -0.05262699, y: -0.0009777832, z: 0.023268128}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999999, z: 0.9999994}
+      transformModified: 1
+    - name: Point150
+      position: {x: -0.020852737, y: -0.005960388, z: 0.041883543}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999964, z: 0.9999997}
+      transformModified: 1
+    - name: Cheek_R
+      position: {x: -0.05808358, y: 0.06928668, z: -0.02719635}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+      transformModified: 1
+    - name: BrowR1
+      position: {x: -0.076640934, y: 0.06693227, z: -0.035208587}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+      transformModified: 1
+    - name: BrowR2
+      position: {x: -0.011281356, y: 0, z: 1.1139491e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000006, y: 1.0000002, z: 1.0000001}
+      transformModified: 1
+    - name: Bip01 Blink Right
+      position: {x: -0.06827522, y: 0.057863757, z: -0.056116626}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 0.9999999, z: 1}
+      transformModified: 1
+    - name: Bip01 Xtra02Nub
+      position: {x: -0.010313149, y: 0, z: -0.0000000023841857}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: Cheek_L
+      position: {x: -0.058338173, y: 0.06925, z: 0.028722916}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999997, y: 0.99999946, z: 0.99999994}
+      transformModified: 1
+    - name: BrowL1
+      position: {x: -0.07617026, y: 0.067016646, z: 0.035189893}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 0.99999976, z: 1}
+      transformModified: 1
+    - name: BrowL2
+      position: {x: -0.011080551, y: 0, z: 0.0000000010721578}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.9999999, z: 1}
+      transformModified: 1
+    - name: Bip01 Blink Left
+      position: {x: -0.068275146, y: 0.057863455, z: 0.056116953}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.99999976, z: 1}
+      transformModified: 1
+    - name: Bip01 Xtra02OppNub
+      position: {x: -0.010313149, y: 0, z: -0.000000009536743}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Bone30
+      position: {x: 0.12209, y: -0.085426666, z: -0.030978903}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000007}
+      transformModified: 1
+    - name: Bone29
+      position: {x: -0.058609065, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bone41
+      position: {x: 0.1245948, y: -0.082048446, z: 0.028521819}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000001}
+      transformModified: 1
+    - name: Bone42
+      position: {x: -0.065485165, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+      transformModified: 1
+    - name: Bone32
+      position: {x: 0.10577911, y: -0.080151066, z: -0.13838743}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 0.99999976}
+      transformModified: 1
+    - name: Bone31
+      position: {x: -0.05018419, y: 0.000000009536743, z: 0.000000076293944}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
     - name: Bone24
       position: {x: 0.16302116, y: -0.01440421, z: -0.11089986}
       rotation: {x: 0, y: 0, z: 0, w: 1}
@@ -24856,16 +24994,6 @@ ModelImporter:
       transformModified: 1
     - name: Bone21
       position: {x: -0.06763069, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: Bone26
-      position: {x: 0.21935767, y: -0.059254102, z: -0.02810569}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000008, y: 1, z: 1.0000001}
-      transformModified: 1
-    - name: Bone25
-      position: {x: -0.0678754, y: 0, z: -0.000000076293944}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
@@ -24879,75 +25007,15 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: Bone30
-      position: {x: 0.12209, y: -0.085426666, z: -0.030978903}
+    - name: Bone26
+      position: {x: 0.21935767, y: -0.059254102, z: -0.02810569}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000007}
+      scale: {x: 1.0000008, y: 1, z: 1.0000001}
       transformModified: 1
-    - name: Bone29
-      position: {x: -0.058609065, y: 0, z: 0}
+    - name: Bone25
+      position: {x: -0.0678754, y: 0, z: -0.000000076293944}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: Bone32
-      position: {x: 0.10577911, y: -0.080151066, z: -0.13838743}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000002, z: 0.99999976}
-      transformModified: 1
-    - name: Bone31
-      position: {x: -0.05018419, y: 0.000000009536743, z: 0.000000076293944}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: Bone34
-      position: {x: 0.28295004, y: -0.034927662, z: 0.040909324}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000001}
-      transformModified: 1
-    - name: Bone33
-      position: {x: -0.07019626, y: 0.000000038146972, z: -0.000000038146972}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: Bone35
-      position: {x: 0.16846938, y: 0.011958799, z: 0.096571274}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 1.0000005, z: 1.0000001}
-      transformModified: 1
-    - name: Bone36
-      position: {x: -0.075538024, y: 0, z: -0.000000038146972}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
-      transformModified: 1
-    - name: Bone37
-      position: {x: 0.22100715, y: -0.057290677, z: 0.011654872}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000002, z: 1}
-      transformModified: 1
-    - name: Bone38
-      position: {x: -0.073147126, y: 0.000000038146972, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1, z: 1.0000001}
-      transformModified: 1
-    - name: Bone39
-      position: {x: 0.1453991, y: -0.03652261, z: 0.12972096}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999996, y: 1.0000007, z: 1.0000001}
-      transformModified: 1
-    - name: Bone40
-      position: {x: -0.07085007, y: 0.000000009536743, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
-      transformModified: 1
-    - name: Bone41
-      position: {x: 0.1245948, y: -0.082048446, z: 0.028521819}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000001}
-      transformModified: 1
-    - name: Bone42
-      position: {x: -0.065485165, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1, z: 1.0000001}
       transformModified: 1
     - name: Bone43
       position: {x: 0.11572349, y: -0.046074092, z: 0.14210534}
@@ -24959,10 +25027,45 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 0.99999994}
       transformModified: 1
-    - name: ExposeTransform12
-      position: {x: -0.011081237, y: 0.07507315, z: 0.017834472}
+    - name: Bone35
+      position: {x: 0.16846938, y: 0.011958799, z: 0.096571274}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000007, y: 1.0000007, z: 1.0000002}
+      scale: {x: 0.99999994, y: 1.0000005, z: 1.0000001}
+      transformModified: 1
+    - name: Bone36
+      position: {x: -0.075538024, y: 0, z: -0.000000038146972}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+      transformModified: 1
+    - name: Bone39
+      position: {x: 0.1453991, y: -0.03652261, z: 0.12972096}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999996, y: 1.0000007, z: 1.0000001}
+      transformModified: 1
+    - name: Bone40
+      position: {x: -0.07085007, y: 0.000000009536743, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+      transformModified: 1
+    - name: Bone34
+      position: {x: 0.28295004, y: -0.034927662, z: 0.040909324}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000001}
+      transformModified: 1
+    - name: Bone33
+      position: {x: -0.07019626, y: 0.000000038146972, z: -0.000000038146972}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bone37
+      position: {x: 0.22100715, y: -0.057290677, z: 0.011654872}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+      transformModified: 1
+    - name: Bone38
+      position: {x: -0.073147126, y: 0.000000038146972, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
       transformModified: 1
     - name: Bip01 RightEye
       position: {x: -0.06964104, y: 0.05379178, z: -0.020621829}
@@ -24984,500 +25087,45 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 0.9999999, y: 0.9999999, z: 0.99999994}
       transformModified: 1
-    - name: Bip01 Blink Right
-      position: {x: -0.06827522, y: 0.057863757, z: -0.056116626}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999976, y: 0.9999999, z: 1}
-      transformModified: 1
-    - name: Bip01 Xtra02Nub
-      position: {x: -0.010313149, y: 0, z: -0.0000000023841857}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1.0000001, z: 1}
-      transformModified: 1
-    - name: Bip01 Blink Left
-      position: {x: -0.068275146, y: 0.057863455, z: 0.056116953}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999998, y: 0.99999976, z: 1}
-      transformModified: 1
-    - name: Bip01 Xtra02OppNub
-      position: {x: -0.010313149, y: 0, z: -0.000000009536743}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 1, z: 1}
-      transformModified: 1
-    - name: BrowR1
-      position: {x: -0.076640934, y: 0.06693227, z: -0.035208587}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
-      transformModified: 1
-    - name: BrowR2
-      position: {x: -0.011281356, y: 0, z: 1.1139491e-10}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000006, y: 1.0000002, z: 1.0000001}
-      transformModified: 1
-    - name: BrowL1
-      position: {x: -0.07617026, y: 0.067016646, z: 0.035189893}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999976, y: 0.99999976, z: 1}
-      transformModified: 1
-    - name: BrowL2
-      position: {x: -0.011080551, y: 0, z: 0.0000000010721578}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999998, y: 0.9999999, z: 1}
-      transformModified: 1
-    - name: Cheek_L
-      position: {x: -0.058338173, y: 0.06925, z: 0.028722916}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999997, y: 0.99999946, z: 0.99999994}
-      transformModified: 1
-    - name: Cheek_R
-      position: {x: -0.05808358, y: 0.06928668, z: -0.02719635}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1, z: 1}
-      transformModified: 1
-    - name: Bip01 L Clavicle
-      position: {x: 0.057495575, y: 0.025273342, z: 0.020734074}
-      rotation: {x: 0.7071068, y: -0.000000030908623, z: -0.7071068, w: 0.000000030908623}
-      scale: {x: 1, y: 1.0000002, z: 1}
-      transformModified: 1
-    - name: Bip01 L UpperArm
-      position: {x: -0.099329524, y: 0.0000000023841857, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999997, y: 0.9999998, z: 1.0000005}
-      transformModified: 1
-    - name: Bip01 L Forearm
-      position: {x: -0.17940384, y: 0.0000000047683715, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 0.9999998, z: 0.99999994}
-      transformModified: 1
-    - name: Bip01 L Hand
-      position: {x: -0.20124076, y: 0, z: -0.000000038146972}
-      rotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
-      scale: {x: 1, y: 0.99999976, z: 1}
-      transformModified: 1
-    - name: Bip01 L Finger0
-      position: {x: -0.017191505, y: 0.018889045, z: -0.023757705}
-      rotation: {x: 0, y: 0.3826835, z: 0, w: -0.9238795}
-      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000006}
-      transformModified: 1
-    - name: Bip01 L Finger01
-      position: {x: -0.022199554, y: 0.000000038146972, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 0.9999997, z: 0.9999999}
-      transformModified: 1
-    - name: Bip01 L Finger02
-      position: {x: -0.017866248, y: -0.000000038146972, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999999, y: 1.0000002, z: 1.0000001}
-      transformModified: 1
-    - name: Bip01 L Finger0Nub
-      position: {x: -0.02331005, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: Bip01 L Finger1
-      position: {x: -0.069752194, y: -0.0031070327, z: -0.018663138}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1, z: 0.9999999}
-      transformModified: 1
-    - name: Bip01 L Finger11
-      position: {x: -0.02173706, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999998, y: 0.9999996, z: 0.9999994}
-      transformModified: 1
-    - name: Bip01 L Finger12
-      position: {x: -0.0142276, y: 0.000000019073486, z: -0.000000038146972}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 1, z: 1.0000005}
-      transformModified: 1
-    - name: Bip01 L Finger1Nub
-      position: {x: -0.018305816, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999999, y: 0.9999999, z: 1}
-      transformModified: 1
-    - name: Bip01 L Finger2
-      position: {x: -0.068701625, y: -0.0029486846, z: -0.004669094}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000004}
-      transformModified: 1
-    - name: Bip01 L Finger21
-      position: {x: -0.02295517, y: 0.000000019073486, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 0.99999994, z: 0.9999999}
-      transformModified: 1
-    - name: Bip01 L Finger22
-      position: {x: -0.017375411, y: -0.000000038146972, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999997, y: 0.99999994, z: 0.9999999}
-      transformModified: 1
-    - name: Bip01 L Finger2Nub
-      position: {x: -0.020558624, y: 0.000000019073486, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: Bip01 L Finger3
-      position: {x: -0.06629066, y: -0.00050590513, z: 0.008092975}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999999, y: 1.0000004, z: 1.0000004}
-      transformModified: 1
-    - name: Bip01 L Finger31
-      position: {x: -0.020892639, y: 0, z: -0.000000019073486}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999997, y: 1.0000001, z: 0.9999999}
-      transformModified: 1
-    - name: Bip01 L Finger32
-      position: {x: -0.018256417, y: -0.000000038146972, z: 0.000000038146972}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1, z: 1.0000005}
-      transformModified: 1
-    - name: Bip01 L Finger3Nub
-      position: {x: -0.017403563, y: 0.000000038146972, z: -0.000000038146972}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 1, z: 0.9999999}
-      transformModified: 1
-    - name: Bip01 L Finger4
-      position: {x: -0.06276088, y: -0.00046894074, z: 0.02038536}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 1, z: 1}
-      transformModified: 1
-    - name: Bip01 L Finger41
-      position: {x: -0.018933792, y: 0.000000019073486, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 0.9999997, z: 0.9999999}
-      transformModified: 1
-    - name: Bip01 L Finger42
-      position: {x: -0.013777618, y: 0.000000019073486, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000002}
-      transformModified: 1
-    - name: Bip01 L Finger4Nub
-      position: {x: -0.014137306, y: 0.000000038146972, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
-      transformModified: 1
-    - name: Bone_Wrist01
-      position: {x: -0.105419, y: 0, z: 0.00000030517577}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 1.0000005, z: 0.99999964}
-      transformModified: 1
-    - name: ExposeTransform01
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999998, y: 1.0000002, z: 1}
-      transformModified: 1
-    - name: Point16
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000004, y: 1.0000004, z: 1}
-      transformModified: 1
-    - name: Bone_KoomL
-      position: {x: -0, y: 0.027579183, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999976, y: 1.1512796, z: 1}
-      transformModified: 1
-    - name: Point128
-      position: {x: -0.04, y: -0.000000038146972, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999997, y: 1, z: 0.9999999}
-      transformModified: 1
-    - name: Bone_ShoulderTwist01
-      position: {x: -0, y: 0, z: -0.000000038146972}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999995, y: 1.0000007, z: 0.9999998}
-      transformModified: 1
-    - name: Point85
-      position: {x: -0.033606872, y: -0.028318042, z: 0.036613427}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000007, z: 1.0000005}
-      transformModified: 1
-    - name: Bone48
-      position: {x: -0.000000076293944, y: -0.015, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 1.0000007, z: 0.99999994}
-      transformModified: 1
-    - name: Bone45
-      position: {x: -0.21499656, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: Circle04
-      position: {x: 0.000000076293944, y: -0.0000008368492, z: -0.00000015258789}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000005, y: 1.000001, z: 1.0000005}
-      transformModified: 1
-    - name: Circle07
-      position: {x: -0.0037187194, y: 0.0030752693, z: 0.003903961}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 0.9999993, z: 1.0000002}
-      transformModified: 1
-    - name: Point213
-      position: {x: -0.0074567413, y: -0.0505519, z: 0.026531486}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 0.9999995}
-      transformModified: 1
-    - name: Point212
-      position: {x: 0.024888, y: -0.0448244, z: 0.019729976}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 0.9999995}
-      transformModified: 1
-    - name: Point39
-      position: {x: 0.061143644, y: -0.001064961, z: -0.010675401}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999964, y: 0.9999999, z: 0.99999917}
-      transformModified: 1
-    - name: Point209
-      position: {x: -0.0021954344, y: 0, z: 0.000000028610229}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 0.9999998, z: 0.99999994}
-      transformModified: 1
-    - name: Circle11
-      position: {x: -0.000000076293944, y: 0.0000000667572, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 0.9999993, z: 1}
-      transformModified: 1
-    - name: Bone_UpperArmTwistL
-      position: {x: -0.02, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1.0000002, z: 0.9999993}
-      transformModified: 1
-    - name: Bone_BicepsL
-      position: {x: -0.065, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9955966, y: 0.98238677, z: 0.99119335}
-      transformModified: 1
-    - name: Bip01 L ForeTwist
-      position: {x: -0.17940384, y: 0.0000000047683715, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 0.99999964, z: 0.9999999}
-      transformModified: 1
-    - name: Point04
-      position: {x: -0.12783302, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 0.9999999, z: 0.9999996}
-      transformModified: 1
-    - name: ExposeTransform28
-      position: {x: -0.000000076293944, y: -0.00000008106232, z: 0.00000030517577}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 1.0000004, z: 0.9999994}
-      transformModified: 1
-    - name: Point93
-      position: {x: -0, y: 0.00000020265578, z: -0.00000022888183}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999964, y: 1.000001, z: 1.0000001}
-      transformModified: 1
-    - name: Bone_ShoulderL
-      position: {x: 0.000000076293944, y: 0, z: -0.049999997}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 0.9999999, z: 0.9702655}
-      transformModified: 1
-    - name: Point130
-      position: {x: -0.13, y: 0.0000000023841857, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999997, y: 1.0000006, z: 1.0000001}
-      transformModified: 1
-    - name: Bone_BicepsLs
-      position: {x: -0, y: 0.039999995, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 1.0088849, z: 0.9911933}
-      transformModified: 1
-    - name: Point_TwistRigidL
-      position: {x: -0.07581245, y: 0.000000047683713, z: 0.000000076293944}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000007, z: 1.0000005}
-      transformModified: 1
-    - name: Point03
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000007, y: 1.0000004, z: 1.0000006}
-      transformModified: 1
-    - name: Point87
-      position: {x: -0.071914755, y: 0.028577246, z: 0.040776517}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999976, y: 1.000001, z: 1.0000002}
-      transformModified: 1
-    - name: Bone16
-      position: {x: -0.074907, y: 0.028179955, z: 0.03931053}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000012, y: 1.0000007, z: 1.1032665}
-      transformModified: 1
-    - name: Bone13
-      position: {x: -0.075747184, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1.0000001}
-      transformModified: 1
-    - name: Bone18
-      position: {x: 0.058664497, y: -0.019126138, z: 0.09174347}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.000001, y: 1.0000005, z: 1.0000007}
-      transformModified: 1
-    - name: Bone15
-      position: {x: -0.0712941, y: -0.000000038146972, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: ExposeTransform30
-      position: {x: -0.082429044, y: 0.03057693, z: 0.06070976}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999998, y: 1.0000002, z: 1.0000004}
-      transformModified: 1
     - name: Bip01 R Clavicle
       position: {x: 0.058757704, y: 0.021230182, z: -0.021700062}
       rotation: {x: 0.7071068, y: -0.000000030908623, z: 0.7071068, w: -0.000000030908623}
       scale: {x: 0.9999999, y: 0.9999997, z: 1}
+      transformModified: 1
+    - name: ExposeTransform29
+      position: {x: -0.07171748, y: 0.023162583, z: -0.07111595}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999964, y: 0.9999998, z: 1.0000002}
+      transformModified: 1
+    - name: Point01
+      position: {x: -0.071914636, y: 0.028577732, z: -0.04077667}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1.0000001, y: -1.0000001, z: -0.99999976}
+      transformModified: 1
+    - name: Point12
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.000001, z: 1.0000007}
+      transformModified: 1
+    - name: Bone11
+      position: {x: -0.07689858, y: 0.028210819, z: -0.037911147}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000008, z: 1.1777463}
+      transformModified: 1
+    - name: Bone14
+      position: {x: -0.07213958, y: -0.0000000047683715, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Bip01 R UpperArm
       position: {x: -0.09932952, y: 0, z: 0.000000076293944}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1.0000001}
       transformModified: 1
-    - name: Bip01 R Forearm
-      position: {x: -0.17940384, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999999, y: 0.99999976, z: 1}
-      transformModified: 1
-    - name: Bip01 R Hand
-      position: {x: -0.20124061, y: 0, z: 0}
-      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-      scale: {x: 1.0000002, y: 1.0000004, z: 0.9999999}
-      transformModified: 1
-    - name: Bip01 R Finger0
-      position: {x: -0.017191581, y: 0.018889083, z: 0.023757724}
-      rotation: {x: 0, y: 0.38268346, z: 0, w: 0.9238795}
-      scale: {x: 1.0000005, y: 1.0000007, z: 1.0000006}
-      transformModified: 1
-    - name: Bip01 R Finger01
-      position: {x: -0.022199515, y: -0.000000019073486, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999994, y: 0.99999964, z: 0.9999998}
-      transformModified: 1
-    - name: Bip01 R Finger02
-      position: {x: -0.017866325, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
-      transformModified: 1
-    - name: Bip01 R Finger0Nub
-      position: {x: -0.02331009, y: -0.0000000047683715, z: 0.000000038146972}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: -1, y: -1, z: -1}
-      transformModified: 1
-    - name: Bip01 R Finger1
-      position: {x: -0.069752194, y: -0.0031069946, z: 0.018663177}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999999, y: 0.9999994, z: 0.99999976}
-      transformModified: 1
-    - name: Bip01 R Finger11
-      position: {x: -0.021737022, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999997, y: 1.0000005, z: 0.9999999}
-      transformModified: 1
-    - name: Bip01 R Finger12
-      position: {x: -0.0142276, y: 0, z: -0.0000000047683715}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999976, y: 1.0000001, z: 1.0000001}
-      transformModified: 1
-    - name: Bip01 R Finger1Nub
-      position: {x: -0.01830574, y: -0.000000019073486, z: -0.0000000047683715}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: -1, y: -0.99999994, z: -1}
-      transformModified: 1
-    - name: Bip01 R Finger2
-      position: {x: -0.06870159, y: -0.0029486846, z: 0.004669094}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999996, y: 1.0000005, z: 1.0000001}
-      transformModified: 1
-    - name: Bip01 R Finger21
-      position: {x: -0.022955094, y: 0.000000038146972, z: 0.000000019073486}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000005, y: 0.99999976, z: 0.9999999}
-      transformModified: 1
-    - name: Bip01 R Finger22
-      position: {x: -0.017375393, y: 0, z: 0.0000000047683715}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999964, y: 1.0000005, z: 0.99999994}
-      transformModified: 1
-    - name: Bip01 R Finger2Nub
-      position: {x: -0.020558624, y: 0.000000009536743, z: 0.0000000047683715}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: -1, y: -1, z: -1.0000001}
-      transformModified: 1
-    - name: Bip01 R Finger3
-      position: {x: -0.06629066, y: -0.00050590513, z: -0.008092957}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999964, y: 0.99999976, z: 1.0000002}
-      transformModified: 1
-    - name: Bip01 R Finger31
-      position: {x: -0.020892676, y: 0, z: 0.000000009536743}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000001}
-      transformModified: 1
-    - name: Bip01 R Finger32
-      position: {x: -0.018256282, y: -0.000000038146972, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999946, y: 1, z: 1}
-      transformModified: 1
-    - name: Bip01 R Finger3Nub
-      position: {x: -0.01740364, y: 0, z: -0.000000009536743}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: -1, y: -1.0000001, z: -1}
-      transformModified: 1
-    - name: Bip01 R Finger4
-      position: {x: -0.06276088, y: -0.00046897886, z: -0.020385342}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 0.9999996, z: 1}
-      transformModified: 1
-    - name: Bip01 R Finger41
-      position: {x: -0.018933792, y: 0, z: 0.000000019073486}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999995, y: 1.0000001, z: 1}
-      transformModified: 1
-    - name: Bip01 R Finger42
-      position: {x: -0.013777618, y: 0, z: 0.000000019073486}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 0.9999998, z: 1}
-      transformModified: 1
-    - name: Bip01 R Finger4Nub
-      position: {x: -0.014137344, y: 0, z: 0.000000019073486}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: -1, y: -1, z: -1}
-      transformModified: 1
-    - name: Wand_Tip
-      position: {x: -0.2530905, y: -0.0122882845, z: 0.25869116}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1.0000001, z: 0.9999999}
-      transformModified: 1
-    - name: Bone_Wrist02
-      position: {x: -0.10541908, y: 0.000000019073486, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000004, y: 0.9999997, z: 0.9999993}
-      transformModified: 1
-    - name: ExposeTransform02
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1.0000005, z: 1.0000001}
-      transformModified: 1
-    - name: Point17
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
-      transformModified: 1
-    - name: Bone_KoomR
-      position: {x: 0.000000076293944, y: 0.027579201, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 1.1252038, z: 1}
-      transformModified: 1
-    - name: Point121
-      position: {x: -0.040000074, y: 0.000000009536743, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000001}
-      transformModified: 1
     - name: Bone_ShoulderTwist02
       position: {x: -0.000000076293944, y: -0.000000019073486, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 0.9999997, y: 0.9999999, z: 0.9999992}
-      transformModified: 1
-    - name: Point79
-      position: {x: -0.033606946, y: -0.028317137, z: -0.036613464}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 1.0000012, z: 1.0000007}
       transformModified: 1
     - name: Bone46
       position: {x: -0.000000076293944, y: -0.015000018, z: 0}
@@ -25499,16 +25147,6 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1.0000001, y: 1.0000001, z: 0.9999997}
       transformModified: 1
-    - name: Point175
-      position: {x: 0.024887847, y: 0.044824094, z: 0.019730186}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: -1.0000006, y: -1, z: -1.0000001}
-      transformModified: 1
-    - name: Point176
-      position: {x: -0.0074567413, y: 0.050551593, z: 0.026531706}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: -1.0000006, y: -1, z: -1.0000001}
-      transformModified: 1
     - name: Point38
       position: {x: 0.06114334, y: 0.0010650217, z: -0.010675411}
       rotation: {x: 0, y: 0, z: 0, w: 1}
@@ -25519,35 +25157,35 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
+    - name: Point175
+      position: {x: 0.024887847, y: 0.044824094, z: 0.019730186}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1.0000006, y: -1, z: -1.0000001}
+      transformModified: 1
+    - name: Point176
+      position: {x: -0.0074567413, y: 0.050551593, z: 0.026531706}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1.0000006, y: -1, z: -1.0000001}
+      transformModified: 1
     - name: Circle10
       position: {x: -0, y: 0.000000009536743, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1.0000001, y: 1, z: 0.9999996}
       transformModified: 1
-    - name: Bone_UpperArmTwistR
-      position: {x: -0.020000076, y: 0, z: 0}
+    - name: Point79
+      position: {x: -0.033606946, y: -0.028317137, z: -0.036613464}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 0.99999994, z: 0.9999988}
-      transformModified: 1
-    - name: Bone_BicepsR
-      position: {x: -0.065, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99233115, y: 0.96932596, z: 0.9846629}
-      transformModified: 1
-    - name: Bip01 R ForeTwist
-      position: {x: -0.17940384, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 0.9999999, z: 1.0000001}
-      transformModified: 1
-    - name: Point13
-      position: {x: -0.12783302, y: 0, z: -0.000000038146972}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999999, y: 1.0000006, z: 0.99999994}
+      scale: {x: 1.0000002, y: 1.0000012, z: 1.0000007}
       transformModified: 1
     - name: ExposeTransform27
       position: {x: -0, y: -0.000000076293944, z: 0.0000002670288}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 0.9999998, y: 1.0000002, z: 0.9999994}
+      transformModified: 1
+    - name: Point13
+      position: {x: -0.12783302, y: 0, z: -0.000000038146972}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1.0000006, z: 0.99999994}
       transformModified: 1
     - name: Point92
       position: {x: -0, y: 0.000000019073486, z: 0}
@@ -25574,90 +25212,445 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 0.99999946, y: 0.99999934, z: 0.9999994}
       transformModified: 1
-    - name: Point12
+    - name: Bone_UpperArmTwistR
+      position: {x: -0.020000076, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 0.99999994, z: 0.9999988}
+      transformModified: 1
+    - name: Bone_BicepsR
+      position: {x: -0.065, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99233115, y: 0.96932596, z: 0.9846629}
+      transformModified: 1
+    - name: Bip01 R ForeTwist
+      position: {x: -0.17940384, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1.0000001}
+      transformModified: 1
+    - name: Bip01 R Forearm
+      position: {x: -0.17940384, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.99999976, z: 1}
+      transformModified: 1
+    - name: ExposeTransform02
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000004, y: 1.000001, z: 1.0000007}
+      scale: {x: 1, y: 1.0000005, z: 1.0000001}
       transformModified: 1
-    - name: Bone11
-      position: {x: -0.07689858, y: 0.028210819, z: -0.037911147}
+    - name: Point17
+      position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1.0000008, z: 1.1777463}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
       transformModified: 1
-    - name: Bone14
-      position: {x: -0.07213958, y: -0.0000000047683715, z: 0}
+    - name: Bone_KoomR
+      position: {x: 0.000000076293944, y: 0.027579201, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.1252038, z: 1}
+      transformModified: 1
+    - name: Point121
+      position: {x: -0.040000074, y: 0.000000009536743, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000001}
+      transformModified: 1
+    - name: Bone_Wrist02
+      position: {x: -0.10541908, y: 0.000000019073486, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 0.9999997, z: 0.9999993}
+      transformModified: 1
+    - name: Bip01 R Hand
+      position: {x: -0.20124061, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+      scale: {x: 1.0000002, y: 1.0000004, z: 0.9999999}
+      transformModified: 1
+    - name: Wand_Tip
+      position: {x: -0.2530905, y: -0.0122882845, z: 0.25869116}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 0.9999999}
+      transformModified: 1
+    - name: Bip01 R Finger0
+      position: {x: -0.017191581, y: 0.018889083, z: 0.023757724}
+      rotation: {x: 0, y: 0.38268346, z: 0, w: 0.9238795}
+      scale: {x: 1.0000005, y: 1.0000007, z: 1.0000006}
+      transformModified: 1
+    - name: Bip01 R Finger01
+      position: {x: -0.022199515, y: -0.000000019073486, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999994, y: 0.99999964, z: 0.9999998}
+      transformModified: 1
+    - name: Bip01 R Finger02
+      position: {x: -0.017866325, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+      transformModified: 1
+    - name: Bip01 R Finger0Nub
+      position: {x: -0.02331009, y: -0.0000000047683715, z: 0.000000038146972}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1, y: -1, z: -1}
+      transformModified: 1
+    - name: Bip01 R Finger4
+      position: {x: -0.06276088, y: -0.00046897886, z: -0.020385342}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999996, z: 1}
+      transformModified: 1
+    - name: Bip01 R Finger41
+      position: {x: -0.018933792, y: 0, z: 0.000000019073486}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999995, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: Bip01 R Finger42
+      position: {x: -0.013777618, y: 0, z: 0.000000019073486}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999998, z: 1}
+      transformModified: 1
+    - name: Bip01 R Finger4Nub
+      position: {x: -0.014137344, y: 0, z: 0.000000019073486}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1, y: -1, z: -1}
+      transformModified: 1
+    - name: Bip01 R Finger3
+      position: {x: -0.06629066, y: -0.00050590513, z: -0.008092957}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999964, y: 0.99999976, z: 1.0000002}
+      transformModified: 1
+    - name: Bip01 R Finger31
+      position: {x: -0.020892676, y: 0, z: 0.000000009536743}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000001}
+      transformModified: 1
+    - name: Bip01 R Finger32
+      position: {x: -0.018256282, y: -0.000000038146972, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999946, y: 1, z: 1}
+      transformModified: 1
+    - name: Bip01 R Finger3Nub
+      position: {x: -0.01740364, y: 0, z: -0.000000009536743}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1, y: -1.0000001, z: -1}
+      transformModified: 1
+    - name: Bip01 R Finger2
+      position: {x: -0.06870159, y: -0.0029486846, z: 0.004669094}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999996, y: 1.0000005, z: 1.0000001}
+      transformModified: 1
+    - name: Bip01 R Finger21
+      position: {x: -0.022955094, y: 0.000000038146972, z: 0.000000019073486}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 0.99999976, z: 0.9999999}
+      transformModified: 1
+    - name: Bip01 R Finger22
+      position: {x: -0.017375393, y: 0, z: 0.0000000047683715}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999964, y: 1.0000005, z: 0.99999994}
+      transformModified: 1
+    - name: Bip01 R Finger2Nub
+      position: {x: -0.020558624, y: 0.000000009536743, z: 0.0000000047683715}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1, y: -1, z: -1.0000001}
+      transformModified: 1
+    - name: Bip01 R Finger1
+      position: {x: -0.069752194, y: -0.0031069946, z: 0.018663177}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999994, z: 0.99999976}
+      transformModified: 1
+    - name: Bip01 R Finger11
+      position: {x: -0.021737022, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999997, y: 1.0000005, z: 0.9999999}
+      transformModified: 1
+    - name: Bip01 R Finger12
+      position: {x: -0.0142276, y: 0, z: -0.0000000047683715}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 1.0000001, z: 1.0000001}
+      transformModified: 1
+    - name: Bip01 R Finger1Nub
+      position: {x: -0.01830574, y: -0.000000019073486, z: -0.0000000047683715}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1, y: -0.99999994, z: -1}
+      transformModified: 1
+    - name: Bip01 L Clavicle
+      position: {x: 0.057495575, y: 0.025273342, z: 0.020734074}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: -0.7071068, w: 0.000000030908623}
+      scale: {x: 1, y: 1.0000002, z: 1}
+      transformModified: 1
+    - name: ExposeTransform30
+      position: {x: -0.082429044, y: 0.03057693, z: 0.06070976}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1.0000002, z: 1.0000004}
+      transformModified: 1
+    - name: Point03
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000007, y: 1.0000004, z: 1.0000006}
+      transformModified: 1
+    - name: Point87
+      position: {x: -0.071914755, y: 0.028577246, z: 0.040776517}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 1.000001, z: 1.0000002}
+      transformModified: 1
+    - name: Bone18
+      position: {x: 0.058664497, y: -0.019126138, z: 0.09174347}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.000001, y: 1.0000005, z: 1.0000007}
+      transformModified: 1
+    - name: Bone15
+      position: {x: -0.0712941, y: -0.000000038146972, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: Point01
-      position: {x: -0.071914636, y: 0.028577732, z: -0.04077667}
+    - name: Bone16
+      position: {x: -0.074907, y: 0.028179955, z: 0.03931053}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: -1.0000001, y: -1.0000001, z: -0.99999976}
+      scale: {x: 1.0000012, y: 1.0000007, z: 1.1032665}
       transformModified: 1
-    - name: ExposeTransform29
-      position: {x: -0.07171748, y: 0.023162583, z: -0.07111595}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999964, y: 0.9999998, z: 1.0000002}
-      transformModified: 1
-    - name: Bone04
-      position: {x: -0.16045798, y: -0.000042881966, z: -0.000000076293944}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 1.0000006, z: 0.9999999}
-      transformModified: 1
-    - name: Point179
-      position: {x: -0.0034117126, y: -0.030565128, z: -0.025633354}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: -1.0000002, y: -0.99999994, z: -0.9999997}
-      transformModified: 1
-    - name: Point76
-      position: {x: -0.00000015258789, y: -0.0000000035762786, z: -0.000000009536743}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000012, y: 1.0000001, z: 0.9999989}
-      transformModified: 1
-    - name: Point205
-      position: {x: 0.08078091, y: 0.000000014305114, z: 0.00000022888183}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 0.99999964}
-      transformModified: 1
-    - name: Point88
-      position: {x: -0.003411865, y: -0.030565165, z: 0.025633544}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 0.99999976, z: 0.9999999}
-      transformModified: 1
-    - name: Point77
-      position: {x: 0.00000022888183, y: 0.000000030994414, z: -0.00000007152557}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: -1.0000007, y: -0.9999999, z: -0.9999988}
-      transformModified: 1
-    - name: Point206
-      position: {x: 0.080780864, y: 0.00000004529953, z: -0.000000076293944}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: Point89
-      position: {x: -0.033795927, y: 0.021244679, z: -0.0398881}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: -1.0000005, y: -0.99999976, z: -0.9999999}
-      transformModified: 1
-    - name: Point90
-      position: {x: -0.033796232, y: 0.021244697, z: 0.0398881}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 0.9999996, z: 0.9999998}
-      transformModified: 1
-    - name: Bone17
-      position: {x: -0.033796158, y: 0.021244716, z: 0.0398881}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 1, z: 0.9999998}
-      transformModified: 1
-    - name: Bone20
-      position: {x: -0.071808316, y: 0, z: 0}
+    - name: Bone13
+      position: {x: -0.075747184, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1.0000001}
       transformModified: 1
-    - name: Point69
-      position: {x: -0.16045798, y: -0.00004293203, z: 0}
+    - name: Bip01 L UpperArm
+      position: {x: -0.099329524, y: 0.0000000023841857, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000008, y: 1.000001, z: 0.99999976}
+      scale: {x: 0.9999997, y: 0.9999998, z: 1.0000005}
+      transformModified: 1
+    - name: Bone_ShoulderTwist01
+      position: {x: -0, y: 0, z: -0.000000038146972}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999995, y: 1.0000007, z: 0.9999998}
+      transformModified: 1
+    - name: Bone48
+      position: {x: -0.000000076293944, y: -0.015, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000007, z: 0.99999994}
+      transformModified: 1
+    - name: Bone45
+      position: {x: -0.21499656, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Circle04
+      position: {x: 0.000000076293944, y: -0.0000008368492, z: -0.00000015258789}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.000001, z: 1.0000005}
+      transformModified: 1
+    - name: Circle07
+      position: {x: -0.0037187194, y: 0.0030752693, z: 0.003903961}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 0.9999993, z: 1.0000002}
+      transformModified: 1
+    - name: Point39
+      position: {x: 0.061143644, y: -0.001064961, z: -0.010675401}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999964, y: 0.9999999, z: 0.99999917}
+      transformModified: 1
+    - name: Point209
+      position: {x: -0.0021954344, y: 0, z: 0.000000028610229}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 0.99999994}
+      transformModified: 1
+    - name: Point212
+      position: {x: 0.024888, y: -0.0448244, z: 0.019729976}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 0.9999995}
+      transformModified: 1
+    - name: Point213
+      position: {x: -0.0074567413, y: -0.0505519, z: 0.026531486}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 0.9999995}
+      transformModified: 1
+    - name: Circle11
+      position: {x: -0.000000076293944, y: 0.0000000667572, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 0.9999993, z: 1}
+      transformModified: 1
+    - name: Point85
+      position: {x: -0.033606872, y: -0.028318042, z: 0.036613427}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000007, z: 1.0000005}
+      transformModified: 1
+    - name: ExposeTransform28
+      position: {x: -0.000000076293944, y: -0.00000008106232, z: 0.00000030517577}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000004, z: 0.9999994}
+      transformModified: 1
+    - name: Point04
+      position: {x: -0.12783302, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 0.9999999, z: 0.9999996}
+      transformModified: 1
+    - name: Point93
+      position: {x: -0, y: 0.00000020265578, z: -0.00000022888183}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999964, y: 1.000001, z: 1.0000001}
+      transformModified: 1
+    - name: Bone_ShoulderL
+      position: {x: 0.000000076293944, y: 0, z: -0.049999997}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.9702655}
+      transformModified: 1
+    - name: Point130
+      position: {x: -0.13, y: 0.0000000023841857, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999997, y: 1.0000006, z: 1.0000001}
+      transformModified: 1
+    - name: Bone_BicepsLs
+      position: {x: -0, y: 0.039999995, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0088849, z: 0.9911933}
+      transformModified: 1
+    - name: Point_TwistRigidL
+      position: {x: -0.07581245, y: 0.000000047683713, z: 0.000000076293944}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000007, z: 1.0000005}
+      transformModified: 1
+    - name: Bone_UpperArmTwistL
+      position: {x: -0.02, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 0.9999993}
+      transformModified: 1
+    - name: Bone_BicepsL
+      position: {x: -0.065, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9955966, y: 0.98238677, z: 0.99119335}
+      transformModified: 1
+    - name: Bip01 L ForeTwist
+      position: {x: -0.17940384, y: 0.0000000047683715, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999964, z: 0.9999999}
+      transformModified: 1
+    - name: Bip01 L Forearm
+      position: {x: -0.17940384, y: 0.0000000047683715, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999998, z: 0.99999994}
+      transformModified: 1
+    - name: ExposeTransform01
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1.0000002, z: 1}
+      transformModified: 1
+    - name: Point16
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+      transformModified: 1
+    - name: Bone_KoomL
+      position: {x: -0, y: 0.027579183, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 1.1512796, z: 1}
+      transformModified: 1
+    - name: Point128
+      position: {x: -0.04, y: -0.000000038146972, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999997, y: 1, z: 0.9999999}
+      transformModified: 1
+    - name: Bone_Wrist01
+      position: {x: -0.105419, y: 0, z: 0.00000030517577}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000005, z: 0.99999964}
+      transformModified: 1
+    - name: Bip01 L Hand
+      position: {x: -0.20124076, y: 0, z: -0.000000038146972}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+      scale: {x: 1, y: 0.99999976, z: 1}
+      transformModified: 1
+    - name: Bip01 L Finger0
+      position: {x: -0.017191505, y: 0.018889045, z: -0.023757705}
+      rotation: {x: 0, y: 0.3826835, z: 0, w: -0.9238795}
+      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000006}
+      transformModified: 1
+    - name: Bip01 L Finger01
+      position: {x: -0.022199554, y: 0.000000038146972, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999997, z: 0.9999999}
+      transformModified: 1
+    - name: Bip01 L Finger02
+      position: {x: -0.017866248, y: -0.000000038146972, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1.0000002, z: 1.0000001}
+      transformModified: 1
+    - name: Bip01 L Finger0Nub
+      position: {x: -0.02331005, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bip01 L Finger4
+      position: {x: -0.06276088, y: -0.00046894074, z: 0.02038536}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Bip01 L Finger41
+      position: {x: -0.018933792, y: 0.000000019073486, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999997, z: 0.9999999}
+      transformModified: 1
+    - name: Bip01 L Finger42
+      position: {x: -0.013777618, y: 0.000000019073486, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000002}
+      transformModified: 1
+    - name: Bip01 L Finger4Nub
+      position: {x: -0.014137306, y: 0.000000038146972, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+      transformModified: 1
+    - name: Bip01 L Finger3
+      position: {x: -0.06629066, y: -0.00050590513, z: 0.008092975}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1.0000004, z: 1.0000004}
+      transformModified: 1
+    - name: Bip01 L Finger31
+      position: {x: -0.020892639, y: 0, z: -0.000000019073486}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999997, y: 1.0000001, z: 0.9999999}
+      transformModified: 1
+    - name: Bip01 L Finger32
+      position: {x: -0.018256417, y: -0.000000038146972, z: 0.000000038146972}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000005}
+      transformModified: 1
+    - name: Bip01 L Finger3Nub
+      position: {x: -0.017403563, y: 0.000000038146972, z: -0.000000038146972}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
+      transformModified: 1
+    - name: Bip01 L Finger2
+      position: {x: -0.068701625, y: -0.0029486846, z: -0.004669094}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000004}
+      transformModified: 1
+    - name: Bip01 L Finger21
+      position: {x: -0.02295517, y: 0.000000019073486, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+      transformModified: 1
+    - name: Bip01 L Finger22
+      position: {x: -0.017375411, y: -0.000000038146972, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999997, y: 0.99999994, z: 0.9999999}
+      transformModified: 1
+    - name: Bip01 L Finger2Nub
+      position: {x: -0.020558624, y: 0.000000019073486, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bip01 L Finger1
+      position: {x: -0.069752194, y: -0.0031070327, z: -0.018663138}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 0.9999999}
+      transformModified: 1
+    - name: Bip01 L Finger11
+      position: {x: -0.02173706, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.9999996, z: 0.9999994}
+      transformModified: 1
+    - name: Bip01 L Finger12
+      position: {x: -0.0142276, y: 0.000000019073486, z: -0.000000038146972}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1.0000005}
+      transformModified: 1
+    - name: Bip01 L Finger1Nub
+      position: {x: -0.018305816, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1}
       transformModified: 1
     - name: Circle03_forMidAngle
       position: {x: 0, y: 0, z: 0}
@@ -25689,6 +25682,31 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1.0000001, y: 1.0000001, z: 0.99999994}
       transformModified: 1
+    - name: Circle08
+      position: {x: -0.093336254, y: -0.009754158, z: -0.13556913}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000004, z: 0.9999996}
+      transformModified: 1
+    - name: Circle09
+      position: {x: -0.093336254, y: -0.00975412, z: 0.13556907}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 0.99999994, z: 1.0000002}
+      transformModified: 1
+    - name: ExposeTransform31
+      position: {x: -0.00000015258789, y: 0.00000011086464, z: -0.15145247}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 0.9999998}
+      transformModified: 1
+    - name: ExposeTransform32
+      position: {x: -0.00000015258789, y: -0.00000012516975, z: 0.1373638}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 0.9999998}
+      transformModified: 1
+    - name: Point69
+      position: {x: -0.16045798, y: -0.00004293203, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000008, y: 1.000001, z: 0.99999976}
+      transformModified: 1
     - name: Point78
       position: {x: -0.010780411, y: 0.10172999, z: 0.00000007390976}
       rotation: {x: 0, y: 0, z: 0, w: 1}
@@ -25703,26 +25721,6 @@ ModelImporter:
       position: {x: -0.1192082, y: -0.0010834312, z: 0.007516403}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 0.9999999, y: 1.0000004, z: 1.0000004}
-      transformModified: 1
-    - name: Bone06
-      position: {x: -0.026056975, y: 0.07640872, z: -0.09310935}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000004, y: 1.0000007, z: 0.99999934}
-      transformModified: 1
-    - name: Bone03
-      position: {x: -0.09769288, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 0.99999994, z: 1}
-      transformModified: 1
-    - name: Bone05
-      position: {x: -0.026056975, y: 0.07640872, z: -0.09310935}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000007, z: 0.9999996}
-      transformModified: 1
-    - name: Bone08
-      position: {x: -0.12578999, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1, z: 1}
       transformModified: 1
     - name: Point82
       position: {x: -0.011624832, y: 0.0779123, z: -0.093173385}
@@ -25744,45 +25742,30 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1.0000001, y: 0.99999964, z: 1.0000002}
       transformModified: 1
-    - name: Bone07
-      position: {x: -0.028472519, y: 0.0818431, z: 0.088074975}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999976, y: 1.0000001, z: 0.9999995}
-      transformModified: 1
-    - name: Bone10
-      position: {x: -0.092009164, y: -0.000000019073486, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
-      transformModified: 1
-    - name: Bone12
-      position: {x: -0.028472519, y: 0.0818431, z: 0.088074975}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999994, y: 1.0000005, z: 1.0000004}
-      transformModified: 1
-    - name: Bone09
-      position: {x: -0.110764466, y: -0.000000038146972, z: 0.000000076293944}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: Point180
-      position: {x: -0.12625305, y: 0.048552494, z: -0.009195239}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: -1.0000008, y: -1.0000006, z: -0.99999994}
-      transformModified: 1
     - name: Point91
       position: {x: -0.12625305, y: 0.048552483, z: 0.0092001185}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1.0000001, y: 0.9999997, z: 0.99999946}
       transformModified: 1
-    - name: Point217
-      position: {x: -0.046652906, y: 0.014374561, z: -0.033314817}
+    - name: Point123
+      position: {x: -0.09115982, y: -0.085610695, z: -0.029764095}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: -1.000001, y: -1.0000008, z: -0.99999964}
+      scale: {x: -1.0000002, y: -1.0000002, z: -0.99999994}
       transformModified: 1
-    - name: Point02
-      position: {x: 0.11000603, y: -0.012239342, z: 0.0041637802}
+    - name: Point177
+      position: {x: 0.00042434692, y: -0.0000000047683715, z: -0.0010906362}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999993, y: 1, z: 0.9999992}
+      scale: {x: 0.99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Point123_defaultPosL
+      position: {x: -0.093336254, y: -0.009754892, z: 0.13556899}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: Point123_defaultPosR
+      position: {x: -0.09333633, y: -0.009754142, z: -0.13556907}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
       transformModified: 1
     - name: Point124
       position: {x: -0.091253586, y: 0.014374568, z: -0.033314817}
@@ -25794,15 +25777,15 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1.0000004, y: 1.0000002, z: 1.0000002}
       transformModified: 1
-    - name: Point218
-      position: {x: -0.12615715, y: 0.014374571, z: -0.033314817}
+    - name: Point125
+      position: {x: -0.09115974, y: -0.08561076, z: 0.029764172}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: -1.000001, y: -1.0000012, z: -0.9999996}
+      scale: {x: 1.0000001, y: 1.0000002, z: 0.99999994}
       transformModified: 1
-    - name: Point178
-      position: {x: 0.112173, y: -0.0035869598, z: 0.00093811034}
+    - name: Point215
+      position: {x: -0.0007318115, y: -0.0000000047683715, z: 0.00121073}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000008, y: 0.9999997, z: 1.0000001}
+      scale: {x: 0.9999998, y: 0.99999994, z: 0.99999994}
       transformModified: 1
     - name: Point125_defaultUpVector
       position: {x: -0.091253586, y: 0.014374556, z: -0.033314817}
@@ -25834,6 +25817,31 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1.0000001, z: 1.0000004}
       transformModified: 1
+    - name: Point180
+      position: {x: -0.12625305, y: 0.048552494, z: -0.009195239}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1.0000008, y: -1.0000006, z: -0.99999994}
+      transformModified: 1
+    - name: Point217
+      position: {x: -0.046652906, y: 0.014374561, z: -0.033314817}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1.000001, y: -1.0000008, z: -0.99999964}
+      transformModified: 1
+    - name: Point02
+      position: {x: 0.11000603, y: -0.012239342, z: 0.0041637802}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999993, y: 1, z: 0.9999992}
+      transformModified: 1
+    - name: Point218
+      position: {x: -0.12615715, y: 0.014374571, z: -0.033314817}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1.000001, y: -1.0000012, z: -0.9999996}
+      transformModified: 1
+    - name: Point178
+      position: {x: 0.112173, y: -0.0035869598, z: 0.00093811034}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000008, y: 0.9999997, z: 1.0000001}
+      transformModified: 1
     - name: Point219
       position: {x: -0.1261573, y: 0.014374556, z: 0.03331489}
       rotation: {x: 0, y: 0, z: 0, w: 1}
@@ -25864,65 +25872,100 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1.0000004, y: 1.0000005, z: 1.0000001}
       transformModified: 1
-    - name: Point123_defaultPosR
-      position: {x: -0.09333633, y: -0.009754142, z: -0.13556907}
+    - name: Bone04
+      position: {x: -0.16045798, y: -0.000042881966, z: -0.000000076293944}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+      scale: {x: 1.0000002, y: 1.0000006, z: 0.9999999}
       transformModified: 1
-    - name: Point123_defaultPosL
-      position: {x: -0.093336254, y: -0.009754892, z: 0.13556899}
+    - name: Point88
+      position: {x: -0.003411865, y: -0.030565165, z: 0.025633544}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+      scale: {x: 1.0000002, y: 0.99999976, z: 0.9999999}
       transformModified: 1
-    - name: ExposeTransform31
-      position: {x: -0.00000015258789, y: 0.00000011086464, z: -0.15145247}
+    - name: Point77
+      position: {x: 0.00000022888183, y: 0.000000030994414, z: -0.00000007152557}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1, z: 0.9999998}
+      scale: {x: -1.0000007, y: -0.9999999, z: -0.9999988}
       transformModified: 1
-    - name: ExposeTransform32
-      position: {x: -0.00000015258789, y: -0.00000012516975, z: 0.1373638}
+    - name: Point206
+      position: {x: 0.080780864, y: 0.00000004529953, z: -0.000000076293944}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1, z: 0.9999998}
+      scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: Point123
-      position: {x: -0.09115982, y: -0.085610695, z: -0.029764095}
+    - name: Point89
+      position: {x: -0.033795927, y: 0.021244679, z: -0.0398881}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: -1.0000002, y: -1.0000002, z: -0.99999994}
+      scale: {x: -1.0000005, y: -0.99999976, z: -0.9999999}
       transformModified: 1
-    - name: Point177
-      position: {x: 0.00042434692, y: -0.0000000047683715, z: -0.0010906362}
+    - name: Point90
+      position: {x: -0.033796232, y: 0.021244697, z: 0.0398881}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 1, z: 1}
+      scale: {x: 1.0000002, y: 0.9999996, z: 0.9999998}
       transformModified: 1
-    - name: Point125
-      position: {x: -0.09115974, y: -0.08561076, z: 0.029764172}
+    - name: Point179
+      position: {x: -0.0034117126, y: -0.030565128, z: -0.025633354}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000002, z: 0.99999994}
+      scale: {x: -1.0000002, y: -0.99999994, z: -0.9999997}
       transformModified: 1
-    - name: Point215
-      position: {x: -0.0007318115, y: -0.0000000047683715, z: 0.00121073}
+    - name: Point76
+      position: {x: -0.00000015258789, y: -0.0000000035762786, z: -0.000000009536743}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999998, y: 0.99999994, z: 0.99999994}
+      scale: {x: 1.0000012, y: 1.0000001, z: 0.9999989}
       transformModified: 1
-    - name: Circle08
-      position: {x: -0.093336254, y: -0.009754158, z: -0.13556913}
+    - name: Point205
+      position: {x: 0.08078091, y: 0.000000014305114, z: 0.00000022888183}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 1.0000004, z: 0.9999996}
+      scale: {x: 1, y: 1, z: 0.99999964}
       transformModified: 1
-    - name: Circle09
-      position: {x: -0.093336254, y: -0.00975412, z: 0.13556907}
+    - name: Bone17
+      position: {x: -0.033796158, y: 0.021244716, z: 0.0398881}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000005, y: 0.99999994, z: 1.0000002}
+      scale: {x: 1.0000002, y: 1, z: 0.9999998}
       transformModified: 1
-    - name: Point27
-      position: {x: -0, y: 0.0000004887581, z: -0.14373754}
+    - name: Bone20
+      position: {x: -0.071808316, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000002, z: 0.9999999}
+      scale: {x: 1, y: 1, z: 1.0000001}
       transformModified: 1
-    - name: Point189
-      position: {x: -0.000000076293944, y: 0.0000004982948, z: 0.14373772}
+    - name: Bone05
+      position: {x: -0.026056975, y: 0.07640872, z: -0.09310935}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+      scale: {x: 1.0000001, y: 1.0000007, z: 0.9999996}
+      transformModified: 1
+    - name: Bone08
+      position: {x: -0.12578999, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+      transformModified: 1
+    - name: Bone12
+      position: {x: -0.028472519, y: 0.0818431, z: 0.088074975}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999994, y: 1.0000005, z: 1.0000004}
+      transformModified: 1
+    - name: Bone09
+      position: {x: -0.110764466, y: -0.000000038146972, z: 0.000000076293944}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bone06
+      position: {x: -0.026056975, y: 0.07640872, z: -0.09310935}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000007, z: 0.99999934}
+      transformModified: 1
+    - name: Bone03
+      position: {x: -0.09769288, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: Bone07
+      position: {x: -0.028472519, y: 0.0818431, z: 0.088074975}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 1.0000001, z: 0.9999995}
+      transformModified: 1
+    - name: Bone10
+      position: {x: -0.092009164, y: -0.000000019073486, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
       transformModified: 1
     - name: Bone19
       position: {x: -0.03265068, y: -0.057634734, z: -0.05404204}
@@ -25934,130 +25977,35 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1.0000001, z: 1}
       transformModified: 1
-    - name: Point207
-      position: {x: -0.032651212, y: -0.057634704, z: 0.054042205}
+    - name: Bip01 RThighTwist
+      position: {x: 0.06556633, y: -0.007473949, z: -0.06283458}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1, z: 0.99999994}
-      transformModified: 1
-    - name: Point171
-      position: {x: -0.032650758, y: -0.057634734, z: -0.05404205}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: -1.0000001, y: -1, z: -0.9999999}
+      scale: {x: 0.99999976, y: 1.0000004, z: 0.99999994}
       transformModified: 1
     - name: Bip01 LThighTwist
       position: {x: 0.074601896, y: -0.012806237, z: 0.070758514}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 0.99999994, y: 1.0000001, z: 1}
       transformModified: 1
-    - name: Bip01 RThighTwist
-      position: {x: 0.06556633, y: -0.007473949, z: -0.06283458}
+    - name: Bone_Hip02
+      position: {x: -0.00000015258789, y: -0.00000007867813, z: -0.0781137}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999976, y: 1.0000004, z: 0.99999994}
+      scale: {x: 1.0000002, y: 1.0000006, z: 0.9999994}
       transformModified: 1
-    - name: Bip01 L Thigh
-      position: {x: 0.000000076293944, y: 0.00000012874602, z: 0.06700222}
-      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
-      scale: {x: 0.9999996, y: 0.9999999, z: 0.9999995}
-      transformModified: 1
-    - name: Bip01 L Calf
-      position: {x: -0.35277575, y: 0, z: 0.0000000047683715}
+    - name: Bone_Hip01
+      position: {x: -0, y: 0.00000014066696, z: 0.078113705}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000005}
-      transformModified: 1
-    - name: Bip01 L Foot
-      position: {x: -0.3065508, y: 0.000000019073486, z: -0.0000000047683715}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 0.99999976, z: 0.99999976}
-      transformModified: 1
-    - name: Bip01 L Toe0
-      position: {x: -0.06254484, y: 0.0865793, z: 0}
-      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
-      scale: {x: 1.0000001, y: 0.99999994, z: 0.9999997}
-      transformModified: 1
-    - name: Bip01 L Toe0Nub
-      position: {x: -0.05572015, y: 0.0000000011920929, z: 0.0000000047683715}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: -1.0000001, y: -1.0000001, z: -1}
-      transformModified: 1
-    - name: ExposeTransform05
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999998, y: 1.0000004, z: 1.0000004}
-      transformModified: 1
-    - name: Point15
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000001}
-      transformModified: 1
-    - name: Bone_KneeL
-      position: {x: 0.0017377471, y: 0.058285408, z: 0.00000009059906}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 1.0408388, z: 1.0000004}
-      transformModified: 1
-    - name: ExposeTM_HipL
-      position: {x: 0.00000015258789, y: 0.000000014305114, z: -0.00000022888183}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000004}
-      transformModified: 1
-    - name: ExposeTM_HipL01
-      position: {x: 0.00000015258789, y: 0.000000014305114, z: -0.00000022888183}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000004}
-      transformModified: 1
-    - name: Point134
-      position: {x: -0.09999996, y: 0.0000000011920929, z: 0.0000000047683715}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999946, y: 1.0000002, z: 0.99999976}
-      transformModified: 1
-    - name: Bone_VenterL
-      position: {x: 0.00000015258789, y: 0.000000014305114, z: -0.00000015258789}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 1, z: 1.0000002}
-      transformModified: 1
-    - name: Point139
-      position: {x: -0.09999996, y: 0.0000000011920929, z: 0.0000000047683715}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999994, y: 1, z: 1.0000002}
+      scale: {x: 0.9999996, y: 1.0000002, z: 0.99999887}
       transformModified: 1
     - name: Bip01 R Thigh
       position: {x: -0.00000015258789, y: -0.000000059604645, z: -0.06700222}
       rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
       scale: {x: 0.9999997, y: 1.0000001, z: 0.9999996}
       transformModified: 1
-    - name: Bip01 R Calf
-      position: {x: -0.35277584, y: 0, z: -0.0000000047683715}
+    - name: Bone_VenterR
+      position: {x: -0, y: 0.000000038146972, z: 0.00000022888183}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 0.99999964, z: 0.9999999}
-      transformModified: 1
-    - name: Bip01 R Foot
-      position: {x: -0.30655077, y: -0.000000023841856, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999998, y: 0.9999999, z: 0.9999999}
-      transformModified: 1
-    - name: Bip01 R Toe0
-      position: {x: -0.06254482, y: 0.0865793, z: -0.0000000047683715}
-      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
-      scale: {x: 1.0000005, y: 1, z: 1.0000002}
-      transformModified: 1
-    - name: Bip01 R Toe0Nub
-      position: {x: -0.055720143, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: ExposeTransform06
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999994, y: 0.9999999, z: 0.9999999}
-      transformModified: 1
-    - name: Point14
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000004, y: 1, z: 0.99999994}
-      transformModified: 1
-    - name: Bone_KneeR
-      position: {x: 0.000000038146972, y: 0.05831129, z: 0.000000019073486}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999997, y: 1.1536058, z: 1.0000005}
+      scale: {x: 1.0000002, y: 1.1879016, z: 1.0000001}
       transformModified: 1
     - name: ExposeTM_HipR
       position: {x: -0.000000076293944, y: 0.000000038146972, z: 0.0000002336502}
@@ -26074,68 +26022,123 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 0.9999998, y: 1, z: 1}
       transformModified: 1
-    - name: Bone_VenterR
-      position: {x: -0, y: 0.000000038146972, z: 0.00000022888183}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 1.1879016, z: 1.0000001}
-      transformModified: 1
     - name: Point135
       position: {x: -0.099999994, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 0.9999996, y: 0.9999998, z: 1}
       transformModified: 1
-    - name: Bone_Hip02
-      position: {x: -0.00000015258789, y: -0.00000007867813, z: -0.0781137}
+    - name: Bip01 R Calf
+      position: {x: -0.35277584, y: 0, z: -0.0000000047683715}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 1.0000006, z: 0.9999994}
+      scale: {x: 1.0000002, y: 0.99999964, z: 0.9999999}
       transformModified: 1
-    - name: Bone_Hip01
-      position: {x: -0, y: 0.00000014066696, z: 0.078113705}
+    - name: ExposeTransform06
+      position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999996, y: 1.0000002, z: 0.99999887}
+      scale: {x: 0.9999994, y: 0.9999999, z: 0.9999999}
       transformModified: 1
-    - name: Point06
-      position: {x: 0.047446974, y: -0.258236, z: 0.08113071}
+    - name: Point14
+      position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000002}
+      scale: {x: 1.0000004, y: 1, z: 0.99999994}
       transformModified: 1
-    - name: Point08
-      position: {x: 0.10212692, y: -0.2319229, z: -0.08112948}
+    - name: Bone_KneeR
+      position: {x: 0.000000038146972, y: 0.05831129, z: 0.000000019073486}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000002}
+      scale: {x: 0.9999997, y: 1.1536058, z: 1.0000005}
       transformModified: 1
-    - name: Point09
-      position: {x: 0.29887375, y: -0.023364812, z: 0.10302984}
+    - name: Bip01 R Foot
+      position: {x: -0.30655077, y: -0.000000023841856, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000002}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.9999999}
       transformModified: 1
-    - name: Point10
-      position: {x: 0.2715724, y: 0.045390643, z: -0.08627286}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000002}
+    - name: Bip01 R Toe0
+      position: {x: -0.06254482, y: 0.0865793, z: -0.0000000047683715}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
+      scale: {x: 1.0000005, y: 1, z: 1.0000002}
       transformModified: 1
-    - name: Point131
-      position: {x: -0.09845093, y: 0.0014153314, z: -0.049525194}
+    - name: Bip01 R Toe0Nub
+      position: {x: -0.055720143, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000007, y: 1.0000004, z: 1.0000006}
+      scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: Point132
-      position: {x: -0.0984507, y: 0.001415472, z: 0.0495255}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000004}
+    - name: Bip01 L Thigh
+      position: {x: 0.000000076293944, y: 0.00000012874602, z: 0.06700222}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 0.9999996, y: 0.9999999, z: 0.9999995}
       transformModified: 1
-    - name: Point136
-      position: {x: -0.0984507, y: 0.001415472, z: 0.0495255}
+    - name: Bone_VenterL
+      position: {x: 0.00000015258789, y: 0.000000014305114, z: -0.00000015258789}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000007, y: 1.0000006, z: 0.9999999}
+      scale: {x: 0.99999994, y: 1, z: 1.0000002}
       transformModified: 1
-    - name: Point138
-      position: {x: -0.09845108, y: 0.0014153337, z: -0.0495252}
+    - name: ExposeTM_HipL
+      position: {x: 0.00000015258789, y: 0.000000014305114, z: -0.00000022888183}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000005, y: 1.0000002, z: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000004}
+      transformModified: 1
+    - name: ExposeTM_HipL01
+      position: {x: 0.00000015258789, y: 0.000000014305114, z: -0.00000022888183}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000004}
+      transformModified: 1
+    - name: Point134
+      position: {x: -0.09999996, y: 0.0000000011920929, z: 0.0000000047683715}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999946, y: 1.0000002, z: 0.99999976}
+      transformModified: 1
+    - name: Point139
+      position: {x: -0.09999996, y: 0.0000000011920929, z: 0.0000000047683715}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999994, y: 1, z: 1.0000002}
+      transformModified: 1
+    - name: Bip01 L Calf
+      position: {x: -0.35277575, y: 0, z: 0.0000000047683715}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000005}
+      transformModified: 1
+    - name: ExposeTransform05
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1.0000004, z: 1.0000004}
+      transformModified: 1
+    - name: Point15
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000001}
+      transformModified: 1
+    - name: Bone_KneeL
+      position: {x: 0.0017377471, y: 0.058285408, z: 0.00000009059906}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0408388, z: 1.0000004}
+      transformModified: 1
+    - name: Bip01 L Foot
+      position: {x: -0.3065508, y: 0.000000019073486, z: -0.0000000047683715}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999976, z: 0.99999976}
+      transformModified: 1
+    - name: Bip01 L Toe0
+      position: {x: -0.06254484, y: 0.0865793, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
+      scale: {x: 1.0000001, y: 0.99999994, z: 0.9999997}
+      transformModified: 1
+    - name: Bip01 L Toe0Nub
+      position: {x: -0.05572015, y: 0.0000000011920929, z: 0.0000000047683715}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1.0000001, y: -1.0000001, z: -1}
       transformModified: 1
     - name: ChildCamera
       position: {x: 0, y: 1.2559743, z: -0.0000000017929472}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: dau_lo
+      position: {x: 0, y: 1.0881307, z: -0.02919422}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: wand_lo
+      position: {x: 0, y: 1.0769131, z: 0.020848874}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
@@ -26148,7 +26151,8 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: b235179bd2a63d1468dd430670338c55,
+    type: 3}
   animationType: 3
   humanoidOversampling: 1
   additionalBone: 0

@@ -219,6 +219,10 @@
     <Compile Include="Assets\Scripts\Player\Player_modern.cs" />
     <Compile Include="Assets\Scripts\Player\Test_player_skill.cs" />
     <Compile Include="Assets\Scripts\Player\controllerSkill.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Assets\Scripts\PlayerAnimationControl.cs" />
+>>>>>>> master
     <Compile Include="Assets\Scripts\Shadow\Player_shadow.cs" />
     <Compile Include="Assets\Scripts\Shadow\ShadowController.cs" />
     <Compile Include="Assets\Scripts\Shadow\ShadowHealth.cs" />
