@@ -197,11 +197,9 @@
      <Compile Include="Assets\Scripts\Shadow\Player_shadow.cs" />
      <Compile Include="Assets\Scripts\Shadow\ShadowController.cs" />
      <Compile Include="Assets\Scripts\Shadow\ShadowHealth.cs" />
+     <Compile Include="Assets\Scripts\Skills\AOE.cs" />
      <Compile Include="Assets\Scripts\Skills\ChargeAttack.cs" />
-<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Skills\Create_shadow.cs" />
-=======
->>>>>>> 8a36cf3fa5ef71960499bb83076ebba3eaefbb4a
      <Compile Include="Assets\Scripts\Skills\Plain_attack.cs" />
      <Compile Include="Assets\Scripts\Skills\PlayerCharge.cs" />
      <Compile Include="Assets\Scripts\Skills\RangeAttack.cs" />

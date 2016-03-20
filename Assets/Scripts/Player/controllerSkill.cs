@@ -7,6 +7,7 @@ public class controllerSkill : MonoBehaviour {
 	public Skill PlayerCharge;
 	public Skill PlainAttack;
 	public Skill TimeStop;
+	public Skill AOE;
 	// Use this for initialization
 	void Start () {
 	
@@ -30,6 +31,9 @@ public class controllerSkill : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.T) && TimeStop.Cooldown == 0&&PlayerStatus.Instance.Fury==100) {
 			TimeStop.useSkill ();
 			PlayerStatus.Instance.AddFury (50);
+		}
+		if (Input.GetKeyDown (KeyCode.O) && AOE.Cooldown == 0) {
+			AOE.useSkill ();
 		}
 	}
 }
