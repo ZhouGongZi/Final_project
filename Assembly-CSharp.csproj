@@ -187,6 +187,7 @@
      <Compile Include="Assets\Scripts\Enemy\MeleeEnemy.cs" />
      <Compile Include="Assets\Scripts\Misc\fireBall.cs" />
      <Compile Include="Assets\Scripts\Multi_trigger.cs" />
+     <Compile Include="Assets\Scripts\Player\AOEPlayer.cs" />
      <Compile Include="Assets\Scripts\Player\ChooseEnemy.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerCharge.cs" />
@@ -197,22 +198,24 @@
      <Compile Include="Assets\Scripts\Shadow\Player_shadow.cs" />
      <Compile Include="Assets\Scripts\Shadow\ShadowController.cs" />
      <Compile Include="Assets\Scripts\Shadow\ShadowHealth.cs" />
+     <Compile Include="Assets\Scripts\Skills\AOE.cs" />
      <Compile Include="Assets\Scripts\Skills\ChargeAttack.cs" />
-<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Skills\Create_shadow.cs" />
-=======
->>>>>>> 8a36cf3fa5ef71960499bb83076ebba3eaefbb4a
      <Compile Include="Assets\Scripts\Skills\Plain_attack.cs" />
      <Compile Include="Assets\Scripts\Skills\PlayerCharge.cs" />
      <Compile Include="Assets\Scripts\Skills\RangeAttack.cs" />
-     <Compile Include="Assets\Scripts\Skills\ShadowBackStab.cs" />
+     <Compile Include="Assets\Scripts\Skills\ShadowSpawnBattle.cs" />
      <Compile Include="Assets\Scripts\Skills\Skill.cs" />
      <Compile Include="Assets\Scripts\Skills\Stick_attack.cs" />
+     <Compile Include="Assets\Scripts\Skills\backStabPlayer.cs" />
+     <Compile Include="Assets\Scripts\Skills\shadowFight.cs" />
      <Compile Include="Assets\Scripts\Skills\stealthAttack.cs" />
+     <Compile Include="Assets\Scripts\Skills\switchposition.cs" />
      <Compile Include="Assets\Scripts\Skills\timeStop.cs" />
      <Compile Include="Assets\Scripts\UI\showFury.cs" />
      <Compile Include="Assets\Scripts\scene_trigger.cs" />
-     <Compile Include="Assets\stealthEffect.cs" />
+     <Compile Include="Assets\Scripts\shadowStatus.cs" />
+     <Compile Include="Assets\Scripts\stealthEffect.cs" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\ReadMe - 3.9.7.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Masked 1.shader" />

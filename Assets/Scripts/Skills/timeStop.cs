@@ -41,10 +41,10 @@ public class timeStop : Skill {
 			col [i].GetComponent<Enemy> ().isStop = true;
 			i++;
 		}
-
 	}
 
 	void makeFree(){
+		this.GetComponent<controllerSkill> ().isStop = false;
 		Collider[] col = Physics.OverlapSphere(gameObject.transform.position,radius, radius);
 		int j = 0;
 		while (j < col.Length) {

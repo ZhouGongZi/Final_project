@@ -3,14 +3,17 @@ using System.Collections;
 
 public class Create_shadow : MonoBehaviour {
 
-	public GameObject shadow_indicator;
-	public GameObject ancient;
+	public GameObject 				shadow_indicator;
+	public GameObject 				ancient;
 
-	public float shortest_shadow_distance = 1.0f;
-	public float longest_shadow_distance = 3.0f;
+	public float 					shortest_shadow_distance = 1.0f;
+	public float 					longest_shadow_distance = 3.0f;
 
-	float shadow_initial_cd_max = 200;
-	float shadow_initial_cd = 0;
+	float 							shadow_initial_cd_max = 200;
+	float 							shadow_initial_cd = 0;
+
+	private float 					createRate = 3f;
+	private float 					nextCreate = 0.0f;
 
 
 	// Use this for initialization
@@ -50,10 +53,14 @@ public class Create_shadow : MonoBehaviour {
 				//make the shadow indicator appear 
 				shadow_indicator.SetActive(true);
 			}
-			else
+			else if(Time.time > nextCreate)
 			{
+				//the cool down effect
+				nextCreate = Time.time + createRate;
+
 				//instantiate a new shadow
 				GameObject go = Instantiate (ancient) as GameObject;
+				ShadowController.Instance.shadows.Add (go);
 				GetComponent<Animation>().Play("attack 3");
 
 				//position of the new shadow

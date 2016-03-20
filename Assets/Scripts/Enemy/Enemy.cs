@@ -46,6 +46,7 @@ public class Enemy : MonoBehaviour {
 	}
 
 	//alert range
+	public float alertRangeStd;
 	public float alertRange;
 	public float maxalertRange;
 	public float informRange;
@@ -54,6 +55,7 @@ public class Enemy : MonoBehaviour {
 	public float speed;
 	//animations
 	public AnimationClip idling,running,attacking,death,getHit,dancing;
+
 
 
 
@@ -72,13 +74,20 @@ public class Enemy : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag ("Player");
 		controller = this.GetComponent < CharacterController> ();
 		Anim =this.GetComponent<Animation> ();
+
 	}
 
 
 	public virtual void Update(){
-		
+		alertRange = attackRange + 4 * (alertRangeStd - attackRange) * ( (PlayerStatus.Instance.Fury *1.0f)/ 100)*((PlayerStatus.Instance.Fury*1.0f) / 100) ;
 		//shadow = GameObject.FindGameObjectWithTag ("Shadow");
-		
+		if (ChooseEnemy.Instance.target!= null) {
+			if (this.gameObject != ChooseEnemy.Instance.target.Value)
+				unchosed ();
+		}
+		if (Anim.IsPlaying (death.name))
+			return;
+
 		if (Health <= 0 || Anim.IsPlaying(getHit.name))
 			return;
 		if (!Alert () && !InAttackRange ()) {
@@ -151,10 +160,12 @@ public class Enemy : MonoBehaviour {
 	}
 	public virtual void die(){
 		//Anim.Stop ();
+		this.tag="Untagged";
 		ChooseEnemy.Instance.enemy.Remove (this.gameObject);
 		Anim.Play (death.name);
 		ChooseEnemy.Instance.enemy.Remove (this.gameObject);
 		StartCoroutine (disappear ());
+
 
 	}
 	public virtual void dance(){
@@ -175,10 +186,12 @@ public class Enemy : MonoBehaviour {
 	public virtual void inform(){
 		GameObject[] enes = GameObject.FindGameObjectsWithTag ("Enemy");
 		foreach (GameObject en in enes) {
+			if (en == null)
+				continue;
 			if (Vector3.Distance (en.transform.position, transform.position) < informRange) {
 				
 
-				en.GetComponent<Enemy> ().alertRange =en.GetComponent<Enemy>().maxalertRange;
+				en.GetComponent<Enemy> ().alertRangeStd =en.GetComponent<Enemy>().maxalertRange;
 			}
 				
 		}

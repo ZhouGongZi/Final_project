@@ -27,13 +27,14 @@ public class Skill : MonoBehaviour {
 		get { return _skillType;}
 		set { _skillType = value;}
 	}
-		
+	public KeyCode k;
 
 	protected Animation Anim;
 	private float startTime;
 
 
 	public virtual void Start(){
+		startTime = Time.time - 5f;
 	}
 
 
