@@ -4,8 +4,8 @@ using System.Collections;
 public class PlayerStatus : MonoBehaviour {
 	public static PlayerStatus Instance;
 	[SerializeField]
-	int _health=10000;
-	int _fury =10;
+	int _health=100;
+	int _fury =50;
 	public AnimationClip death,getHit;
 	Animation Anim;
 	[SerializeField]

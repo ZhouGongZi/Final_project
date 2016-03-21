@@ -4,7 +4,7 @@ using System.Collections;
 public class Plain_attack : Skill {
 	
 	public AnimationClip 		Melee_Clip;
-
+	public int 					damage;
 	bool 						isAttacking = false; 
 	float 						impactTime=0.40f;
 
@@ -36,7 +36,7 @@ public class Plain_attack : Skill {
 			if (isAttacking == true) {
 				print("success!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 				if (Anim [Melee_Clip.name].time > Anim [Melee_Clip.name].length * impactTime) {
-					other.GetComponent<Enemy> ().GetHit (100);
+					other.GetComponent<Enemy> ().GetHit (damage);
 					isAttacking = false;
 				}
 

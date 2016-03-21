@@ -4,7 +4,7 @@ using System.Collections;
 public class stealthAttack : MonoBehaviour {
 	public AnimationClip BackStab;
 	public bool launchattack=false;
-
+	public int damage;
 	float impactTime=0.40f;
 	Vector3 startPosition;
 	GameObject _opponent;
@@ -21,9 +21,9 @@ public class stealthAttack : MonoBehaviour {
 		setStart ();
 		if (launchattack)
 			attack ();
-		if (this.GetComponent<Animation> () [BackStab.name].time >= this.GetComponent<Animation> () [BackStab.name].length * impactTime) {
+		if (launchattack&& this.GetComponent<Animation> () [BackStab.name].time >= this.GetComponent<Animation> () [BackStab.name].length * impactTime) {
 			if (Opponent != null) {
-				Opponent.GetComponent<Enemy> ().GetHit (100);
+				Opponent.GetComponent<Enemy> ().GetHit (damage);
 				launchattack = false;
 			}
 		}
