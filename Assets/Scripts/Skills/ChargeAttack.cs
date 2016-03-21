@@ -20,7 +20,8 @@ public class ChargeAttack : Skill {
 	public override void Update () {
 		base.Update ();
 		if (tar == null || tar.tag != "Enemy") {
-			//Anim.Play(idling.name);
+			Anim.Play(idling.name);
+
 			return;
 		}
 		if (Vector3.Distance (this.transform.position, tar.transform.position) < 1 && !attacked) {

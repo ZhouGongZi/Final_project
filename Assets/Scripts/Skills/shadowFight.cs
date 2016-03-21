@@ -110,7 +110,7 @@ public class shadowFight : Skill {
 			if (isAttacking == true) {
 				print("success!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 				if (Anim [Melee_Clip.name].time > Anim [Melee_Clip.name].length * impactTime) {
-					other.GetComponent<Enemy> ().GetHit (100);
+					other.GetComponent<Enemy> ().GetHit (30);
 					isAttacking = false;
 					viewLock = false;
 				}

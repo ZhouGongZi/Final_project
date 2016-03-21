@@ -55,6 +55,10 @@ public class ShadowController : MonoBehaviour {
 			sha.GetComponent<AOE> ().useSkill ();	
 		}
 	}
-
+	public void plainAttack(){
+		foreach (GameObject sha in shadows) {
+			sha.GetComponent<shadowFight> ().useSkill ();
+		}
+	}
 
 }

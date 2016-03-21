@@ -15,7 +15,7 @@ public class ShadowSpawnBattle: Skill {
 			GameObject go = Instantiate (shadow) as GameObject;
 			ShadowController.Instance.shadows.Add (go);
 
-			go.transform.position = tar.transform.position + tar.transform.forward * (-1.5f);
+			go.transform.position = tar.transform.position + tar.transform.forward * (-1f);
 			go.transform.LookAt (tar.gameObject.transform);	
 			go.GetComponent<stealthAttack> ().Opponent = tar;
 //			go.GetComponent<stealthAttack> ().launchattack = true;
