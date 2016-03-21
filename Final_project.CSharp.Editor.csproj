@@ -229,6 +229,7 @@
     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 2.shader" />
     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 3.shader" />
     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed.shader" />
+    <None Include="Assets\PyroParticles\Prefab\Materials\AdditiveTintable.shader" />
     <None Include="Assets\SkeletonData\animations.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
