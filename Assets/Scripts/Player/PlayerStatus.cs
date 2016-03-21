@@ -52,7 +52,7 @@ public class PlayerStatus : MonoBehaviour {
 		Anim = this.GetComponent<Animation> ();
 	}
 	void Start(){
-		InvokeRepeating ("timeUpdate", 1f, 1f);
+		InvokeRepeating ("timeUpdate", 1f, 2f);
 
 	}
 

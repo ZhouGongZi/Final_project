@@ -79,7 +79,7 @@ public class Enemy : MonoBehaviour {
 
 
 	public virtual void Update(){
-		alertRange = attackRange + ShadowController.Instance.shadows.Count*4 * (alertRangeStd - attackRange) * ( (PlayerStatus.Instance.Fury *1.0f)/ 100)*((PlayerStatus.Instance.Fury*1.0f) / 100) ;
+		alertRange = attackRange + (ShadowController.Instance.shadows.Count+1)*4 * (alertRangeStd - attackRange) * ( (PlayerStatus.Instance.Fury *1.0f)/ 100)*((PlayerStatus.Instance.Fury*1.0f) / 100) ;
 		//shadow = GameObject.FindGameObjectWithTag ("Shadow");
 		if (ChooseEnemy.Instance.target!= null) {
 			if (this.gameObject != ChooseEnemy.Instance.target.Value)

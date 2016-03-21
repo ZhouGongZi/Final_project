@@ -202,8 +202,10 @@
      <Compile Include="Assets\Scripts\Player\ChooseEnemy.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerCharge.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerStatus.cs" />
      <Compile Include="Assets\Scripts\Player\Player_modern.cs" />
+     <Compile Include="Assets\Scripts\Player\StateMachine.cs" />
      <Compile Include="Assets\Scripts\Player\Test_player_skill.cs" />
      <Compile Include="Assets\Scripts\Player\controllerSkill.cs" />
      <Compile Include="Assets\Scripts\PlayerAnimationControl.cs" />
@@ -228,6 +230,7 @@
      <Compile Include="Assets\Scripts\scene_trigger.cs" />
      <Compile Include="Assets\Scripts\shadowStatus.cs" />
      <Compile Include="Assets\Scripts\stealthEffect.cs" />
+     <Compile Include="Assets\coolDownCounter.cs" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\ReadMe - 3.9.7.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Masked 1.shader" />
@@ -243,6 +246,8 @@
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Masked Colored.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 3.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo18.txt" />
+     <None Include="Assets\Resources\painterly-spell-icons-3\README.txt" />
+     <None Include="Assets\Resources\painterly-spell-icons-4\README.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (TextureClip).shader" />
      <None Include="Assets\NGUI\Examples\Atlases\SciFi\SciFi Font - Header.txt" />
      <None Include="Assets\PyroParticles\Prefab\Materials\AdditiveTintable.shader" />

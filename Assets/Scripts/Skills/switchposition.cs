@@ -14,7 +14,7 @@ public class switchposition : Skill {
 
 	// Update is called once per frame
 	public override void useSkill ()
-	{
+	{	base.useSkill ();
 		target = ShadowController.Instance.shadows [index];
 		if ((index+1) == ShadowController.Instance.shadows.Count)
 			index = 0;

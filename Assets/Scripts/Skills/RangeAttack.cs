@@ -18,18 +18,20 @@ public class RangeAttack : Skill {
 
 
 	float impactTime=0.65f;
-	float nextCast=0.0f;
-	float intervalCast = 2.01f;
+//	float nextCast=0.0f;
+//	float intervalCast = 2.01f;
+	[SerializeField]
 	bool launch;
 	bool casted=false;
 	bool speedset=false;
+	AnimStateMachine animController;
 
 	// Use this for initialization
 	void Awake () {
 		fireBall = Resources.Load ("fireBall") as GameObject;
 		Anim = this.GetComponent<Animation> ();
 		//shadow = GameObject.FindGameObjectWithTag ("Shadow");
-
+		animController= new AnimStateMachine(Anim,new AnimState("ready 2",true,PlayerState.idle));
 	}
 
 
@@ -44,16 +46,22 @@ public class RangeAttack : Skill {
 	// Update is called once per frame
 	public override void Update () {
 		base.Update ();
+		//animController.Update();	
 		if(ChooseEnemy.Instance.target!=null)
 			tar = ChooseEnemy.Instance.target.Value;
-		if (launch&&Time.time>nextCast&&(tar!=null)) {
+		if (launch&&(tar!=null)) {
 			Anim.Play (cast.name);
+			//AnimState temp = new AnimState (cast.name, true, PlayerState.idle);
+//			animController.ChangeState (temp);
+//
 			casted = false;
-			nextCast = Time.time + intervalCast;
+//			nextCast = Time.time + intervalCast;
 			launch = false;
 			speedset = false;
 		}
+
 		castFire ();
+
 	}
 
 	void castFire(){

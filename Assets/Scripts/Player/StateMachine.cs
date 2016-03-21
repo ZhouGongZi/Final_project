@@ -72,6 +72,9 @@ public class AnimStateMachine : StateMachine
     {
         this.anim = anim;
         this.default_anim = default_anim;
+		this._current_state=default_anim;
+		this._current_state.state_machine = this;
+		default_anim.state_machine = this;
     }
     public void ChangeState(AnimState new_state)
     {
@@ -94,8 +97,12 @@ public class AnimStateMachine : StateMachine
         
     }
     public override void Update()
-    {
-        base.Update();
+	{	if(_current_state != null)
+		{
+			float time_delta_fraction = Time.deltaTime / (1.0f / Application.targetFrameRate);
+			_current_state.OnUpdate(time_delta_fraction);
+		}
+        //base.Update();
         //control block for state transition
     }
 }
