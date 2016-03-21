@@ -210,6 +210,7 @@
      <Compile Include="Assets\Scripts\Skills\Skill.cs" />
      <Compile Include="Assets\Scripts\Skills\Stick_attack.cs" />
      <Compile Include="Assets\Scripts\Skills\backStabPlayer.cs" />
+     <Compile Include="Assets\Scripts\Skills\shadowFight.cs" />
      <Compile Include="Assets\Scripts\Skills\stealthAttack.cs" />
      <Compile Include="Assets\Scripts\Skills\switchposition.cs" />
      <Compile Include="Assets\Scripts\Skills\timeStop.cs" />
