@@ -19,7 +19,7 @@ public class ChargeAttack : Skill {
 	// Update is called once per frame
 	public override void Update () {
 		base.Update ();
-		if (tar == null)
+		if (tar == null||tar.tag!="Enemy")
 			//Anim.Play (idling.name);
 			return;
 		if (Vector3.Distance (this.transform.position, tar.transform.position) < 1 && !attacked) {

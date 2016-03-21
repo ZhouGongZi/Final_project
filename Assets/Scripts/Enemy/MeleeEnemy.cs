@@ -14,9 +14,10 @@ public class MeleeEnemy : Enemy {
 	
 	// Update is called once per frame
 	public override void Update () {
-		if (isStop) // used for time stop !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		if (isStop) { // used for time stop !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			Anim.Stop();
 			return;
-		
+		}
 		base.Update ();	
 	
 		if( attacked && Anim[attacking.name].time>Anim[attacking.name].length*0.9){

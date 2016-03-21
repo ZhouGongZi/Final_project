@@ -23,6 +23,7 @@ public class switchposition : Skill {
 		Vector3 temp = this.transform.position;
 		this.transform.position = target.transform.position;
 		target.transform.position = temp;
+		this.transform.LookAt (target.transform);
 
 
 	}

@@ -45,8 +45,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AOEBALL.cs" />
-     <Compile Include="Assets\AOEparticle.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipItems.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipRandomItem.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UICursor.cs" />
@@ -184,9 +182,20 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UITexture.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
+     <Compile Include="Assets\PyroParticles\Demo\DemoScript.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\FireBaseScript.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\FireCollisionForwardScript.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\FireConstantBaseScript.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\FireHomingProjectile.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\FireLightScript.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\FireProjectileScript.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\MeteorSwarmScript.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\SingleLineAttribute.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
      <Compile Include="Assets\Scripts\Enemy\MeleeEnemy.cs" />
+     <Compile Include="Assets\Scripts\Misc\AOEBALL.cs" />
+     <Compile Include="Assets\Scripts\Misc\AOEparticle.cs" />
      <Compile Include="Assets\Scripts\Misc\fireBall.cs" />
      <Compile Include="Assets\Scripts\Multi_trigger.cs" />
      <Compile Include="Assets\Scripts\Player\AOEPlayer.cs" />
@@ -197,6 +206,7 @@
      <Compile Include="Assets\Scripts\Player\Player_modern.cs" />
      <Compile Include="Assets\Scripts\Player\Test_player_skill.cs" />
      <Compile Include="Assets\Scripts\Player\controllerSkill.cs" />
+     <Compile Include="Assets\Scripts\PlayerAnimationControl.cs" />
      <Compile Include="Assets\Scripts\Shadow\Player_shadow.cs" />
      <Compile Include="Assets\Scripts\Shadow\ShadowController.cs" />
      <Compile Include="Assets\Scripts\Shadow\ShadowHealth.cs" />
@@ -235,6 +245,7 @@
      <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo18.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (TextureClip).shader" />
      <None Include="Assets\NGUI\Examples\Atlases\SciFi\SciFi Font - Header.txt" />
+     <None Include="Assets\PyroParticles\Prefab\Materials\AdditiveTintable.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Masked 3.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored 1.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Fantasy\Fantasy Font - Normal.txt" />
