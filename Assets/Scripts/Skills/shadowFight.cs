@@ -104,7 +104,7 @@ public class shadowFight : Skill {
 
 	void OnTriggerStay(Collider other){
 
-		if (other.tag == "Enemy") {
+		if (other.tag == "Enemy" && other.GetComponent<Enemy>().Health > 0) {
 			transform.LookAt (other.transform);
 			viewLock = true;
 			if (isAttacking == true) {
