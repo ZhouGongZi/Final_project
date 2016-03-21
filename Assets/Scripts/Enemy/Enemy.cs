@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour {
 
 
 	//enemy health 
-	protected int			 _health;
+	protected int		 _health;
 
 	public  int Health { 
 		get {return _health;}
@@ -174,7 +174,7 @@ public class Enemy : MonoBehaviour {
 	public virtual void GetHit(int damage){
 		alertRange = maxalertRange;
 		Health -= damage;
-		PlayerStatus.Instance.AddFury(damage);
+		PlayerStatus.Instance.AddFury(damage/2);
 		if (Health <= 0)
 			return;
 		

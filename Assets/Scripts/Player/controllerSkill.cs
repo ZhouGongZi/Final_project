@@ -81,6 +81,7 @@ public class controllerSkill : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.O) && AOE.Cooldown == 0&&PlayerStatus.Instance.Fury==100) {
 			AOE.useSkill ();
+			PlayerStatus.Instance.AddFury (-50);
 		}
 
 		if (Input.GetKeyDown (KeyCode.C) && shadowFight.Cooldown == 0) {
