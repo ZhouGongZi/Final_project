@@ -52,7 +52,7 @@ public class ShadowController : MonoBehaviour {
 	}
 	public void aoe(){
 		foreach (GameObject sha in shadows) {
-			sha.GetComponent<AOE> ().useSkill ();
+			sha.GetComponent<AOE> ().useSkill ();	
 		}
 	}
 

@@ -16,5 +16,6 @@ public class AOEPlayer : Skill {
 	public override void useSkill(){
 		base.useSkill ();
 		ShadowController.Instance.aoe ();
+
 	}
 }

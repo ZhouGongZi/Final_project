@@ -12,12 +12,13 @@ public class shadowStatus : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Time.time - startTime > lifeTime) {
+			
 			Destroy (this.gameObject);
 			ShadowController.Instance.shadows.Remove (this.gameObject);
 		}
 	}
 	public void bonusTime(){
-		lifeTime += 3f;
+		lifeTime += 5f;
 	}
 
 

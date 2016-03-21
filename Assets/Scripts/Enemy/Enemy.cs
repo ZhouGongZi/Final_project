@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour {
 
 
 	//enemy health 
-	protected int			 _health;
+	protected int		 _health;
 
 	public  int Health { 
 		get {return _health;}
@@ -79,7 +79,7 @@ public class Enemy : MonoBehaviour {
 
 
 	public virtual void Update(){
-		alertRange = attackRange + 4 * (alertRangeStd - attackRange) * ( (PlayerStatus.Instance.Fury *1.0f)/ 100)*((PlayerStatus.Instance.Fury*1.0f) / 100) ;
+		alertRange = attackRange + (ShadowController.Instance.shadows.Count+1)*4 * (alertRangeStd - attackRange) * ( (PlayerStatus.Instance.Fury *1.0f)/ 100)*((PlayerStatus.Instance.Fury*1.0f) / 100) ;
 		//shadow = GameObject.FindGameObjectWithTag ("Shadow");
 		if (ChooseEnemy.Instance.target!= null) {
 			if (this.gameObject != ChooseEnemy.Instance.target.Value)
@@ -92,6 +92,7 @@ public class Enemy : MonoBehaviour {
 			return;
 		if (!Alert () && !InAttackRange ()) {
 			idle ();
+
 		} else if (!InAttackRange ()) {
 			chase ();
 
@@ -135,8 +136,10 @@ public class Enemy : MonoBehaviour {
 
 	//idle
 	public virtual void idle(){
-		
-		Anim.Play (idling.name);
+		print ("idle");
+		//Vector3 idlerange = Vector3.Normalize( new Vector3 (Random.Range (-1, 1), 0, Random.Range (-1, 1)));
+		//controller.SimpleMove (idlerange*0.5f);
+		Anim.Play (dancing.name);
 	}
 	//chase the player
 	public virtual void chase(){
@@ -174,7 +177,7 @@ public class Enemy : MonoBehaviour {
 	public virtual void GetHit(int damage){
 		alertRange = maxalertRange;
 		Health -= damage;
-		PlayerStatus.Instance.AddFury(damage);
+		PlayerStatus.Instance.AddFury(damage/2);
 		if (Health <= 0)
 			return;
 		

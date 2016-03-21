@@ -4,8 +4,8 @@ using System.Collections;
 public class PlayerStatus : MonoBehaviour {
 	public static PlayerStatus Instance;
 	[SerializeField]
-	int _health=10000;
-	int _fury =10;
+	int _health=100;
+	int _fury =50;
 	public AnimationClip death,getHit;
 	Animation Anim;
 	[SerializeField]
@@ -52,7 +52,7 @@ public class PlayerStatus : MonoBehaviour {
 		Anim = this.GetComponent<Animation> ();
 	}
 	void Start(){
-		InvokeRepeating ("timeUpdate", 1f, 1f);
+		InvokeRepeating ("timeUpdate", 1f, 2f);
 
 	}
 

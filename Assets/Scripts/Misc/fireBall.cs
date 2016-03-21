@@ -16,6 +16,7 @@ public class fireBall : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rig = this.GetComponent<Rigidbody> ();
+		Invoke ("cancel", 3f);
 	}
 	
 	// Update is called once per frame
@@ -43,5 +44,9 @@ public class fireBall : MonoBehaviour {
 	void move(){
 		rig.velocity=Vector3.Normalize(_target.transform.position+offset-this.transform.position)*speed;
 
+	}
+	void cancel(){
+		if(!Movement)
+		Destroy (this.gameObject);
 	}
 }

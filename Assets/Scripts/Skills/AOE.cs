@@ -2,10 +2,18 @@
 using System.Collections;
 
 public class AOE : Skill {
-	
-	float radius = 500;
+	public int damage;
+	public float radius = 8;
 	// Use this for initialization
 	float explodeSpeed = 0.1f;
+	GameObject AOEBALL;
+	public AnimationClip aoe;
+
+	public override void Start ()
+	{	Anim = this.GetComponent<Animation> ();
+		base.Start ();
+		AOEBALL = Resources.Load ("AOEBALL") as GameObject;
+	}
 
 	public override void Update () {
 		base.Update ();
@@ -14,13 +22,17 @@ public class AOE : Skill {
 	public override void useSkill(){
 		base.useSkill ();
 	 	explodeAOE ();
+		Anim.Play (aoe.name);
 			
 	}
 
 	public void explodeAOE(){
 		//make all the other things except the player stop 
-
-
+		GameObject go =Instantiate(AOEBALL)as GameObject;
+		Vector3 pos = this.transform.position;
+		pos.y = 0;
+		go.transform.position = pos;
+		go.GetComponent<TweenScale> ().to = new Vector3 (radius, radius, radius);
 		Collider[] col = Physics.OverlapSphere(transform.position, radius);
 		int i = 0;
 
@@ -41,7 +53,7 @@ public class AOE : Skill {
 	IEnumerator zeroHealth(Collider co, float delay){
 		yield return new WaitForSeconds(delay);
 
-		co.GetComponent<Enemy> ().Health = 0;
+		co.GetComponent<Enemy> ().GetHit(damage);
 	}
 
 }

@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scenes/_Scene_test_YIhzou.unity
+=======
+- path: Assets/_Scenes/_Scene_DC.unity
+>>>>>>> f2ca88c16d24751d900d8df523a08aa8b57b1270
   isLoaded: 1
   isActive: 1
