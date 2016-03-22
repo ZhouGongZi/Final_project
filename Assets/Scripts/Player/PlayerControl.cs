@@ -16,7 +16,8 @@ public class PlayerControl : MonoBehaviour {
     //jump parameters
     private const float jumping_force = 100f;
     private const float gravity = 5f;
-    //constants
+    //movements
+    private Vector3 movement;
     private const float sprint_speed = 2.5f;
     private const float forward_speed = 1f;
     private const float backward_speed = 0.5f;
@@ -70,6 +71,7 @@ public class PlayerControl : MonoBehaviour {
         instance = this;
         controller = GetComponent<CharacterController>();
         cam_container = GameObject.Find("CamContainer");
+        anim["jump"].speed = 0.8f;
     }
 	
 	// Update is called once per frame
@@ -93,9 +95,9 @@ public class PlayerControl : MonoBehaviour {
     }
 
 	void FixedUpdate () {
-        
+
         //transitions of the states
-        if (left_y >0.7)
+        if (left_y > 0.7)
         {
             if (!walk_forward)
             {
@@ -105,14 +107,14 @@ public class PlayerControl : MonoBehaviour {
             if (sprint > 0.1)
             {
                 anim_control.ChangeState(new AnimState("run", anim_control._current_state.player_state, PlayerState.moving));
-                controller.Move(transform.forward * sprint_speed * Time.deltaTime);
+                movement = transform.forward * sprint_speed * Time.deltaTime;
             }
             else
             {
                 anim_control.ChangeState(new AnimState("walk", anim_control._current_state.player_state, PlayerState.moving));
-                controller.Move(transform.forward * forward_speed * Time.deltaTime);
+                movement = transform.forward * forward_speed * Time.deltaTime;
             }
-            
+
         }
         else if (left_y < -0.7)
         {
@@ -122,43 +124,40 @@ public class PlayerControl : MonoBehaviour {
                 ChangeWalkDirection(walk_forward);
             }
             anim_control.ChangeState(new AnimState("walk", anim_control._current_state.player_state, PlayerState.moving));
-            controller.Move(-transform.forward * backward_speed * Time.deltaTime);
+            movement = -transform.forward * backward_speed * Time.deltaTime;
         }
         else if (left_x > 0.1)
         {
             anim_control.ChangeState(new AnimState("strafe right", anim_control._current_state.player_state, PlayerState.moving));
-            controller.Move(transform.right * strafe_speed * Time.deltaTime);
+            movement = transform.right * strafe_speed * Time.deltaTime;
         }
         else if (left_x < -0.1)
         {
             anim_control.ChangeState(new AnimState("strafe left", anim_control._current_state.player_state, PlayerState.moving));
-            controller.Move(-transform.right * strafe_speed * Time.deltaTime);
+            movement = -transform.right * strafe_speed * Time.deltaTime;
         }
-        else
+        else if (left_x == 0 && left_y == 0 && (anim_control._current_state.player_state == PlayerState.moving || anim_control._current_state.player_state == PlayerState.idle))
         {
             anim_control.SetToDefaultState();
-            anim.Play("ready 2");
         }
 
         if (right_x != 0)
         {
             transform.Rotate(0, right_x * cam_speed * Time.deltaTime, 0);
         }
-        CheckJump();
-        if (A > 0.1 && !if_jump)
+        if (X > 0.1)
         {
-            //add lifting force
-            anim.Play("jump");
+            anim_control.ChangeState(new AnimState("attack 5", anim_control.playing_state, PlayerState.melee_attack));
         }
-        if (if_jump)
+        if (A>0.1)
         {
-            controller.Move(-Vector3.up * gravity * Time.deltaTime);
-        }
-        if (anim["jump"].time > 0.2)
-        {
-            controller.Move(Vector3.up * gravity * 2 *Time.deltaTime);
+            anim_control.ChangeState(new AnimState("jump", anim_control.playing_state, PlayerState.jumping));
         }
         anim_control.Update();
+        if (anim_control._current_state.player_state == PlayerState.moving)
+        {
+            controller.Move(movement);
+        }
         
         
     } 
