@@ -116,7 +116,7 @@ public class AnimStateMachine : StateMachine
     }
 }
 
-public enum PlayerState { none,idle,moving,attacking, jumping };
+public enum PlayerState { none, idle, ranged_attack, hitting, moving, melee_attack, jumping };
 
 public class AnimState :State
 {
@@ -148,7 +148,7 @@ public class AnimState :State
         {
             state_machine.anim.PlayQueued(anim_clip);
         }
-        if (state_machine.anim[anim_clip].time > 0.9 )
+        if (state_machine.anim[anim_clip].time > 0.9999 && state_machine._current_state.player_state != PlayerState.moving)
         {
             state_machine.SetToDefaultState();
         }

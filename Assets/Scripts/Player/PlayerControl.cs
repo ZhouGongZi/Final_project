@@ -16,7 +16,8 @@ public class PlayerControl : MonoBehaviour {
     //jump parameters
     private const float jumping_force = 100f;
     private const float gravity = 5f;
-    //constants
+    //movements
+    private Vector3 movement;
     private const float sprint_speed = 2.5f;
     private const float forward_speed = 1f;
     private const float backward_speed = 0.5f;
@@ -70,6 +71,7 @@ public class PlayerControl : MonoBehaviour {
         instance = this;
         controller = GetComponent<CharacterController>();
         cam_container = GameObject.Find("CamContainer");
+        anim["jump"].speed = 0.8f;
     }
 	
 	// Update is called once per frame
@@ -105,12 +107,12 @@ public class PlayerControl : MonoBehaviour {
             if (sprint > 0.1)
             {
                 anim_control.ChangeState(new AnimState("run", anim_control._current_state.player_state, PlayerState.moving));
-                controller.Move(transform.forward * sprint_speed * Time.deltaTime);
+                movement = transform.forward * sprint_speed * Time.deltaTime;
             }
             else
             {
                 anim_control.ChangeState(new AnimState("walk", anim_control._current_state.player_state, PlayerState.moving));
-                controller.Move(transform.forward * forward_speed * Time.deltaTime);
+                movement = transform.forward * forward_speed * Time.deltaTime;
             }
 
         }
@@ -122,19 +124,22 @@ public class PlayerControl : MonoBehaviour {
                 ChangeWalkDirection(walk_forward);
             }
             anim_control.ChangeState(new AnimState("walk", anim_control._current_state.player_state, PlayerState.moving));
-            controller.Move(-transform.forward * backward_speed * Time.deltaTime);
+            movement = -transform.forward * backward_speed * Time.deltaTime;
         }
         else if (left_x > 0.1)
         {
             anim_control.ChangeState(new AnimState("strafe right", anim_control._current_state.player_state, PlayerState.moving));
-            controller.Move(transform.right * strafe_speed * Time.deltaTime);
+            movement = transform.right * strafe_speed * Time.deltaTime;
         }
         else if (left_x < -0.1)
         {
             anim_control.ChangeState(new AnimState("strafe left", anim_control._current_state.player_state, PlayerState.moving));
-            controller.Move(-transform.right * strafe_speed * Time.deltaTime);
+            movement = -transform.right * strafe_speed * Time.deltaTime;
         }
-        
+        else if (left_x == 0 && left_y == 0 && (anim_control._current_state.player_state == PlayerState.moving || anim_control._current_state.player_state == PlayerState.idle))
+        {
+            anim_control.SetToDefaultState();
+        }
 
         if (right_x != 0)
         {
@@ -142,9 +147,17 @@ public class PlayerControl : MonoBehaviour {
         }
         if (X > 0.1)
         {
-            anim_control.ChangeState(new AnimState("attack 5", anim_control.playing_state, PlayerState.attacking));
+            anim_control.ChangeState(new AnimState("attack 5", anim_control.playing_state, PlayerState.melee_attack));
+        }
+        if (A>0.1)
+        {
+            anim_control.ChangeState(new AnimState("jump", anim_control.playing_state, PlayerState.jumping));
         }
         anim_control.Update();
+        if (anim_control._current_state.player_state == PlayerState.moving)
+        {
+            controller.Move(movement);
+        }
         
         
     } 
