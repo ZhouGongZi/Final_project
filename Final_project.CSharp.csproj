@@ -69,8 +69,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AOEBALL.cs" />
-    <Compile Include="Assets\AOEparticle.cs" />
     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipItems.cs" />
     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipRandomItem.cs" />
     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UICursor.cs" />
@@ -220,6 +218,8 @@
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemy\MeleeEnemy.cs" />
+    <Compile Include="Assets\Scripts\Misc\AOEBALL.cs" />
+    <Compile Include="Assets\Scripts\Misc\AOEparticle.cs" />
     <Compile Include="Assets\Scripts\Misc\fireBall.cs" />
     <Compile Include="Assets\Scripts\Multi_trigger.cs" />
     <Compile Include="Assets\Scripts\Player\AOEPlayer.cs" />
@@ -254,6 +254,7 @@
     <Compile Include="Assets\Scripts\scene_trigger.cs" />
     <Compile Include="Assets\Scripts\shadowStatus.cs" />
     <Compile Include="Assets\Scripts\stealthEffect.cs" />
+    <Compile Include="Assets\coolDownCounter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\NGUI\Examples\Atlases\Fantasy\Fantasy Font - Normal.txt" />
@@ -298,6 +299,8 @@
     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 3.shader" />
     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed.shader" />
     <None Include="Assets\PyroParticles\Prefab\Materials\AdditiveTintable.shader" />
+    <None Include="Assets\Resources\painterly-spell-icons-3\README.txt" />
+    <None Include="Assets\Resources\painterly-spell-icons-4\README.txt" />
     <None Include="Assets\SkeletonData\animations.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />

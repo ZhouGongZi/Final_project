@@ -31,7 +31,7 @@ public class RangeAttack : Skill {
 		fireBall = Resources.Load ("fireBall") as GameObject;
 		Anim = this.GetComponent<Animation> ();
 		//shadow = GameObject.FindGameObjectWithTag ("Shadow");
-		animController= new AnimStateMachine(Anim,new AnimState("ready 2",true,PlayerState.idle));
+		animController= new AnimStateMachine(Anim,new AnimState("ready 2",PlayerState.none,PlayerState.idle));
 	}
 
 
