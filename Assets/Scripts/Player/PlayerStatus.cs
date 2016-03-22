@@ -37,7 +37,7 @@ public class PlayerStatus : MonoBehaviour {
 				_fury = 0;
 			else
 				_fury = value;
-			Debug.Log (Fury);
+			//Debug.Log (Fury);
 			if (_fury == 0)
 				stealth = true;
 			else

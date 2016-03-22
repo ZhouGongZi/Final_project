@@ -19,7 +19,7 @@ public class ChargeAttack : Skill {
 	// Update is called once per frame
 	public override void Update () {
 		base.Update ();
-		if (tar == null || tar.tag != "Enemy") {
+		if ((tar == null || tar.tag != "Enemy")&&Anim.IsPlaying(running.name)) {
 			Anim.Play(idling.name);
 
 			return;
