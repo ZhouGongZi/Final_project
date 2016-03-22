@@ -7,7 +7,7 @@ public class StateMachine
 {
 	protected State _current_state;
 	
-	public void ChangeState(State new_state)
+	public virtual void ChangeState(State new_state)
 	{
 		if(_current_state != null)
 		{
@@ -72,9 +72,9 @@ public class AnimStateMachine : StateMachine
     {
         this.anim = anim;
         this.default_anim = default_anim;
-		this._current_state=default_anim;
-		this._current_state.state_machine = this;
-		default_anim.state_machine = this;
+        default_anim.state_machine = this;
+        _current_state = default_anim;
+        _current_state.state_machine = this;
     }
     public void ChangeState(AnimState new_state)
     {
@@ -82,49 +82,50 @@ public class AnimStateMachine : StateMachine
         {
             _current_state.OnFinish();
         }
-        if (_current_state.can_exit)
-        {
             //do the normal change state thing
             _current_state = new_state;
             _current_state.state_machine = this;
             _current_state.OnStart();
-        }
-        else
-        {
-            return;
-        }
-
-        
     }
     public override void Update()
-	{	if(_current_state != null)
-		{
-			float time_delta_fraction = Time.deltaTime / (1.0f / Application.targetFrameRate);
-			_current_state.OnUpdate(time_delta_fraction);
-		}
-        //base.Update();
+    {
+        if (_current_state != null)
+        {
+            float time_delta_fraction = Time.deltaTime / (1.0f / Application.targetFrameRate);
+            _current_state.OnUpdate(time_delta_fraction);
+        }
         //control block for state transition
+    }
+    public void SetToDefaultState()
+    {
+        ChangeState(new AnimState("ready 2", _current_state.player_state, PlayerState.idle));
     }
 }
 
-public enum PlayerState { idle,moving,attacking,jumping};
+public enum PlayerState { none,idle,moving,attacking, jumping };
 
 public class AnimState :State
 {
     public new AnimStateMachine state_machine;
     public PlayerState player_state;
     public string anim_clip;
-    public bool can_exit = false;
-    private bool last_anim_over = true;
-    public AnimState(string anim_clip, bool can_exit, PlayerState player_state)
+    public bool if_queued = false;
+    public AnimState(string anim_clip, PlayerState last_state, PlayerState player_state)
     {
         this.anim_clip = anim_clip;
-        this.can_exit = can_exit;
+        if ((int)last_state <= (int)player_state)
+        {
+            if_queued = false;
+        }
+        else
+        {
+            if_queued = true;
+        }
         this.player_state = player_state;
     }
     public override void OnUpdate(float time_delta_fraction)
     {
-        /*if (can_exit)
+        if (!if_queued)
         {
             state_machine.anim.Play(anim_clip);
         }
@@ -132,11 +133,10 @@ public class AnimState :State
         {
             state_machine.anim.PlayQueued(anim_clip);
         }
-        */
-        state_machine.anim.Play(anim_clip);
+        
     }
-    public void setIfExist (bool can_exit = true)
+    public void setIfExist (bool if_queued = true)
     {
-        this.can_exit = can_exit;
+        this.if_queued = if_queued;
     }
 }
