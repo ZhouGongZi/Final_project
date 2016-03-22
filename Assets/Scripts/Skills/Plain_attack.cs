@@ -6,7 +6,9 @@ public class Plain_attack : Skill {
 	public AnimationClip 		Melee_Clip;
 	public int 					damage;
 	bool 						isAttacking = false; 
-	float 						impactTime=0.40f;
+	float 						impactTime = 0.40f;
+
+
 
 
 	public override void Start () {
@@ -26,7 +28,13 @@ public class Plain_attack : Skill {
 	}
 
 	public void attack(){
-		Anim.Play (Melee_Clip.name);
+		//Anim.Play (Melee_Clip.name);
+
+		PlayerControl.instance.anim_control.ChangeState (new AnimState (Melee_Clip.name, PlayerControl.instance.anim_control._current_state.player_state, PlayerState.attacking));
+		Debug.Log ("attacked pushed");
+		PlayerControl.instance.anim_control.Update ();
+
+
 		isAttacking = true;
 	}
 

@@ -78,6 +78,8 @@ public class PlayerStatus : MonoBehaviour {
 	}
 
 	void timeUpdate(){
+		if (Fury != 100)
+			maxFury = false;
 		if (Fury == 100 && !maxFury) {
 			maxFury = true;
 			maxtime = Time.time;

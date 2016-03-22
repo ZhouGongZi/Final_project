@@ -7,6 +7,9 @@ public class ChooseEnemy :MonoBehaviour{
 	public LinkedList<GameObject> enemy=new LinkedList<GameObject>();
 	public LinkedListNode<GameObject> target=null;
 
+	float fireRate = 0.5f;
+	float nextfire = 0.0f;
+
 	void Awake(){
 		Instance = this;
 
@@ -14,19 +17,23 @@ public class ChooseEnemy :MonoBehaviour{
 	void Start(){
 		GetEnemies ();
 	}
-	// Use this for initialization
+	// Use this for initializatio
 	void Update()
 	{
 
-		if (Input.GetKeyDown (KeyCode.Tab))
-			chooseEnemy();
+		GetEnemies ();
+		if (Input.GetAxis ("Tab") > 0.5 && Time.time > nextfire) {
+			chooseEnemy ();
+			nextfire = Time.time + fireRate;
+		}
 		
 	}
 
 	void GetEnemies(){
 		GameObject[] ene= GameObject.FindGameObjectsWithTag ("Enemy");
+
 		foreach (GameObject en in ene) {
-			if (Vector3.Distance (en.transform.position, this.transform.position) < 50 && Vector3.Dot (en.transform.position - this.transform.position, this.transform.forward) > 0){
+			if (Vector3.Distance (en.transform.position, this.transform.position) < 100 && Vector3.Dot (en.transform.position - this.transform.position, this.transform.forward) >- 0.3){
 				
 				enemy.AddLast (en);
 
@@ -44,7 +51,7 @@ public class ChooseEnemy :MonoBehaviour{
 		else
 			target = target.Next;
 		//target.Value.GetComponent<Enemy> ().chosed();
-	//	Debug.Log (target.Value.name);
+		//Debug.Log (target.Value.name);
 
 	}
 

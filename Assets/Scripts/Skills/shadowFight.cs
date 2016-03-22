@@ -78,6 +78,7 @@ public class shadowFight : Skill {
 	bool 						isAttacking = false; 
 	float 						impactTime=0.40f;
 	bool 						viewLock = false;
+	bool 						isWell = false;
 
 	public override void Start () {
 		base.Anim = this.GetComponent<Animation> ();
@@ -85,6 +86,16 @@ public class shadowFight : Skill {
 	// Update is called once per frame
 	public override void Update () {
 		base.Update ();
+
+		if (Anim[Melee_Clip.name].time > Anim[Melee_Clip.name].length * 0.8f && !isWell)
+		{
+			//make sure the shadow does not tilt !
+			Vector3 temp = this.transform.localEulerAngles;
+			temp.x = 0;
+			temp.z = 0;
+			this.transform.localEulerAngles = temp;
+			isWell = true;
+		}
 		if (Anim [Melee_Clip.name].time > Anim [Melee_Clip.name].length * 0.90)
 			isAttacking = false;
 	}
@@ -97,6 +108,7 @@ public class shadowFight : Skill {
 	public void attack(){
 		if (viewLock) {
 			Anim.Play (Melee_Clip.name);
+			isWell = false;
 			isAttacking = true;
 		}
 	}

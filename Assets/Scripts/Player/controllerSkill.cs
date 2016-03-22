@@ -114,49 +114,52 @@ public class controllerSkill : MonoBehaviour {
 
 		sprint = Input.GetAxis("Sprint");
 
-		if(LT==1 && B==1 &&spawnBattle.Cooldown==0){
+		if(LT > 0.5 && B > 0.5 &&spawnBattle.Cooldown==0){
 			spawnBattle.useSkill ();
 			this.GetComponent<RangeAttack> ().cancel();
 		}
-		if (LT==1 && Y==1 &&rangeattack.Cooldown==0) {
+		if (LT > 0.5 && Y > 0.5 &&rangeattack.Cooldown==0) {
 			rangeattack.useSkill ();
 			ShadowController.Instance.fireball ();
 
 		}
-		if (LT==1 && X==1 && (left_y > 0) &&PlayerCharge.Cooldown==0) {
+		if (LT > 0.5 && X > 0.5 && (left_y > 0) &&PlayerCharge.Cooldown==0) {
 			PlayerCharge.useSkill ();
 			this.GetComponent<RangeAttack> ().cancel();
+			ShadowController.Instance.plainAttack ();
 		}
-		if (X==1 && PlainAttack.Cooldown == 0) {
+		//if (LT < 0.1 && X > 0.5 && PlainAttack.Cooldown == 0) {
+		if(Input.GetKeyDown(KeyCode.K)){
+			Debug.Log ("Kpushed");
 			PlainAttack.useSkill ();
 			this.GetComponent<RangeAttack> ().cancel();
 		}
-		if (RT==1 && TimeStop.Cooldown == 0&&PlayerStatus.Instance.Fury==0) {
+		if (RT > 0.5 && TimeStop.Cooldown == 0&&PlayerStatus.Instance.Fury==0) {
 			TimeStop.useSkill ();
 			this.GetComponent<RangeAttack> ().cancel();
 			PlayerStatus.Instance.AddFury (50);
 			isStop = true;
 		}
 
-		if (LT==1 && X==1 && (left_y < 0) && backstab.Cooldown == 0) {
+		if (LT > 0.5 && X > 0.5 && (left_y < 0) && backstab.Cooldown == 0) {
 			this.GetComponent<RangeAttack> ().cancel();
 			backstab.useSkill ();
 		}
-		if (Y==1 && switchPlayer.Cooldown == 0 && !GetComponent<Create_shadow>().shadow_indicator.activeInHierarchy) {
+		if (LT < 0.1 && Y > 0.5 && switchPlayer.Cooldown == 0 && !GetComponent<Create_shadow>().shadow_indicator.activeInHierarchy) {
 			//is this good ??????????????????????????
 			//zhen bu fang xin na !!!!!!!!!!!!!!!!!!!!!!!!!!!
 			switchPlayer.useSkill ();
 			this.GetComponent<RangeAttack> ().cancel();
 		}
 
-		if (RT==1 && AOE.Cooldown == 0 && PlayerStatus.Instance.Fury==100) {
+		if (RT > 0.5 && AOE.Cooldown == 0 && PlayerStatus.Instance.Fury==100) {
 			AOE.useSkill ();
 			PlayerStatus.Instance.AddFury (-50);
 		}
 
-		if (X==1 && shadowFight.Cooldown == 0) {
-			shadowFight.useSkill ();
-		}
+//		if (LT < 0.1 && X > 0.9 && shadowFight.Cooldown == 0) {
+//			shadowFight.useSkill ();
+//		}
 			
 
 	}

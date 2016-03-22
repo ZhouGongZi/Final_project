@@ -50,7 +50,10 @@ public class RangeAttack : Skill {
 		if(ChooseEnemy.Instance.target!=null)
 			tar = ChooseEnemy.Instance.target.Value;
 		if (launch&&(tar!=null)) {
+			if(this.tag=="Shadow")
 			Anim.Play (cast.name);
+			else 
+				PlayerControl.instance.anim_control.ChangeState (new AnimState (cast.name, PlayerControl.instance.anim_control._current_state.player_state, PlayerState.idle));
 			//AnimState temp = new AnimState (cast.name, true, PlayerState.idle);
 //			animController.ChangeState (temp);
 //

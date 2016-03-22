@@ -124,7 +124,7 @@ public class AnimState :State
         this.player_state = player_state;
     }
     public override void OnUpdate(float time_delta_fraction)
-    {
+	{	
         if (!if_queued)
         {
             state_machine.anim.Play(anim_clip);
