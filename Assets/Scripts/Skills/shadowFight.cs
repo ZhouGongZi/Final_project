@@ -104,13 +104,13 @@ public class shadowFight : Skill {
 
 	void OnTriggerStay(Collider other){
 
-		if (other.tag == "Enemy" && other.GetComponent<Enemy>().Health > 0) {
+		if (other.tag == "Enemy") {
 			transform.LookAt (other.transform);
 			viewLock = true;
 			if (isAttacking == true) {
 				print("success!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 				if (Anim [Melee_Clip.name].time > Anim [Melee_Clip.name].length * impactTime) {
-					other.GetComponent<Enemy> ().GetHit (100);
+					other.GetComponent<Enemy> ().GetHit (30);
 					isAttacking = false;
 					viewLock = false;
 				}
@@ -118,5 +118,9 @@ public class shadowFight : Skill {
 			}
 		}
 	}
+	void OnTriggerExit(Collider other){
+		viewLock = false;
+	}
+
 
 }

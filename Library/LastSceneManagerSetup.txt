@@ -1,4 +1,12 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scenes/_Scene_Ningqi.unity
+=======
+<<<<<<< HEAD
+- path: Assets/_Scenes/Main_Scene.unity
+=======
+- path: Assets/_Scenes/_Scene_DC.unity
+>>>>>>> dd1e588943c49259b86f05d7e6cb6055f5de6516
+>>>>>>> 30da1ff4e42f9c469a4b376e0c02afca0f0fa713
   isLoaded: 1
   isActive: 1

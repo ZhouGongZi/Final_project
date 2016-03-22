@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class coolDownCounter : MonoBehaviour {
 	public  Skill spell;
 	UISprite mask;
 	public bool timeStop;
 	public bool AOE;
+
 	// Use this for initialization
 	void Start () {
 		mask = this.GetComponent<UISprite> ();
@@ -27,4 +30,5 @@ public class coolDownCounter : MonoBehaviour {
 		}
 		mask.fillAmount = spell.Cooldown / spell.maxCoolDown;
 	}
+
 }
