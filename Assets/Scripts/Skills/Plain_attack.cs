@@ -22,6 +22,7 @@ public class Plain_attack : Skill {
 	public override void useSkill(){
 		base.useSkill ();
 		attack ();
+	
 	}
 
 	public void attack(){

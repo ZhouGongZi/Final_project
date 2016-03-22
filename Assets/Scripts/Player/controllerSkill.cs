@@ -61,6 +61,7 @@ public class controllerSkill : MonoBehaviour {
 		}
 		if (Input.GetKeyDown (KeyCode.F) && PlainAttack.Cooldown == 0) {
 			PlainAttack.useSkill ();
+			ShadowController.Instance.plainAttack ();
 			this.GetComponent<RangeAttack> ().cancel();
 		}
 		if (Input.GetKeyDown (KeyCode.T) && TimeStop.Cooldown == 0&&PlayerStatus.Instance.Fury==0) {
