@@ -160,10 +160,7 @@ public class PlayerControl : MonoBehaviour {
         }
         anim_control.Update();
         
-        if (Input.GetKeyDown(KeyCode.Q))
-            anim.Play("attack 1");
-        if (Input.GetKeyDown(KeyCode.W))
-            anim.Play("ready 2");
+        
     } 
 
 
