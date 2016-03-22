@@ -218,6 +218,7 @@
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemy\MeleeEnemy.cs" />
+    <Compile Include="Assets\Scripts\Hud.cs" />
     <Compile Include="Assets\Scripts\Misc\AOEBALL.cs" />
     <Compile Include="Assets\Scripts\Misc\AOEparticle.cs" />
     <Compile Include="Assets\Scripts\Misc\fireBall.cs" />

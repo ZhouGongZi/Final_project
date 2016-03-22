@@ -4,6 +4,7 @@
     <Files>
       <File FileName="Assets/Scripts/Skills/AOE.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Skills/timeStop.cs" Line="1" Column="1" />
+<<<<<<< HEAD
       <File FileName="Assets/Scripts/Player/controllerSkill.cs" Line="103" Column="3" />
       <File FileName="Assets/Scripts/Shadow/Player_shadow.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Skills/shadowFight.cs" Line="1" Column="1" />
@@ -11,6 +12,17 @@
       <File FileName="Assets/Scripts/Skills/Skill.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Player/Player.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Hud.cs" Line="45" Column="3" />
+=======
+      <File FileName="Assets/Scripts/Player/controllerSkill.cs" Line="52" Column="4" />
+      <File FileName="Assets/Scripts/Shadow/Player_shadow.cs" Line="68" Column="28" />
+      <File FileName="Assets/Scripts/Skills/shadowFight.cs" Line="107" Column="69" />
+      <File FileName="Assets/Scripts/Skills/Plain_attack.cs" Line="16" Column="34" />
+      <File FileName="Assets/Scripts/Skills/Skill.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/Player.cs" Line="60" Column="1" />
+      <File FileName="Assets/Scripts/Skills/ShadowSpawnBattle.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Skills/Create_shadow.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/StateMachine.cs" Line="1" Column="1" />
+>>>>>>> 763874c474e052cd837daa85121251d147e8f0b2
       <File FileName="Assets/NGUI/Scripts/UI/UICamera.cs" Line="169" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

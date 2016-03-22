@@ -16,6 +16,15 @@ public class controllerSkill : MonoBehaviour {
 	Skill cast;
 
 
+	private float left_x, left_y, right_x, right_y;
+	private float A, B, X, Y;
+	private float RB, LB, RT, LT;
+	private float sprint;
+
+
+
+
+
 	void Update () {
 		if (isStop)
 			decreaseCooldown ();
@@ -46,6 +55,7 @@ public class controllerSkill : MonoBehaviour {
 //			cast = Skill [7];
 //		}
 
+		/*
 		if(Input.GetKeyDown(KeyCode.E)&&spawnBattle.Cooldown==0){
 			spawnBattle.useSkill ();
 			this.GetComponent<RangeAttack> ().cancel();
@@ -87,7 +97,67 @@ public class controllerSkill : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.C) && shadowFight.Cooldown == 0) {
 			shadowFight.useSkill ();
+		}*/
+		left_x = Input.GetAxis("LeftX");
+		left_y = Input.GetAxis("LeftY");
+		print(left_y);
+		right_x = Input.GetAxis("RightX");
+		right_y = Input.GetAxis("RightY");
+		A = Input.GetAxis("A");
+		B = Input.GetAxis("B");
+		X = Input.GetAxis("X");
+		Y = Input.GetAxis("Y");
+		RB = Input.GetAxis("RB");
+		LB = Input.GetAxis("LB");
+		RT = Input.GetAxis("RT");
+		LT = Input.GetAxis("LT");
+
+		sprint = Input.GetAxis("Sprint");
+
+		if(LT==1 && B==1 &&spawnBattle.Cooldown==0){
+			spawnBattle.useSkill ();
+			this.GetComponent<RangeAttack> ().cancel();
 		}
+		if (LT==1 && Y==1 &&rangeattack.Cooldown==0) {
+			rangeattack.useSkill ();
+			ShadowController.Instance.fireball ();
+
+		}
+		if (LT==1 && X==1 && (left_y > 0) &&PlayerCharge.Cooldown==0) {
+			PlayerCharge.useSkill ();
+			this.GetComponent<RangeAttack> ().cancel();
+		}
+		if (X==1 && PlainAttack.Cooldown == 0) {
+			PlainAttack.useSkill ();
+			this.GetComponent<RangeAttack> ().cancel();
+		}
+		if (RT==1 && TimeStop.Cooldown == 0&&PlayerStatus.Instance.Fury==0) {
+			TimeStop.useSkill ();
+			this.GetComponent<RangeAttack> ().cancel();
+			PlayerStatus.Instance.AddFury (50);
+			isStop = true;
+		}
+
+		if (LT==1 && X==1 && (left_y < 0) && backstab.Cooldown == 0) {
+			this.GetComponent<RangeAttack> ().cancel();
+			backstab.useSkill ();
+		}
+		if (Y==1 && switchPlayer.Cooldown == 0 && !GetComponent<Create_shadow>().shadow_indicator.activeInHierarchy) {
+			//is this good ??????????????????????????
+			//zhen bu fang xin na !!!!!!!!!!!!!!!!!!!!!!!!!!!
+			switchPlayer.useSkill ();
+			this.GetComponent<RangeAttack> ().cancel();
+		}
+
+		if (RT==1 && AOE.Cooldown == 0 && PlayerStatus.Instance.Fury==100) {
+			AOE.useSkill ();
+			PlayerStatus.Instance.AddFury (-50);
+		}
+
+		if (X==1 && shadowFight.Cooldown == 0) {
+			shadowFight.useSkill ();
+		}
+			
 
 	}
 
