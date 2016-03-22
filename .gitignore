@@ -17,7 +17,7 @@ ExportedObj/
 *.pidb
 *.booproj
 *.app
-
+**/InputManager.asset
 # Unity3D generated meta files
 *.pidb.meta
 
