@@ -19,10 +19,10 @@ public class stealthAttack : MonoBehaviour {
 		if(Opponent!=null)
 		this.transform.LookAt (Opponent.transform);
 		setStart ();
-		if (launchattack)
+		if (Opponent!=null&& launchattack&&Opponent.tag=="Enemy")
 			attack ();
 		if (launchattack&& this.GetComponent<Animation> () [BackStab.name].time >= this.GetComponent<Animation> () [BackStab.name].length * impactTime) {
-			if (Opponent != null) {
+			if (Opponent!=null&&Opponent.tag=="Enemy") {
 				Opponent.GetComponent<Enemy> ().GetHit (damage);
 				launchattack = false;
 			}

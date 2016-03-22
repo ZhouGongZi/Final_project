@@ -7,9 +7,10 @@ public class AOE : Skill {
 	// Use this for initialization
 	float explodeSpeed = 0.1f;
 	GameObject AOEBALL;
+	public AnimationClip aoe;
 
 	public override void Start ()
-	{
+	{	Anim = this.GetComponent<Animation> ();
 		base.Start ();
 		AOEBALL = Resources.Load ("AOEBALL") as GameObject;
 	}
@@ -21,6 +22,7 @@ public class AOE : Skill {
 	public override void useSkill(){
 		base.useSkill ();
 	 	explodeAOE ();
+		Anim.Play (aoe.name);
 			
 	}
 

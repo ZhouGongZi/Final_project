@@ -72,9 +72,15 @@ public class AnimStateMachine : StateMachine
     {
         this.anim = anim;
         this.default_anim = default_anim;
+<<<<<<< HEAD
         default_anim.state_machine = this;
         _current_state = default_anim;
         _current_state.state_machine = this;
+=======
+		this._current_state=default_anim;
+		this._current_state.state_machine = this;
+		default_anim.state_machine = this;
+>>>>>>> 5cfb6a0dbc889660d04eb0848231e7ae0f91ba73
     }
     public void ChangeState(AnimState new_state)
     {
@@ -88,12 +94,21 @@ public class AnimStateMachine : StateMachine
             _current_state.OnStart();
     }
     public override void Update()
+<<<<<<< HEAD
     {
         if (_current_state != null)
         {
             float time_delta_fraction = Time.deltaTime / (1.0f / Application.targetFrameRate);
             _current_state.OnUpdate(time_delta_fraction);
         }
+=======
+	{	if(_current_state != null)
+		{
+			float time_delta_fraction = Time.deltaTime / (1.0f / Application.targetFrameRate);
+			_current_state.OnUpdate(time_delta_fraction);
+		}
+        //base.Update();
+>>>>>>> 5cfb6a0dbc889660d04eb0848231e7ae0f91ba73
         //control block for state transition
     }
     public void SetToDefaultState()
