@@ -134,10 +134,7 @@ public class PlayerControl : MonoBehaviour {
             anim_control.ChangeState(new AnimState("strafe left", anim_control._current_state.player_state, PlayerState.moving));
             controller.Move(-transform.right * strafe_speed * Time.deltaTime);
         }
-        else if (left_x == 0 && left_y == 0)
-        {
-            anim_control.SetToDefaultState();
-        }
+        
 
         if (right_x != 0)
         {
