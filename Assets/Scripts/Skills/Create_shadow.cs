@@ -22,8 +22,7 @@ public class Create_shadow : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-		
-		if (Input.GetKey(KeyCode.X))
+		if (Input.GetAxis("Y") == 1)
 		{
 			if (shadow_initial_cd < shadow_initial_cd_max / 2.0f)
 			{
@@ -46,7 +45,7 @@ public class Create_shadow : MonoBehaviour {
 				}
 			}
 		}
-		else if (Input.GetKeyDown(KeyCode.Z))
+		else if (Input.GetAxis("B") == 1)
 		{
 			if (!shadow_indicator.activeInHierarchy)
 			{
