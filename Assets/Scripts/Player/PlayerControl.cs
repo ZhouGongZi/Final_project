@@ -73,7 +73,8 @@ public class PlayerControl : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+    void Update()
+    {
         // Get the input parameters
         left_x = Input.GetAxis("LeftX");
         left_y = Input.GetAxis("LeftY");
@@ -89,6 +90,10 @@ public class PlayerControl : MonoBehaviour {
         RT = Input.GetAxis("RT");
         LT = Input.GetAxis("LT");
         sprint = Input.GetAxis("Sprint");
+    }
+
+	void FixedUpdate () {
+        
         //transitions of the states
         if (left_y >0.7)
         {
