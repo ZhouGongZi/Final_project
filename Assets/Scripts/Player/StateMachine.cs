@@ -65,6 +65,7 @@ public class State
 // Defined for animation controls
 public class AnimStateMachine : StateMachine
 {
+    public PlayerState playing_state,cached_state;
     public new AnimState _current_state;
     public AnimState default_anim;
     public Animation anim;
@@ -82,16 +83,29 @@ public class AnimStateMachine : StateMachine
         {
             _current_state.OnFinish();
         }
-            //do the normal change state thing
-            _current_state = new_state;
-            _current_state.state_machine = this;
-            _current_state.OnStart();
+        //do the normal change state thing
+        if (new_state.if_queued)
+        {
+            cached_state = new_state.player_state;
+        }
+        else
+        {
+            playing_state = new_state.player_state;
+        }
+
+        _current_state = new_state;
+        _current_state.state_machine = this;
+        _current_state.OnStart();
     }
     public override void Update()
     {
         if (_current_state != null)
         {
             float time_delta_fraction = Time.deltaTime / (1.0f / Application.targetFrameRate);
+            if (anim[_current_state.anim_clip].time>0.9)
+            {
+                playing_state = cached_state;
+            }
             _current_state.OnUpdate(time_delta_fraction);
         }
         //control block for state transition
@@ -116,6 +130,7 @@ public class AnimState :State
         if ((int)last_state <= (int)player_state)
         {
             if_queued = false;
+            
         }
         else
         {
@@ -133,8 +148,13 @@ public class AnimState :State
         {
             state_machine.anim.PlayQueued(anim_clip);
         }
+        if (state_machine.anim[anim_clip].time > 0.9 )
+        {
+            state_machine.SetToDefaultState();
+        }
         
     }
+    
     public void setIfExist (bool if_queued = true)
     {
         this.if_queued = if_queued;

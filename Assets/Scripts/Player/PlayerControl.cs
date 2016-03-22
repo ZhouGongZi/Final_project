@@ -93,9 +93,9 @@ public class PlayerControl : MonoBehaviour {
     }
 
 	void FixedUpdate () {
-        
+
         //transitions of the states
-        if (left_y >0.7)
+        if (left_y > 0.7)
         {
             if (!walk_forward)
             {
@@ -112,7 +112,7 @@ public class PlayerControl : MonoBehaviour {
                 anim_control.ChangeState(new AnimState("walk", anim_control._current_state.player_state, PlayerState.moving));
                 controller.Move(transform.forward * forward_speed * Time.deltaTime);
             }
-            
+
         }
         else if (left_y < -0.7)
         {
@@ -134,29 +134,18 @@ public class PlayerControl : MonoBehaviour {
             anim_control.ChangeState(new AnimState("strafe left", anim_control._current_state.player_state, PlayerState.moving));
             controller.Move(-transform.right * strafe_speed * Time.deltaTime);
         }
-        else
+        else if (left_x == 0 && left_y == 0)
         {
             anim_control.SetToDefaultState();
-            anim.Play("ready 2");
         }
 
         if (right_x != 0)
         {
             transform.Rotate(0, right_x * cam_speed * Time.deltaTime, 0);
         }
-        CheckJump();
-        if (A > 0.1 && !if_jump)
+        if (X > 0.1)
         {
-            //add lifting force
-            anim.Play("jump");
-        }
-        if (if_jump)
-        {
-            controller.Move(-Vector3.up * gravity * Time.deltaTime);
-        }
-        if (anim["jump"].time > 0.2)
-        {
-            controller.Move(Vector3.up * gravity * 2 *Time.deltaTime);
+            anim_control.ChangeState(new AnimState("attack 5", anim_control.playing_state, PlayerState.attacking));
         }
         anim_control.Update();
         
