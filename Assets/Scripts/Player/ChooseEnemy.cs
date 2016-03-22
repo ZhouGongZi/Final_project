@@ -43,8 +43,8 @@ public class ChooseEnemy :MonoBehaviour{
 			target = enemy.First;
 		else
 			target = target.Next;
-		target.Value.GetComponent<Enemy> ().chosed();
-		Debug.Log (target.Value.name);
+		//target.Value.GetComponent<Enemy> ().chosed();
+	//	Debug.Log (target.Value.name);
 
 	}
 
